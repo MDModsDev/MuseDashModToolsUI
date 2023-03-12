@@ -2,7 +2,7 @@ using System;
 using Avalonia;
 using Avalonia.ReactiveUI;
 
-namespace MuseDashModToolsUI;
+namespace MuseDashModToolsUI.Updater;
 
 internal class Program
 {

@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using MuseDashModToolsUI.ViewModels;
-using MuseDashModToolsUI.Views;
+using MuseDashModToolsUI.Updater.ViewModels;
+using MuseDashModToolsUI.Updater.Views;
 
-namespace MuseDashModToolsUI;
+namespace MuseDashModToolsUI.Updater;
 
 public partial class App : Application
 {
@@ -19,7 +19,7 @@ public partial class App : Application
         {
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel()
+                DataContext = new MainWindowViewModel(),
             };
         }
 
