@@ -102,8 +102,8 @@
         <PackageReference Include="Serilog.Sinks.Console" Version="5.0.0"/>
         <PackageReference Include="Serilog.Sinks.File" Version="5.0.1-dev-00968"/>
         <PackageReference Include="SharpZipLib" Version="1.4.2"/>
-        <PackageReference Include="TestableIO.System.IO.Abstractions" Version="19.2.69"/>
-        <PackageReference Include="TestableIO.System.IO.Abstractions.Wrappers" Version="19.2.69"/>
+        <PackageReference Include="TestableIO.System.IO.Abstractions" Version="20.0.4"/>
+        <PackageReference Include="TestableIO.System.IO.Abstractions.Wrappers" Version="20.0.4"/>
         <PackageReference Include="ValveKeyValue" Version="0.9.0.267"/>
     </ItemGroup>
 
