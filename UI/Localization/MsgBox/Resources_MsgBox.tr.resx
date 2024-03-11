@@ -20,46 +20,46 @@
         </value>
   </resheader>
   <data name="MsgBox_Button_No" xml:space="preserve">
-        <value>いいえ</value>
+        <value>Hayır</value>
     </data>
   <data name="MsgBox_Button_NoNoAsk" xml:space="preserve">
-        <value>いいえ、そして問い合わせないで</value>
+        <value>Hayır ve Bir Daha Sorma</value>
     </data>
   <data name="MsgBox_Button_Yes" xml:space="preserve">
-        <value>はい</value>
+        <value>Evet</value>
     </data>
   <data name="MsgBox_Content_BrokenMods" xml:space="preserve">
-        <value>あなたのダウンロードは問題があります\nもし0KBのModはあれば、削除して再起動する\n{0}</value>
+        <value>İndirdiğin modlar bozuk\nEğer 0KB modlar varsa silip uygulamayı geri başlatın\n{0}</value>
     </data>
   <data name="MsgBox_Button_YesNoAsk" xml:space="preserve">
-        <value>はい、そして問い合わせないで</value>
+        <value>Evet ve Bir Daha Sorma</value>
     </data>
   <data name="MsgBox_Content_ChangeModStateFailed" xml:space="preserve">
-        <value>Mod 起動/禁止失敗\n{0}</value>
+        <value>Mod etkinleştirme/devre dışı bırakma başarısız oldu\n{0}</value>
     </data>
   <data name="MsgBox_Content_ChangeModStateFailed_Game" xml:space="preserve">
-        <value>Mod 起動/禁止失敗。　ゲームは動いていますか?\n{0}</value>
+        <value>Mod etkinleştirme/devre dışı bırakma başarısız oldu. Oyun çalışıyor mu?\n{0}</value>
     </data>
   <data name="MsgBox_Content_ChangeModStateFailed_Unauthorized" xml:space="preserve">
-        <value>Mod 起動/禁止失敗。權限がいません\n{0}</value>
+        <value>Mod etkinleştirme/devre dışı bırakma başarız oldu. Yetki bulunamadı\n{0}</value>
     </data>
   <data name="MsgBox_Content_CheckUpdateFailed" xml:space="preserve">
-        <value>アップロード検査失敗\nインターネット接続いますか？</value>
+        <value>Güncelleme kontrolü başarısız oldu \nÇevrim içi misin?</value>
     </data>
   <data name="MsgBox_Content_ChooseCorrectPath" xml:space="preserve">
-        <value>正しいのMuse Dashデータ選んでください！</value>
+        <value>Önce doğru Muse Dash dosyasını seçin!</value>
     </data>
   <data name="MsgBox_Content_ChoosePath" xml:space="preserve">
-        <value>MuseDashのインストール先が指定されていません！\nインストール先のフォルダを選択してください。</value>
+        <value>Bir Muse Dash dosyası seçmedin\nLütfen bir dosya seçin</value>
     </data>
   <data name="MsgBox_Content_CopyUpdaterFailed" xml:space="preserve">
-        <value>アップデータをターゲットパスにコピーできません\n{0}</value>
+        <value>Cannot copy Updater to target path\n{0}</value>
     </data>
   <data name="MsgBox_Content_DeleteMelonLoaderZipFailed" xml:space="preserve">
-        <value>MelonLoader.zip を削除できませんでした\n{0}\nエラー: {1}\n手動で削除してください</value>
+        <value>Failed to delete MelonLoader.zip in\n{0}\nError:{1}\nTry to manually delete</value>
     </data>
   <data name="MsgBox_Content_DeleteModConfirm" xml:space="preserve">
-        <value>MelonLoader. zip を削除できませんでした\n{0}\nエラー: {1}\n手動で削除してください</value>
+        <value>{0} is used by {1} as dependency\nAre you sure you want to delete this mod?</value>
     </data>
   <data name="MsgBox_Content_DisableReverseDependency" xml:space="preserve">
         <value>Do you want to disable the mods dependent on {0}?</value>
@@ -68,52 +68,52 @@
         <value>{0} is used by {1} as dependency\nAre you sure you want to disable this mod?</value>
     </data>
   <data name="MsgBox_Content_DuplicateMods" xml:space="preserve">
-        <value>Please manually choose and delete the duplicated mod\n{0}</value>
+        <value>Lütfen çoğaltılmış modu manuel olarak seçin ve silin\n{0}</value>
     </data>
   <data name="MsgBox_Content_EnableDependency" xml:space="preserve">
         <value>Do you want to enable {0}'s dependency {1}?</value>
     </data>
   <data name="MsgBox_Content_ExeVerifyFailed" xml:space="preserve">
-        <value>Failed to verify MuseDash.exe\nMake sure you selected the right folder</value>
+        <value>MuseDash.exe'yi doğrulamak başarısız oldu\nDoğru dosyayı seçtiğinizden emin olun</value>
     </data>
   <data name="MsgBox_Content_GamePathError" xml:space="preserve">
-        <value>Your game path doesn't contain "steamapps\common\Muse Dash\musedash.exe"\nAre you using a pirated version?</value>
+        <value>Oyunun klasör adresi "steamapps\common\Muse Dash\musedash.exe içermiyor"\nKorsan bir sürümü mü oynuyorsun?</value>
     </data>
   <data name="MsgBox_Content_GetModListFailed" xml:space="preserve">
-        <value>Failed to get mod list from any source</value>
+        <value>Kaynaktan mod listesi almakta başarısız olundu</value>
     </data>
   <data name="MsgBox_Content_IncorrectMelonLoaderVersion" xml:space="preserve">
-        <value>You have an incorrect MelonLoader version installed: {0}\nPlease use the button in the ModManage window to install MelonLoader 0.5.7</value>
+        <value>MelonLoader'ın yanlış bir sürümüne sahipsiniz: {0}\nLütfen ModManage penceresindeki butonu kullanarak MelonLoader 0.5.7'yı indirin</value>
     </data>
   <data name="MsgBox_Content_IncorrectVersion" xml:space="preserve">
-        <value>MuseDash.exe is not the correct version \nAre you using a pirated or modified version?</value>
+        <value>MusaDash.exe doğru sürümde deği l\nKorsan veya modifiye edilmiş bir sürüm mü kullanıyorsun?</value>
     </data>
   <data name="MsgBox_Content_InstallDependencyFailed" xml:space="preserve">
         <value>Dependency {0} failed to install\n{1}</value>
     </data>
   <data name="MsgBox_Content_InstallMelonLoader" xml:space="preserve">
-        <value>You did not install MelonLoader\nThis is needed to run all the mods\nInstall Now?</value>
+        <value>MelonLoader'ı yüklemedin\nBu, bütün modları çalıştırmak için gereklidir\nŞimdi yükler misin?</value>
     </data>
   <data name="MsgBox_Content_InstallMelonLoaderFailed" xml:space="preserve">
-        <value>MelonLoader download failed\n{0}</value>
+        <value>MelonLoader yüklemesi başarısız oldu\n{0}</value>
     </data>
   <data name="MsgBox_Content_InstallMelonLoaderFailed_Internet" xml:space="preserve">
-        <value>MelonLoader download failed due to internet\nAre you online?\n{0}</value>
+        <value>MelonLoader yüklemesi internet yüzünden başarısız oldu\nÇevrim içi misin?\n{0}</value>
     </data>
   <data name="MsgBox_Content_InstallMelonLoaderSuccess" xml:space="preserve">
-        <value>MelonLoader has been successfully installed\n</value>
+        <value>MelonLoader başarıyla yüklendi\n</value>
     </data>
   <data name="MsgBox_Content_InstallModFailed" xml:space="preserve">
-        <value>Mod installation failed\n{0}</value>
+        <value>Mod indirmesi başarısız oldu\n{0}</value>
     </data>
   <data name="MsgBox_Content_InstallModFailed_Game" xml:space="preserve">
-        <value>Mod installation failed. Is the game running?\n{0}</value>
+        <value>Mod yüklemesi başarısız oldu. Oyun şuan çalışıyor mu?\n{0}</value>
     </data>
   <data name="MsgBox_Content_InstallModFailed_Internet" xml:space="preserve">
-        <value>Mod installation failed. Are you online?\n{0}</value>
+        <value>Mod yükleme başarısız oldu. Çevrim içi misin?\n{0}</value>
     </data>
   <data name="MsgBox_Content_InstallModSuccess" xml:space="preserve">
-        <value>{0} has been successfully installed\n</value>
+        <value>{0} başarıyla yüklendi\n</value>
     </data>
   <data name="MsgBox_Content_InstallModTools" xml:space="preserve">
         <value>You don't have MuseDashModTools mod installed\nThis checks for available updates to all the mods when launching Muse Dash\nInstall Now?</value>
@@ -122,46 +122,46 @@
         <value>Detected Muse Dash folder path is {0}\nIs this the correct game folder?</value>
     </data>
   <data name="MsgBox_Content_InvalidPath" xml:space="preserve">
-        <value>The path you have chosen is invalid. Try again</value>
+        <value>Seçtiğiniz path geçersiz. Tekrar deneyin</value>
     </data>
   <data name="MsgBox_Content_LatestVersion" xml:space="preserve">
-        <value>Update check successful\nYou are using the latest version of Muse Dash Mod Tools</value>
+        <value>Güncelleme kontrolü başarılı\nMuse Dash Mod Tools'un en güncel sürümünü kullanıyorsunuz</value>
     </data>
   <data name="MsgBox_Content_LogAnalyzeComplete" xml:space="preserve">
         <value>Log analysis completed, no obvious errors are found in your log file\nIf you still have issues please go to troubleshoot channel</value>
     </data>
   <data name="MsgBox_Content_NewerVersion" xml:space="preserve">
-        <value>A newer version of Muse Dash Mod Tools ({0}) is released\n\nDo you want to install it now?\n\nRelease Title:\n{1}\n\nRelease Info:\n{2}</value>
+        <value>Muse Dash Mod Aletleri'nin yeni bir sürümü {0} yayımlandı\n\nŞimdi yüklemek ister misin?\n\nYayımlanma Başlığı:\n{1}\n\nYayımlanma Bilgisi:\n{2}</value>
     </data>
   <data name="MsgBox_Content_NoApplicationPath" xml:space="preserve">
         <value>You don't have application path in the log</value>
     </data>
   <data name="MsgBox_Content_NoDlcPurchased" xml:space="preserve">
-        <value>Cannot find purchase record for Muse Dash's DLC\nYou have to buy it in order to play custom charts</value>
+        <value>Muse Dash DLC'si için ödeme geçmişi bulunamıyor\nTopluluk şarkılarını oynayabilmek için bunu satın alman lazım</value>
     </data>
   <data name="MsgBox_Content_NoDownloadLink" xml:space="preserve">
-        <value>This mod does not have an available resource for download\n</value>
+        <value>Bu mod yüklenemek için mevcut bir kaynağa sahip değil\n</value>
     </data>
   <data name="MsgBox_Content_NoExeFound" xml:space="preserve">
         <value>Couldn't find MuseDash.exe and/or GameAssembly.dll\nPlease choose the right folder</value>
     </data>
   <data name="MsgBox_Content_NoInstallRecord" xml:space="preserve">
-        <value>Cannot verify that you have bought the game on Steam\nAre you using a pirated version?</value>
+        <value>Steam üzerinden bu oyunu satın aldığını doğrulayamıyoruz\nKorsan bir sürüm mü kullanıyorsun?</value>
     </data>
   <data name="MsgBox_Content_NoLogFile" xml:space="preserve">
         <value>No Log File Found\nYou have to launch the game once after installing MelonLoader to generate log</value>
     </data>
   <data name="MsgBox_Content_NoMelonLoaderFolder" xml:space="preserve">
-        <value>Cannot find MelonLoader Folder\nHave you installed MelonLoader?</value>
+        <value>MelonLoader dosyası bulunamıyor\nMelonLoader'ı yükledin mi?</value>
     </data>
   <data name="MsgBox_Content_NoMelonLoaderVersion" xml:space="preserve">
-        <value>Cannot find MelonLoader version from log</value>
+        <value>Kayıtlardan MelonLoader sürümü bulunamadı</value>
     </data>
   <data name="MsgBox_Content_NullPath" xml:space="preserve">
-        <value>Your stored Muse Dash Folder path is null\nPlease choose the correct folder</value>
+        <value>Muse Dash Dosya path'i bilinmiyor\nLütfen doğru dosyayı seçin</value>
     </data>
   <data name="MsgBox_Content_OutdatedMod" xml:space="preserve">
-        <value>{0} is outdated, please update using "ModManage"page</value>
+        <value>{0} 'nın sürümü eski, lütfen ''ModlarıYönet'' sayfasından güncelleştirin</value>
     </data>
   <data name="MsgBox_Content_ReadGameVersionFailed" xml:space="preserve">
         <value>Cannot read current game version\nIs your Muse Dash installation complete?\nPlease check your globalgamemanagers file in\n{0}</value>
@@ -170,28 +170,28 @@
         <value>You have not registered for Headquarters\nPlease register in #bot-commands channel in MDMC discord or mdmc.moe website</value>
     </data>
   <data name="MsgBox_Content_ReinstallMod" xml:space="preserve">
-        <value>You are asking to reinstall {0}\nPlease confirm your operation</value>
+        <value>Tekrar yüklemeye çalışıyorsunuz {0}\nLütfen operasyonunuzu doğrulayın</value>
     </data>
   <data name="MsgBox_Content_UninstallMelonLoader" xml:space="preserve">
-        <value>You are asking to uninstall MelonLoader\nPlease confirm your operation</value>
+        <value>MelonLoader'ı silmek istiyorsunuz\nLütfen operasyonunuzu doğrulayın</value>
     </data>
   <data name="MsgBox_Content_UninstallMelonLoaderFailed" xml:space="preserve">
-        <value>Cannot uninstall MelonLoader\nPlease make sure your game is not running!</value>
+        <value>MelonLoader silinmesi başarısız oldu\nLütfen oyunun arka planda çalışmadığından emin olun!</value>
     </data>
   <data name="MsgBox_Content_UninstallMelonLoaderSuccess" xml:space="preserve">
-        <value>MelonLoader has been successfully uninstalled\n</value>
+        <value>MelonLoader başarıyla silindi\n</value>
     </data>
   <data name="MsgBox_Content_UninstallModFailed" xml:space="preserve">
-        <value>Mod uninstall failed. Is the game running?\n{0}</value>
+        <value>Mod silmesi başarısız oldu. Oyunun çalışıyor mu?\n{0}</value>
     </data>
   <data name="MsgBox_Content_UninstallModFailed_Game" xml:space="preserve">
-        <value>Mod uninstall failed\n{0}</value>
+        <value>Mod silinmesi başarısız oldu\n{0}</value>
     </data>
   <data name="MsgBox_Content_UninstallModFailed_Null" xml:space="preserve">
-        <value>Cannot delete file that doesn't exist</value>
+        <value>Var olmayan bir dosyayı silemezsin</value>
     </data>
   <data name="MsgBox_Content_UninstallModSuccess" xml:space="preserve">
-        <value>{0} has been successfully deleted\n</value>
+        <value>{0} başarıyla silindi\n</value>
     </data>
   <data name="MsgBox_Content_UnzipMelonLoaderFailed" xml:space="preserve">
         <value>Cannot unzip MelonLoader.zip in\n{0}\nError:{1}\nTry to manually unzip?</value>
@@ -200,30 +200,30 @@
         <value>Cannot find Updater\nPlease make sure you have downloaded full software,\nand check your antivirus</value>
     </data>
   <data name="MsgBox_Title_AnalyzeSuccess" xml:space="preserve">
-        <value>Analysis successful</value>
+        <value>Analiz başarılı</value>
     </data>
   <data name="MsgBox_Title_Failure" xml:space="preserve">
-        <value>Failure</value>
+        <value>Başarısız</value>
     </data>
   <data name="MsgBox_Title_Notice" xml:space="preserve">
         <value>Notice</value>
     </data>
   <data name="MsgBox_Title_Success" xml:space="preserve">
-        <value>Success</value>
+        <value>Başarılı</value>
     </data>
   <data name="MsgBox_Title_Warning" xml:space="preserve">
-        <value>Warning</value>
+        <value>Uyarı</value>
     </data>
   <data name="MsgBox_Content_DownloadChartFailed" xml:space="preserve">
-        <value>Chart download failed\n{0}</value>
+        <value>Harita yüklemesi başarısız oldu\n{0}</value>
     </data>
   <data name="MsgBox_Content_DownloadChartSuccess" xml:space="preserve">
-        <value>Chart {0} has been successfully downloaded\n</value>
+        <value>{0} haritası başarıyla yüklendi\n</value>
     </data>
   <data name="MsgBox_Content_OverrideChart" xml:space="preserve">
-        <value>You have already downloaded the chart {0}\nContinue downloading and overriding the existing file?</value>
+        <value>Bu haritayı çoktan yükledin {0}\nYüklemeye devam et ve var olan dosyanın üstüne yazdır?</value>
     </data>
   <data name="MsgBox_Content_NoBmsFile" xml:space="preserve">
-        <value>No charts found in the folder</value>
+        <value>Bu dosyada hiç harita bulunamadı</value>
     </data>
 </root>

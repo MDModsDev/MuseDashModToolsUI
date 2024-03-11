@@ -1,178 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="" id="root">
-    <xsd:element name="root" msdata:IsDataSet="true">
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-        </xsd:element>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
   </xsd:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
   <resheader name="version">
-    <value>1.3</value>
+    <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Accuracy Indicator" xml:space="preserve">
-        <value>Добавляет более точный индикатор точности снизу экрана.\nТакже показывает среднюю точность в миллисекундах в конце уровня.</value>
-    </data>
+    <value>Добавляет более точный индикатор точности снизу экрана.\nТакже показывает среднюю точность в миллисекундах в конце уровня.</value>
+  </data>
   <data name="AccuracyDisplay" xml:space="preserve">
-        <value>Показывает точность во время игры.</value>
-    </data>
+    <value>Показывает точность во время игры.</value>
+  </data>
   <data name="Alt Tab Mute" xml:space="preserve">
-        <value>Заглушает игру, когда окно свёрнуто.</value>
-    </data>
+    <value>Заглушает игру, когда окно свёрнуто.</value>
+  </data>
   <data name="AlwaysAprilFool" xml:space="preserve">
-        <value>Босс всегда стреляет птицами, туториал теперь всегда, как на первое апреля, включает Goodtek hidden</value>
-    </data>
+    <value>Босс всегда стреляет птицами, туториал теперь всегда, как на первое апреля, включает Goodtek hidden</value>
+  </data>
   <data name="AlwaysBadApple" xml:space="preserve">
-        <value>Мод, который делает все чёрно-белым со сценой Touhou</value>
-    </data>
+    <value>Мод, который делает все чёрно-белым со сценой Touhou</value>
+  </data>
   <data name="AlwaysPigeons" xml:space="preserve">
-        <value>Босс всегда стреляет птицами, не используйте с модом AlwaysAprilFools</value>
-    </data>
+    <value>Босс всегда стреляет птицами, не используйте с модом AlwaysAprilFools</value>
+  </data>
   <data name="BestCombinationSuggest" xml:space="preserve">
-        <value>Показывает лучшую комбинацию для уровня в меню паузы\nПоказанное комбо чаще всего правильное, но не рассчитывайте на него всегда\nЕсли не знаете, что взять, то используйте CharacterScroreboard</value>
-    </data>
+    <value>Показывает лучшую комбинацию для уровня в меню паузы\nПоказанное комбо чаще всего правильное, но не рассчитывайте на него всегда\nЕсли не знаете, что взять, то используйте CharacterScroreboard</value>
+  </data>
   <data name="BPMDisplay" xml:space="preserve">
-        <value>Показывает BPM инфо сверху от надписи со создателем чарта на экране подготовки</value>
-    </data>
+    <value>Показывает BPM инфо сверху от надписи со создателем чарта на экране подготовки</value>
+  </data>
   <data name="CharacterRandomizer" xml:space="preserve">
-        <value>Выбирает случайную комбинацию каждый раз, когда вы заходите в уровень</value>
-    </data>
+    <value>Выбирает случайную комбинацию каждый раз, когда вы заходите в уровень</value>
+  </data>
   <data name="CharacterScoreboard" xml:space="preserve">
-        <value>Показывает сколько какие-либо персонажи получили опыта в таблице лидеров (OCS)\nТакже можно посмотреть личные рекорды (LCS)</value>
-    </data>
+    <value>Показывает сколько какие-либо персонажи получили опыта в таблице лидеров (OCS)\nТакже можно посмотреть личные рекорды (LCS)</value>
+  </data>
   <data name="ChartDeleter" xml:space="preserve">
-        <value>Позволяет ставить чарты в очередь для удаления или перемещения когда вы выходите из игры.</value>
-    </data>
+    <value>Позволяет ставить чарты в очередь для удаления или перемещения когда вы выходите из игры.</value>
+  </data>
   <data name="ChartReview" xml:space="preserve">
-        <value>Автоматически выбирает сонную Рин, ставит оффсет на 0, меняет fever на ручной, выключает некоторые элементы интерфейса.\nМожно включать/выключать прямо в игре</value>
-    </data>
+    <value>Автоматически выбирает сонную Рин, ставит оффсет на 0, меняет fever на ручной, выключает некоторые элементы интерфейса.\nМожно включать/выключать прямо в игре</value>
+  </data>
   <data name="ChineseMode" xml:space="preserve">
-        <value>Цензурит некоторые аспекты игры (персонажей, иллюстрации и прочее)</value>
-    </data>
+    <value>Цензурит некоторые аспекты игры (персонажей, иллюстрации и прочее)</value>
+  </data>
   <data name="Cinema" xml:space="preserve">
-        <value>Позволяет использовать видео как задний план в чартах</value>
-    </data>
+    <value>Позволяет использовать видео как задний план в чартах</value>
+  </data>
   <data name="CustomAlbums" xml:space="preserve">
-        <value>Позволяет играть в кастомные чарты</value>
-    </data>
+    <value>Позволяет играть в кастомные чарты</value>
+  </data>
   <data name="CustomAnchorSupport" xml:space="preserve">
-        <value>Позволяет использовать "Add the streamer" тег в файле info.json, чтобы помечать треки без авторских прав\n(для режима стримера)</value>
-    </data>
+    <value>Позволяет использовать "Add the streamer" тег в файле info.json, чтобы помечать треки без авторских прав\n(для режима стримера)</value>
+  </data>
   <data name="CustomBGBrightness" xml:space="preserve">
-        <value>Позволяет делать яркость заднего плана ниже, чем 40%</value>
-    </data>
+    <value>Позволяет делать яркость заднего плана ниже, чем 40%</value>
+  </data>
   <data name="CustomHitSound" xml:space="preserve">
-        <value>Позволяет делать кастомные звуки ударов\nБолее подробная инструкция есть в файле readme на гитхабе</value>
-    </data>
+    <value>Позволяет делать кастомные звуки ударов\nБолее подробная инструкция есть в файле readme на гитхабе</value>
+  </data>
   <data name="CustomLoadingScreens" xml:space="preserve">
-        <value>Позволяет добавлять кастомные экраны загрузки (папка CustomLoadingScreens)\nТакже позволяет добавлять кастомные сообщения загрузки (UserData/CustomLoadingScreens.cfg)\nСообщения можно совмещать с иллюстрациями, или оставить случайными</value>
-    </data>
+    <value>Позволяет добавлять кастомные экраны загрузки (папка CustomLoadingScreens)\nТакже позволяет добавлять кастомные сообщения загрузки (UserData/CustomLoadingScreens.cfg)\nСообщения можно совмещать с иллюстрациями, или оставить случайными</value>
+  </data>
   <data name="CustomResolution" xml:space="preserve">
-        <value>Добавляет кастомную опцию в настройках разрешения, которую можно изменить в конфиге</value>
-    </data>
+    <value>Добавляет кастомную опцию в настройках разрешения, которую можно изменить в конфиге</value>
+  </data>
   <data name="EffectDisable" xml:space="preserve">
-        <value>Выключает некоторые эффекты в игре</value>
-    </data>
+    <value>Выключает некоторые эффекты в игре</value>
+  </data>
   <data name="FavGirl" xml:space="preserve">
-        <value>Позволяет выбирать любимых персонажей и эльфинов\nС этим модом у вас будет внешний вид понравившихся персонажей/эльфинов, а перки от выбранных.</value>
-    </data>
+    <value>Позволяет выбирать любимых персонажей и эльфинов\nС этим модом у вас будет внешний вид понравившихся персонажей/эльфинов, а перки от выбранных.</value>
+  </data>
   <data name="FC AP indicator" xml:space="preserve">
-        <value>Показывает, проходите ли вы на AP/FC, также показывает кол-во промахов/грейтов</value>
-    </data>
+    <value>Показывает, проходите ли вы на AP/FC, также показывает кол-во промахов/грейтов</value>
+  </data>
   <data name="FeverEffectDisable" xml:space="preserve">
-        <value>Выключает эффект заднего плана fever'а</value>
-    </data>
+    <value>Выключает эффект заднего плана fever'а</value>
+  </data>
   <data name="Headquarters" xml:space="preserve">
-        <value>Позволяет отправлять рекорды катсомных чартов, полученных с сайта MDMC</value>
-    </data>
+    <value>Позволяет отправлять рекорды катсомных чартов, полученных с сайта MDMC</value>
+  </data>
   <data name="HiddenQoL" xml:space="preserve">
-        <value>Добавляет кнопку, которая позволяет всегда видеть скрытые сложности.\nК примеру, вам не нужно быстро кликать или делать что-либо ещё, чтобы открыть скрытую сложность</value>
-    </data>
+    <value>Добавляет кнопку, которая позволяет всегда видеть скрытые сложности.\nК примеру, вам не нужно быстро кликать или делать что-либо ещё, чтобы открыть скрытую сложность</value>
+  </data>
   <data name="IntroSkip" xml:space="preserve">
-        <value>Пропускает сцену "PeroPero HasuHasu" при загрузке</value>
-    </data>
+    <value>Пропускает катсцену запуска, ускоряя игру.\nВ конфиг файле можно настроить скорость, а также будет ли пропускать экран с анимированной иллюстрацией.\nМод является наследником оригинального мода RobotLucca'и</value>
+  </data>
   <data name="KeybindManager" xml:space="preserve">
-        <value>Библиотека для других модов, позволяющая использовать кейбинды</value>
-    </data>
+    <value>Библиотека для других модов, позволяющая использовать кейбинды</value>
+  </data>
   <data name="LocalizeLib" xml:space="preserve">
-        <value>Библиотека для локализации модов</value>
-    </data>
+    <value>Библиотека для локализации модов</value>
+  </data>
   <data name="MDRPC" xml:space="preserve">
-        <value>Кастомный статус Muse Dash для дискорда</value>
-    </data>
+    <value>Кастомный статус Muse Dash для дискорда</value>
+  </data>
   <data name="ModManager" xml:space="preserve">
-        <value>Позволяет выключать и удалять моды прямо в игре</value>
-    </data>
+    <value>Позволяет выключать и удалять моды прямо в игре</value>
+  </data>
   <data name="Muse Dash Mirror" xml:space="preserve">
-        <value>Библиотека, позволяющая проще получать доступ к PlayerData, BattleComponents информации и создавать интерфейсы.\nСам мод ничего не делает</value>
-    </data>
+    <value>Библиотека, позволяющая проще получать доступ к PlayerData, BattleComponents информации и создавать интерфейсы.\nСам мод ничего не делает</value>
+  </data>
   <data name="MuseDashModTools" xml:space="preserve">
-        <value>Автоматически находит и записывает в логи доступные обновления модов</value>
-    </data>
+    <value>Автоматически находит и записывает в логи доступные обновления модов</value>
+  </data>
   <data name="NoAutoPause" xml:space="preserve">
-        <value>Не даёт игре уйти в паузу при сворачивании игры</value>
-    </data>
+    <value>Не даёт игре уйти в паузу при сворачивании игры</value>
+  </data>
   <data name="NoLevelUpAnimations" xml:space="preserve">
-        <value>Пропускает анимацию получения нового уровня</value>
-    </data>
+    <value>Пропускает анимацию получения нового уровня</value>
+  </data>
   <data name="PerfectDisable" xml:space="preserve">
-        <value>Позволяет настроить оценку попаданий.\n(к примеру: показывать early/late перфекты но не показывать чистые перфекты)\nВдохновленно ADOFAI Tweaks</value>
-    </data>
+    <value>Позволяет настроить оценку попаданий.\n(к примеру: показывать early/late перфекты но не показывать чистые перфекты)\nВдохновленно ADOFAI Tweaks</value>
+  </data>
   <data name="PopupLib" xml:space="preserve">
-        <value>Библиотека для модов, позволяющая управлять всплывающими окнами</value>
-    </data>
+    <value>Библиотека для модов, позволяющая управлять всплывающими окнами</value>
+  </data>
   <data name="PreventLowAcc" xml:space="preserve">
-        <value>Предотвращает отправку рекорда. чтобы можно было успеть сделать скриншот</value>
-    </data>
+    <value>Предотвращает отправку рекорда. чтобы можно было успеть сделать скриншот</value>
+  </data>
   <data name="QuickRestart" xml:space="preserve">
-        <value>Позволяет выйти из уровня, нажав Delete. Также позволяет использовать Backspace для перезапуска уровня\nС новым обновлением теперь можно ставить кастомные бинды</value>
-    </data>
+    <value>Позволяет выйти из уровня, нажав Delete. Также позволяет использовать Backspace для перезапуска уровня\nС новым обновлением теперь можно ставить кастомные бинды</value>
+  </data>
   <data name="QuickSwitchCombination" xml:space="preserve">
-        <value>Позволяет ставить бинды чтобы быстро менять персонажей\nТеперь есть меню для добавления биндов</value>
-    </data>
+    <value>Позволяет ставить бинды чтобы быстро менять персонажей\nТеперь есть меню для добавления биндов</value>
+  </data>
   <data name="SceneEggs" xml:space="preserve">
-        <value>Позволяет чартам использовать некоторые декорации заднего плана, которые используют официальные чарты</value>
-    </data>
+    <value>Позволяет чартам использовать некоторые декорации заднего плана, которые используют официальные чарты</value>
+  </data>
   <data name="Scoreboard characters and elfins" xml:space="preserve">
-        <value>Похож на мод CharacterScoreboard, но только теперь будут видны иконки комбинаций персонажа и эльфина.\nЕсли на них нажать, то это комбинация автоматически экипируется</value>
-    </data>
+    <value>Похож на мод CharacterScoreboard, но только теперь будут видны иконки комбинаций персонажа и эльфина.\nЕсли на них нажать, то это комбинация автоматически экипируется</value>
+  </data>
   <data name="ScrollSpeed" xml:space="preserve">
-        <value> Позволяет чартерам(не игрокам) использовать кастомную скорость прокрутки.\nБольшинство чартеров обычно не используют этот мод</value>
-    </data>
+    <value> Позволяет чартерам(не игрокам) использовать кастомную скорость прокрутки.\nБольшинство чартеров обычно не используют этот мод</value>
+  </data>
   <data name="SearchPlusPlus" xml:space="preserve">
-        <value>Показывает название, автора и сложность чарта справа сверху во время игры</value>
-    </data>
+    <value>Включает почти все функции поиска, которые только могут понадобиться(наверное).\nБиблиотеки, которые можно добавить: KeybindManager, CustomAlbums</value>
+  </data>
   <data name="Song Desc" xml:space="preserve">
-        <value>Расширение для SearchPlusPlus, позволяющее создавать папки\nи искать чарты в них</value>
-    </data>
+    <value>Показывает название, автора и сложность чарта справа сверху во время игры</value>
+  </data>
   <data name="Search++ Folder Tag" xml:space="preserve">
-        <value>Добавляет множество тегов для поиска.\nЗагляните на главную страницу или форум для большей информации</value>
-    </data>
+    <value>Расширение для SearchPlusPlus, позволяющее создавать папки\nи искать чарты в них</value>
+  </data>
   <data name="StricterJudge" xml:space="preserve">
-        <value>Усложняет игру, меняет экран оценки\nМожно вручную настроить диапазон оценки в StricterJudge.cfg</value>
-    </data>
+    <value>Усложняет игру, меняет экран оценки\nМожно вручную настроить диапазон оценки в StricterJudge.cfg</value>
+  </data>
   <data name="True rank for 999+" xml:space="preserve">
-        <value>Показывает более точное место в топе заместо "999+" от 1000 до 2000</value>
-    </data>
+    <value>Показывает более точное место в топе заместо "999+" от 1000 до 2000</value>
+  </data>
   <data name="UI Disable" xml:space="preserve">
-        <value>Позволяет выключить некоторые визуальные аспекты игры (к примеру кружки при ударе)</value>
-    </data>
+    <value>Позволяет выключить некоторые визуальные аспекты игры (к примеру кружки при ударе)</value>
+  </data>
   <data name="UltraInstinctSleepwalking" xml:space="preserve">
-        <value>Сонная Рин бьет груши с максимальной скоростью, заместо медленной</value>
-    </data>
+    <value>Сонная Рин бьет груши с максимальной скоростью, заместо медленной</value>
+  </data>
   <data name="UnlockAll2" xml:space="preserve">
-        <value>Альтернатива моду UnlockAll.\nСкрытые уровни открыты до тех пор, пока этот мод установлен</value>
-    </data>
+    <value>Альтернатива моду UnlockAll.\nСкрытые уровни открыты до тех пор, пока этот мод установлен</value>
+  </data>
   <data name="VictoryScreenSwitcher" xml:space="preserve">
-        <value>Позволяет менять экран победы в меню настроек на DJMAX или Arknights, заменяя оригинальный</value>
-    </data>
+    <value>Позволяет менять экран победы в меню настроек на DJMAX или Arknights, заменяя оригинальный</value>
+  </data>
 </root>

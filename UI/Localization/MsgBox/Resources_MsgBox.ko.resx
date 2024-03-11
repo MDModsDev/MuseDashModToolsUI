@@ -224,6 +224,6 @@
         <value>이미 차트를 다운로드했습니다. {0}\n계속 다운로드하고 바꾸시겠습니까?</value>
     </data>
   <data name="MsgBox_Content_NoBmsFile" xml:space="preserve">
-        <value>No charts found in the folder</value>
+        <value>해당 폴더에서 발견된 채보 없음</value>
     </data>
 </root>

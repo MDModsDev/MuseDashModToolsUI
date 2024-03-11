@@ -118,160 +118,159 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Accuracy Indicator" xml:space="preserve">
-    <value>Añade un medidor de precisión en arriba de la barra de vida,\ny muestra al final del nivel un gráfico de tu media de precisión durante la canción.</value>
+    <value>Ekranının aşağısına daha ayrıntılı bir doğruluk indikatörü ekler.\nAyrıca oyun sonu ekranında ortalama doğruluğu milisaniye olarak gösterir.</value>
   </data>
   <data name="AccuracyDisplay" xml:space="preserve">
-    <value>Un medidor de precisión a tiempo real en la parte superior izquierda de tu pantalla.</value>
+    <value>Canlı olarak doğruluk yüzdesini gösterir.</value>
   </data>
   <data name="Alt Tab Mute" xml:space="preserve">
-    <value>Silencia Muse Dash cuando no está enfocado.</value>
+    <value>Oyun arka plandayken oyun seslerini susturur.</value>
   </data>
   <data name="AlwaysAprilFool" xml:space="preserve">
-    <value>Boss always shoots pigeons, tutorial is always april fool's version, and activates good tek hidden</value>
+    <value>Boss her zaman güvercin yollar, ve tutorial her zaman 1 nisan versiyonu olur</value>
   </data>
   <data name="AlwaysBadApple" xml:space="preserve">
-    <value>Un mod que activará el modo Bad Apple en todos los escenarios de Touhou.</value>
+    <value>Arka plan ve karakteri tohoudaki gibi siyah beyaz yapar</value>
   </data>
   <data name="AlwaysPigeons" xml:space="preserve">
-    <value>Boss always shoots pigeons, do not use AlwaysAprilFool at the same time</value>
+    <value>Boss her zaman güvercin yollar, HerZaman1Nisan modu ile beraber kullanmayın</value>
   </data>
   <data name="BestCombinationSuggest" xml:space="preserve">
-    <value>Este mod calculará cuál es la mejor combinación posible para cada Canción y Dificultad\nEntra a una canción y al pausar, podras ver la sugerencia de personajes.\n¡Pero! Toma en cuenta que el mod puede no ser preciso en muchos casos.</value>
+    <value>Bir seviye için en iyi karakter kombinasyonunu gösterir\ngenellikle doğrudur ama körü körüne inanmayın\nşüpheniz varsa KarakterSkorborduna da bakın</value>
   </data>
   <data name="BPMDisplay" xml:space="preserve">
-    <value>Este mod muestra el BPM de cada canción en la pantalla de selección de dificultad.</value>
+    <value>BPM bilgisini hazırlık ekranında seviye tasarımcı üzerinde gösteren bir mod</value>
   </data>
   <data name="CharacterRandomizer" xml:space="preserve">
-    <value>Cada vez que juegues una canción, un personaje aleatorio será seleccionado.</value>
+    <value>Her şarkı oynadağında rastgele bir karakter kombinasyonu seçilecek</value>
   </data>
   <data name="CharacterScoreboard" xml:space="preserve">
-    <value>Displays which character a specific score was achieved with on the leaderboard (OCS)\nIt can also display your own local scores (LCS)\nLCS and OCS have inconsistent behavior on custom songs.</value>
+    <value>Sıralamada hangi karakter ile skorun yapıldığını gösterir (OCS)\n Ayrıca kendi yerel skorlarını da gösterir (LCS)\n LCS ve OCS topluluk şarkılarında tutarlı olmayabilir.</value>
   </data>
   <data name="ChartDeleter" xml:space="preserve">
-    <value>Permite hacer una lista de charts que desees eliminar o mover, cuando cierres Muse Dash.</value>
+    <value>Oyundan çıktığında topluluk şarkılarnın silmeni veya yerini değiştirmene olanak sağlar.</value>
   </data>
   <data name="ChartReview" xml:space="preserve">
-    <value>Automáticamente selecciona a Rin Sleepwalker, establece el offset a 0,\ndesactiva el Auto-Fever y Oculta elementos de la interfaz.\n¡Además! Tienes un botón in-game para poder desactivar esto cuando quieras.</value>
+    <value>Otomatik olarak Sleepwalker Rin'i seçer, ofsetti 0 yapar, fever modunu manuel yapar ve bazı kullanıcı arayüzü elementlerini devre dışı bırakır\n Oyun içinde açıp kapatılabilir</value>
   </data>
   <data name="ChineseMode" xml:space="preserve">
-    <value>Permite activar Muse Dash en modo Chino. Esto modifica contenido del juego como:\n-  Modelos de los Personajes\n- Ilustraciones\n- Escenarios\n- Y otras características exclusivas</value>
+    <value>Oyunun bazı kısımları sanmsürler (Karakterler, ilüstrasyonlar vesaire)</value>
   </data>
   <data name="Cinema" xml:space="preserve">
-    <value>El mod permite a ciertos charts, reproducir un video en reemplazo del Fondo de Escenario.</value>
+    <value>Topluluk şarkı haritalarında video arka planı görmeni sağlar</value>
   </data>
   <data name="CustomAlbums" xml:space="preserve">
-    <value>Este mod permite la carga de Custom Charts(O canciones customs).</value>
+    <value>Topluluk tarafından yapılmış şarkı haritalarını indirmeni sağlar</value>
   </data>
   <data name="CustomAnchorSupport" xml:space="preserve">
-    <value>Este mod permite que algunos Custom Charts estén disponibles en el Modo Streamer.\n
-¡Esto permite jugar Canciones NO Oficiales, sabiendo que No tienen reclamación por Copyright!</value>
+    <value>Allows you to use add the streamer tag in your info.json to mark a song as copyright-free\n(for use with streamer mode)</value>
   </data>
   <data name="CustomBGBrightness" xml:space="preserve">
-    <value>Permite bajar el brillo del escenario a menos del 40%</value>
+    <value>Arka plan parlaklığını yüzde 40'ın altında ayarlayabilmene olanak sağlar</value>
   </data>
   <data name="CustomHitSound" xml:space="preserve">
-    <value>Allows you to set custom hitsounds\nDetailed instructions in the github readme</value>
+    <value>Kendi vuruş seslerini eklemeni sağlar\ndetaylı yönerge github readme'de var</value>
   </data>
   <data name="CustomLoadingScreens" xml:space="preserve">
-    <value>Permite tener Pantallas de Carga y Mensajes de Carga customizables.\nLos mensajes pueden estar vinculados a las imágenes que añadas\no dejar que se activen de manera aleatoria.\nMás información en: UserData/CustomLoadingScreens.cfg </value>
+    <value>Allows you to add custom loading screens (CustomLoadingScreens folder)\nAlso allows you to add custom loading screen messages (UserData/CustomLoadingScreens.cfg)\nMessages can be paired with an image, or be left as random</value>
   </data>
   <data name="CustomResolution" xml:space="preserve">
-    <value>Permite ajustar la resolución de Muse Dash a uno que tú prefieras desde la configuración.</value>
+    <value>Çözünürlük ayarları ekler, config dosyasından değiştirebilirsin</value>
   </data>
   <data name="EffectDisable" xml:space="preserve">
-    <value>Desactiva algunos efectos in-game</value>
+    <value>Bazı oyun içi efektleri devre dışı bırakır</value>
   </data>
   <data name="FavGirl" xml:space="preserve">
-    <value>Permite el reemplazar las habilidades de los Personajes y Elfins por otros.\nEl personaje/elfin que selecciones abajo a la derecha será la habilidad seleccionada,\nmientras que el Personaje/Elfin seleccionado con el corazón de arriba a la izquierda, será la apariencia que desees usar.</value>
+    <value>Favori karakter ve elfinlerini seçmeni sağlar\nBaşka bir karakter seçsen bile oynarken favorilediğin karakterin gibi gözükeceksin.\nSeçtiğin karakterin yeteneklerine sahip olacaksın ve skorun skorborda o karakter olarak kaydedilecektir</value>
   </data>
   <data name="FC AP indicator" xml:space="preserve">
-    <value>Este mod mostrará cuando estés en una ruta AP(Todo Perfecto), FC(Full Combo) o La cantidad de Fallas y Greats registrados.</value>
+    <value>Tamamı mükemmel/full kombo mu yapıyorsun onu gösterir ve harika ve kaçırdıklarının sayısını da gösterir</value>
   </data>
   <data name="FeverEffectDisable" xml:space="preserve">
-    <value>Desactiva el fondo del modo Fever</value>
+    <value>''Fever'' arka plan efektini devre dışı bırakır</value>
   </data>
   <data name="Headquarters" xml:space="preserve">
-    <value>Permite acceder al Ranking de MDMC a todas las canciones descargadas desde la web MDMC.</value>
+    <value>Topluluk tarafından yapılan haritadaki skorlarını MDMC websitesine göndermeni sağlar</value>
   </data>
   <data name="HiddenQoL" xml:space="preserve">
-    <value>Permite añadir un botón el cual permite activar/desactivar el modo Hidden de las canciones.\nBastante útil para saltarte los pasos de desbloquearlos</value>
+    <value>Gizli zorlukları gösteren bir buton ekler.\n\ Artık onları açmak için spam tıklamana gerek kalmaz</value>
   </data>
   <data name="IntroSkip" xml:space="preserve">
     <value>Skips past opening scene by speeding the game up.\nYou can configure the speed and whether to skip past the animated illustration.\nSpiritual successor of RobotLucca's mod</value>
   </data>
   <data name="KeybindManager" xml:space="preserve">
-    <value>Una librería que permite a otros mods comprender y detectar muchas más teclas.</value>
+    <value>Başka modları ayrıştırmak ve tuş atamalarını değiştirmek için bir kütüphane</value>
   </data>
   <data name="LocalizeLib" xml:space="preserve">
-    <value>Una librería que permite a otros mods detectar texto</value>
+    <value>Başka modların paragrafları lokalize etmesi için bir kütüphane</value>
   </data>
   <data name="MDRPC" xml:space="preserve">
-    <value>Muse Dash Rich Presence. Un mod que permite mostrar que canción estás jugando en Discord.</value>
+    <value>Muse Dash Rich Presence, açıklamaya gerek yok.</value>
   </data>
   <data name="ModManager" xml:space="preserve">
-    <value>Un mod que te permite activar/desactivar mods mientras esta in-game.</value>
+    <value>Oyundayken modları devre dışı bırakıp silmeni sağlar.</value>
   </data>
   <data name="Muse Dash Mirror" xml:space="preserve">
-    <value>Una librería que permite acceder a Datos del Jugador, Componentes de Batalla y Crear elementos de Interfaz.</value>
+    <value>A library that makes it easier to access PlayerData, BattleComponents info and create UI elements.\nThis mod does nothing by itself.</value>
   </data>
   <data name="MuseDashModTools" xml:space="preserve">
-    <value>Automáticamente analiza todos los mods y detecta posibles actualizaciones de cada una.</value>
+    <value>Otomatik olarak kayıtları ve mevcut mod güncellemelerini bulur.</value>
   </data>
   <data name="NoAutoPause" xml:space="preserve">
-    <value>Evita que la Auto Pausa de Muse Dash sea active al cambiar de pestaña. </value>
+    <value>Oyun arka plandayken otomatik olarak durdurmayı devre dışı bırakır.</value>
   </data>
   <data name="NoLevelUpAnimations" xml:space="preserve">
-    <value>Permite saltarte la animación de Subiste de Nivel</value>
+    <value>Seviye atlama animasyonları çok uzun sürüyor.\nHadi onları atlayalım.</value>
   </data>
   <data name="PerfectDisable" xml:space="preserve">
-    <value>Permite ocultar como el juego juzga cada objeto que golpees.\nPor ejemplo, en ADOFAI se muestran los avisos de Early/Late, pero no se\nmuestra nada cuando es un Perfecto Exacto.</value>
+    <value>Oyun içi yargıları devre dışı bırakmanı sağlar\n(örnek: erken/geç mükemmelleri gösterir ama gerçek mükemmeleri göstermez)\n ADOFAI tweaksden ilham alınmıştır</value>
   </data>
   <data name="PopupLib" xml:space="preserve">
-    <value>Una librería que permite gestionar Ventanas y Popups</value>
+    <value>A library for other mods to manage popups and windows</value>
   </data>
   <data name="PreventLowAcc" xml:space="preserve">
-    <value>Un mod que previene enviar puntajes al leaderboard,\npero permite sacar screenshots del intento.</value>
+    <value>Skorları sıralamaya göndermeni engeller\n ama ekran görüntüsü alabilirsin.</value>
   </data>
   <data name="QuickRestart" xml:space="preserve">
-    <value>Pulsar la tecla [Supr] te dejará abandonar el chart\nPulsar la tecla [ ← ] te dejará reiniciar el chart\n¡Y ahora puedes customizar que tecla usar para cada acción!</value>
+    <value>Allows you to use Delete to instantly leave a chart &amp; Allows you to use Backspace to instantly restart a chart\nUpdate now allows you to set custom keybinds.</value>
   </data>
   <data name="QuickSwitchCombination" xml:space="preserve">
-    <value>Permite asignar una tecla para seleccionar personajes rápidamente.\nAhora dispone de una interfaz para editar.</value>
+    <value>Karakterlerini hızlıca değiştirebilmeyi bir tuşa atayarak yapmanı sağlar\noyun için menuden yeni tuş atamaları ekleyebilirsin</value>
   </data>
   <data name="SceneEggs" xml:space="preserve">
-    <value>Hace posible que Custom Charts puedan utilizar escenarios con decoración especial.</value>
+    <value>Makes it possible for customs to use certain background decorations that the default charts use.</value>
   </data>
   <data name="Scoreboard characters and elfins" xml:space="preserve">
-    <value>Igual que CharacterScoreboard, pero permite ver un icono de los personajes utilizados,\nlos cuales puedes pulsar para seleccionar.</value>
+    <value>KarakterSkorborduna benzer lakin onun yerine tıklanabilen ikon temcileri ekler,\n tıklandığında o karakter kombinasyonuna geçiş yapar.</value>
   </data>
   <data name="ScrollSpeed" xml:space="preserve">
-    <value>Permite a los Diseñadores poder asignar velocidades custom a los charts.\nEs completamente opcional el utilizar este mod.</value>
+    <value>Şarkı seviyeleri yapanların (oyuncuların değil) özel taslak hızı yapmalarını sağlar.\nKullanıp kullanmamak tamamen sana kalmış, lakin çoğu şarkı seviyesi üreticisi bunu kullanmıyor.</value>
   </data>
   <data name="SearchPlusPlus" xml:space="preserve">
     <value>Any search feature you will ever need (probably).\nOptional dependencies: KeybindManager, CustomAlbums</value>
   </data>
   <data name="Song Desc" xml:space="preserve">
-    <value>Displays the title, artist, and difficulty of the song in the top-right corner during play.</value>
+    <value>Şarkının başlığını, sanatçıyı ve zorluğu oynarken sağ üst köşede gösterir.</value>
   </data>
   <data name="Search++ Folder Tag" xml:space="preserve">
-    <value>An extension to SearchPlusPlus, allowing you to create folders\nand search for songs in said folders.</value>
+    <value>Search++ için bir uzantı, dosya yaratmana olanak sağlar\nve o dosyalarda şarkıları arayabilirsin.</value>
   </data>
   <data name="StricterJudge" xml:space="preserve">
-    <value>Este mod aumenta la dificultad de Muse Dash, reduciendo el área de hit de los objetos del chart.</value>
+    <value>Oyunu daha zorlaştıran ve mükemmel harika kısmını daha kısaltan bir mod\n yargılama kısmını manuel olarak StricterJudge.cfg'den değiştirebilirsin</value>
   </data>
   <data name="True rank for 999+" xml:space="preserve">
-    <value>Permite mostrar una mayor cantidad del ranking, en lugar del limitado "+999"</value>
+    <value>+999 yerine şarkılarda 1000 ile 2000 arasındaki gerçek sıralamanı gösterir</value>
   </data>
   <data name="UI Disable" xml:space="preserve">
-    <value>Permite ocultar elementos de la interfaz de Muse Dash (Por ejemplo, los círculos de golpe)</value>
+    <value>Oyunun bazı görsel kısımlarını devre dışı bırakmanı sağlar (örnek: vuruş çemberi)</value>
   </data>
   <data name="UltraInstinctSleepwalking" xml:space="preserve">
-    <value>Este mod permite que Sleepwalker Rin pueda alcanzar el hit máximo de todos los smashers.</value>
+    <value>Sleepwalker Rin masherları normal bir hız yerine maksimum hızda yapar.</value>
   </data>
   <data name="UnlockAll2" xml:space="preserve">
-    <value>Permite desbloquear todas las dificultades Master automáticamente,\n solo mientras el mod esté instalado.</value>
+    <value>An alternative to UnlockAll.\nMaster's stay unlocked only for as long as the mod is installed.</value>
   </data>
   <data name="VictoryScreenSwitcher" xml:space="preserve">
-    <value>Permite reemplazar la Pantalla de Victoria al modo DJMAX o ARKNIGHTS.</value>
+    <value>Allows you to switch victory screen in the settings menu either to DJMAX or Arknights. Swaps original screen with arknights/djmax and vise versa.</value>
   </data>
 </root>

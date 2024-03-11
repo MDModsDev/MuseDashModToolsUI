@@ -242,63 +242,66 @@
         <value>모드 검색(이름, 제작자, 설명)</value>
     </data>
   <data name="XAML_InfoJson_ChartName" xml:space="preserve">
-        <value>Name</value>
+        <value>곡명</value>
     </data>
   <data name="XAML_InfoJson_Author" xml:space="preserve">
-        <value>Artist</value>
+        <value>아티스트</value>
     </data>
   <data name="XAML_InfoJson_LevelDesigner" xml:space="preserve">
-        <value>Level Designer</value>
+        <value>레벨 디자이너</value>
     </data>
   <data name="XAML_InfoJson_Scene" xml:space="preserve">
-        <value>Scene</value>
+        <value>스테이지</value>
     </data>
   <data name="XAML_InfoJson_BPM" xml:space="preserve">
         <value>BPM</value>
     </data>
   <data name="XAML_InfoJson_Difficulty" xml:space="preserve">
-        <value>Difficulty</value>
+        <value>난이도</value>
     </data>
   <data name="XAML_InfoJson_SearchTags" xml:space="preserve">
-        <value>Search Tags</value>
+        <value>태그 검색</value>
     </data>
   <data name="XAML_InfoJson_HideBmsMode" xml:space="preserve">
-        <value>Hide Bms Mode</value>
+        <value>숨겨진 BMS의 모드</value>
     </data>
   <data name="XAML_InfoJson_HideBmsDifficulty" xml:space="preserve">
-        <value>Hide Bms Difficulty</value>
+        <value>숨겨진 BMS의 난이도</value>
     </data>
   <data name="XAML_InfoJson_HideBmsMessage" xml:space="preserve">
-        <value>Hide Bms Message</value>
+        <value>숨겨진 BMS의 메시지</value>
     </data>
   <data name="XAML_ChooseChartPath" xml:space="preserve">
-        <value>Choose Chart Folder</value>
+        <value>채보 폴더 선택</value>
     </data>
   <data name="XAML_Scene_SpaceStation" xml:space="preserve">
-        <value>Space Station</value>
+        <value>우주 정거장</value>
     </data>
   <data name="XAML_Scene_Retrocity" xml:space="preserve">
-        <value>Retrocity</value>
+        <value>복고풍 도시</value>
     </data>
   <data name="XAML_Scene_Castle" xml:space="preserve">
-        <value>Castle</value>
+        <value>성</value>
     </data>
   <data name="XAML_Scene_RainyNight" xml:space="preserve">
-        <value>RainyNight</value>
+        <value>비 내리는 밤</value>
     </data>
   <data name="XAML_Scene_Candyland" xml:space="preserve">
-        <value>Candyland</value>
+        <value>사탕나라</value>
     </data>
   <data name="XAML_Scene_Oriental" xml:space="preserve">
-        <value>Oriental</value>
+        <value>오리엔탈</value>
     </data>
   <data name="XAML_Scene_LetsGroove" xml:space="preserve">
-        <value>Let's Groove</value>
+        <value>그루브 코스터</value>
     </data>
   <data name="XAML_Scene_Touhou" xml:space="preserve">
-        <value>Touhou</value>
+        <value>환상향</value>
     </data>
   <data name="XAML_Scene_DJMAX" xml:space="preserve">
-        <value>DJMAX</value>
+        <value>DJMAX 공동묘지</value>
+    </data>
+  <data name="XAML_ConfigFile" xml:space="preserve">
+        <value>Config 파일</value>
     </data>
 </root>

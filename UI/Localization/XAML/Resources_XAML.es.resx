@@ -301,4 +301,7 @@
   <data name="XAML_Scene_DJMAX" xml:space="preserve">
         <value>DJMAX</value>
     </data>
+  <data name="XAML_ConfigFile" xml:space="preserve">
+        <value>Configuración</value>
+    </data>
 </root>

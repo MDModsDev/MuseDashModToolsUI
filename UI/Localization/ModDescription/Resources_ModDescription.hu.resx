@@ -1,178 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="" id="root">
-    <xsd:element name="root" msdata:IsDataSet="true">
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-        </xsd:element>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
   </xsd:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
   <resheader name="version">
-    <value>1.3</value>
+    <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Accuracy Indicator" xml:space="preserve">
-        <value>Egy érintési hibamérőt rak a képernyőd aljára.\nA pálya végén láthatod az átlagos eltérést is.</value>
-    </data>
+    <value>Egy érintési hibamérőt rak a képernyőd aljára.\nA pálya végén láthatod az átlagos eltérést is.</value>
+  </data>
   <data name="AccuracyDisplay" xml:space="preserve">
-        <value>Egy élő százalékos pontosság jelző a mi örömünkre.</value>
-    </data>
+    <value>Egy élő százalékos pontosság jelző a mi örömünkre.</value>
+  </data>
   <data name="Alt Tab Mute" xml:space="preserve">
-        <value>Lenémítja a játékot, amikor az nincsen fókuszban.</value>
-    </data>
+    <value>Lenémítja a játékot, amikor az nincsen fókuszban.</value>
+  </data>
   <data name="AlwaysAprilFool" xml:space="preserve">
-        <value>A Boss mindig galambokat lő ki, és elhiteti a játékkal, hogy április 1. van</value>
-    </data>
+    <value>A Boss mindig galambokat lő ki, és elhiteti a játékkal, hogy április 1. van (tutorial, GOODTEK rejtett pálya)</value>
+  </data>
   <data name="AlwaysBadApple" xml:space="preserve">
-        <value>Egy mod ami átalakítja a hátteret, karaktert, stb., fekete fehérré a Touhou helyszínen</value>
-    </data>
+    <value>Egy mod ami átalakítja a hátteret, karaktert, stb., fekete fehérré a Touhou helyszínen</value>
+  </data>
   <data name="AlwaysPigeons" xml:space="preserve">
-        <value>A Boss mindig galambokat lő, ne használd az AlwaysAprilFool mod-dal együtt</value>
-    </data>
+    <value>A Boss mindig galambokat lő, ne használd az AlwaysAprilFool mod-dal együtt</value>
+  </data>
   <data name="BestCombinationSuggest" xml:space="preserve">
-        <value>Kiírja a pályához a legjobb karakter kombinációt a Pause menüben\nEz a kombináció csak általában helyes, nem pedig mindig, nem bízz meg benne vakon\nHa nem vagy biztos, használd a CharacterScoreboard vagy ScoreboardCharacters mod-ot</value>
-    </data>
+    <value>Kiírja a pályához a legjobb karakter kombinációt a Pause menüben\nEz a kombináció csak általában helyes, nem pedig mindig, nem bízz meg benne vakon\nHa nem vagy biztos, használd a CharacterScoreboard vagy ScoreboardCharacters mod-ot</value>
+  </data>
   <data name="BPMDisplay" xml:space="preserve">
-        <value>Egy mod amely kiírja a főmenüben egy zenének a BPM-jét</value>
-    </data>
+    <value>Egy mod amely kiírja a főmenüben egy zenének a BPM-jét</value>
+  </data>
   <data name="CharacterRandomizer" xml:space="preserve">
-        <value>Minden probálkozásnál véletlenszerűen kiválaszt egy karakter kombinációt</value>
-    </data>
+    <value>Minden probálkozásnál véletlenszerűen kiválaszt egy karakter kombinációt</value>
+  </data>
   <data name="CharacterScoreboard" xml:space="preserve">
-        <value>Kiírja hogy mely karakterekkel lett elérve egy rekord a ranglétra (OCS gomb)\nA saját helyi próbálkozásaidat is megjeleníti (LCS)</value>
-    </data>
+    <value>Kiírja hogy mely karakterekkel lett elérve egy rekord a ranglétra (OCS gomb)\nA saját helyi próbálkozásaidat is megjeleníti (LCS)\nLCS és OCS változékony viselkedése van custom-pályákon.</value>
+  </data>
   <data name="ChartDeleter" xml:space="preserve">
-        <value>Lehetővé teszi, hogy megjelölj pályákat kitörlésre vagy áthelyezésre miután a játékból kilépsz.</value>
-    </data>
+    <value>Lehetővé teszi, hogy megjelölj pályákat kitörlésre vagy áthelyezésre miután a játékból kilépsz.</value>
+  </data>
   <data name="ChartReview" xml:space="preserve">
-        <value>Automatikusan kiválasztja a Sleepwalker-t, a késleltetést (offset) 0-ra állítja, a Fever-t manuálisra, és bizonyos UI elemek kikapcsol.\nJáték közben ki-/bekapcsolható</value>
-    </data>
+    <value>Automatikusan kiválasztja a Sleepwalker-t, a késleltetést (offset) 0-ra állítja, a Fever-t manuálisra, és bizonyos UI elemek kikapcsol.\nJáték közben ki-/bekapcsolható</value>
+  </data>
   <data name="ChineseMode" xml:space="preserve">
-        <value>A játék bizonyos részeit kicenzúrázza (Karakterek, illusztrációk, stb)</value>
-    </data>
+    <value>A játék bizonyos részeit kicenzúrázza (Karakterek, illusztrációk, stb)</value>
+  </data>
   <data name="Cinema" xml:space="preserve">
-        <value>A mod amellyel videós háttéreket tudnak használni az egyéni pályák</value>
-    </data>
+    <value>A mod amellyel videós háttéreket tudnak használni az egyéni pályák</value>
+  </data>
   <data name="CustomAlbums" xml:space="preserve">
-        <value>A mod amely lehetővé teszi az egyéni pályák betöltését</value>
-    </data>
+    <value>A mod amely lehetővé teszi az egyéni pályák betöltését</value>
+  </data>
   <data name="CustomAnchorSupport" xml:space="preserve">
-        <value>Lehetővé teszi a "streamer" címke használatát az info.json fájlba hogy copyright-mentesnek jelölj egy zenét\n(streamer módra van kitalálva)</value>
-    </data>
+    <value>Lehetővé teszi a "streamer" címke használatát az info.json fájlba hogy copyright-mentesnek jelölj egy zenét\n(streamer módra van kitalálva)</value>
+  </data>
   <data name="CustomBGBrightness" xml:space="preserve">
-        <value>Engedélyezi hogy 40%-nál alacsonyabbra állítsd a háttér fényerejét</value>
-    </data>
+    <value>Engedélyezi hogy 40%-nál alacsonyabbra állítsd a háttér fényerejét</value>
+  </data>
   <data name="CustomHitSound" xml:space="preserve">
-        <value>Lehetővé teszi hogy saját hang-effektek adj meg\nRészletes leírás a github oldalán található</value>
-    </data>
+    <value>Lehetővé teszi hogy saját hang-effektek adj meg\nRészletes leírás a github oldalon található</value>
+  </data>
   <data name="CustomLoadingScreens" xml:space="preserve">
-        <value>Lehetővé teszi hogy saját betöltő képernyőket használj (CustomLoadingScreens mappa)\nSaját feliratokat is adhatsz meg (UserData/CustomLoadingScreens.cfg)\nEzeket lehet képpel párosítani, vagy véletlen kiíratni</value>
-    </data>
+    <value>Lehetővé teszi hogy saját betöltő képernyőket használj (CustomLoadingScreens mappa)\nSaját feliratokat is adhatsz meg (UserData/CustomLoadingScreens.cfg)\nEzeket lehet képpel párosítani, vagy véletlen kiíratni</value>
+  </data>
   <data name="CustomResolution" xml:space="preserve">
-        <value>Egy egyéni ("Custom") beállítást rak a felbontás beállításokhoz, amelyet a config-ban változtathatsz </value>
-    </data>
+    <value>Egy egyéni ("Custom") beállítást rak a felbontás beállításokhoz, amelyet a config-ban változtathatsz </value>
+  </data>
   <data name="EffectDisable" xml:space="preserve">
-        <value>Kikapcsol pár játék alatti effektet</value>
-    </data>
+    <value>Kikapcsol pár játék alatti effektet</value>
+  </data>
   <data name="FavGirl" xml:space="preserve">
-        <value>Lehetővé teszi hogy kedvencként jelölj egy karaktert és manót\nEzután úgy fogsz kinézni mint az a karakter még ha másik is van kijelölve\nA tényleges karaktered képességét fogod kapni és a ranglétrán is úgy fogsz megjelenni</value>
-    </data>
+    <value>Lehetővé teszi hogy kedvencként jelölj egy karaktert és manót\nEzután úgy fogsz kinézni mint az a karakter még ha másik is van kijelölve\nA tényleges karaktered képességét fogod kapni és a ranglétrán is úgy fogsz megjelenni</value>
+  </data>
   <data name="FC AP indicator" xml:space="preserve">
-        <value>Kijelzi hogy Tökéletes vagy Hibamentes meneted van-e, és kiírja hogy hány hibád volt addig</value>
-    </data>
+    <value>Kijelzi hogy Tökéletes vagy Hibamentes meneted van-e, és kiírja hogy hány hibád volt addig</value>
+  </data>
   <data name="FeverEffectDisable" xml:space="preserve">
-        <value>Kikapcsolja a Fever-nek a hátterét</value>
-    </data>
+    <value>Kikapcsolja a Fever-nek a hátterét</value>
+  </data>
   <data name="Headquarters" xml:space="preserve">
-        <value>Lehetővé teszi hogy egyedi pályák ranglétráját elérd</value>
-    </data>
+    <value>Lehetővé teszi hogy egyedi pályák ranglétráját elérd</value>
+  </data>
   <data name="HiddenQoL" xml:space="preserve">
-        <value>Lerak egy gombot, amely láthatóvá teszi az összes rejtett pályát\nMagyarul, nem kell spam-elned vagy rajzolgatnod hogy megjelenjenek</value>
-    </data>
+    <value>Lerak egy gombot, amely láthatóvá teszi az összes rejtett pályát\nMagyarul, nem kell spam-elned vagy rajzolgatnod hogy megjelenjenek</value>
+  </data>
   <data name="IntroSkip" xml:space="preserve">
-        <value>Átugorja a "PeroPero HasuHasu" képernyőt és nyító animációt.</value>
-    </data>
+    <value>Átugorja a nyitó animációkat a játék felgyorsításával.\nÁllítható a sebesség és hogy átugorja-e az animált illusztrációt.\nSzellemi útodja RobotLucca egy soros mod-jának</value>
+  </data>
   <data name="KeybindManager" xml:space="preserve">
-        <value>Egy könyvtár más modoknak gomb-lenyomások érzékelésére és értelmezésére</value>
-    </data>
+    <value>Egy könyvtár más modoknak gomb-lenyomások érzékelésére és értelmezésére</value>
+  </data>
   <data name="LocalizeLib" xml:space="preserve">
-        <value>Egy könyvtár más modoknak hogy lokalizáljanak szöveget</value>
-    </data>
+    <value>Egy könyvtár más modoknak hogy lokalizáljanak szöveget</value>
+  </data>
   <data name="MDRPC" xml:space="preserve">
-        <value>Muse Dash Rich Presence, pontosan az aminek hívja magát.</value>
-    </data>
+    <value>Muse Dash Rich Presence, pontosan az aminek hívja magát.</value>
+  </data>
   <data name="ModManager" xml:space="preserve">
-        <value>Lehetővé teszi hogy kitörölj/kikapcsolj modok játékon belül.</value>
-    </data>
+    <value>Lehetővé teszi hogy kitörölj/kikapcsolj modok játékon belül.</value>
+  </data>
   <data name="Muse Dash Mirror" xml:space="preserve">
-        <value>Egy könyvtár más modoknak amely könnyebbé teszi a hozzáférést bizonyos adatok és UI elemek létrehozását.\nEgy magában nem csinál semmit.</value>
-    </data>
+    <value>Egy könyvtár más modoknak amely könnyebbé teszi a hozzáférést bizonyos adatok és UI elemek létrehozását.\nEgy magában nem csinál semmit.</value>
+  </data>
   <data name="MuseDashModTools" xml:space="preserve">
-        <value>Automatikusan megnézi hogy vannak a modjaidnak elérhető frissítései.</value>
-    </data>
+    <value>Automatikusan megnézi hogy vannak a modjaidnak elérhető frissítései.</value>
+  </data>
   <data name="NoAutoPause" xml:space="preserve">
-        <value>Megakadályozza hogy a játék szüneteljen, amikor elveszti a fókuszt.</value>
-    </data>
+    <value>Megakadályozza hogy a játék szüneteljen, amikor elveszti a fókuszt.</value>
+  </data>
   <data name="NoLevelUpAnimations" xml:space="preserve">
-        <value>A szint-lépés animáció évekig tart;\nUgorjuk át.</value>
-    </data>
+    <value>A szint-lépés animáció évekig tart;\nUgorjuk át.</value>
+  </data>
   <data name="PerfectDisable" xml:space="preserve">
-        <value>Lehetővé teszi hogy kikapcsolj kiértékeléseket.\n(pl.: mutassa az Early/Late Perfect-et, de az igazi Perfect-et ne)\nADOFAI Tweaks inspirálta</value>
-    </data>
+    <value>Lehetővé teszi hogy kikapcsolj kiértékeléseket.\n(pl.: mutassa az Early/Late Perfect-et, de az igazi Perfect-et ne)\nADOFAI Tweaks inspirálta</value>
+  </data>
   <data name="PopupLib" xml:space="preserve">
-        <value>Egy könyvtár más modoknak hogy kezeljenek felugró ablakokat</value>
-    </data>
+    <value>Egy könyvtár más modoknak hogy kezeljenek felugró ablakokat</value>
+  </data>
   <data name="PreventLowAcc" xml:space="preserve">
-        <value>Lehetővé teszi, hogy ne töltődjön fel a pontszámod,\nde ugyanúgy le tudd azt fotózni.</value>
-    </data>
+    <value>Lehetővé teszi, hogy ne töltődjön fel a pontszámod,\nde ugyanúgy le tudd azt fotózni.</value>
+  </data>
   <data name="QuickRestart" xml:space="preserve">
-        <value>Lehetővé teszi, hogy Delete-el azonnal kilépj egy pályából &amp; Backspace-el azonnal újraindítsd\nA gombok tetszőlegesen állíthatóak.</value>
-    </data>
+    <value>Lehetővé teszi, hogy Delete-el azonnal kilépj egy pályából &amp; Backspace-el azonnal újraindítsd\nA gombok tetszőlegesen állíthatóak.</value>
+  </data>
   <data name="QuickSwitchCombination" xml:space="preserve">
-        <value>Lehetővé teszi, hogy billentyű-kombinációkat állíts gyors karakter-váltásra\nElérhető egy játékon belüli menü</value>
-    </data>
+    <value>Lehetővé teszi, hogy billentyű-kombinációkat állíts gyors karakter-váltásra\nElérhető egy játékon belüli menü</value>
+  </data>
   <data name="SceneEggs" xml:space="preserve">
-        <value>Lehetővé teszi egyedi pályáknak hogy bizonyos háttérdíszítéseket használjanak.</value>
-    </data>
+    <value>Lehetővé teszi egyedi pályáknak hogy bizonyos háttérdíszítéseket használjanak.</value>
+  </data>
   <data name="Scoreboard characters and elfins" xml:space="preserve">
-        <value>Hasonló a CharacterScoreboard-hoz, de helyette kattintható ikonokat jelenít meg,\namely automatikusan arra a karakterkombinációra váltanak dupla kattintásra.</value>
-    </data>
+    <value>Hasonló a CharacterScoreboard-hoz, de helyette kattintható ikonokat jelenít meg,\namely automatikusan arra a karakterkombinációra váltanak dupla kattintásra.</value>
+  </data>
   <data name="ScrollSpeed" xml:space="preserve">
-        <value>Lehetővé teszi pálya készítőknek hogy saját sebességet állítsanak.\nÁltalában nem használják.</value>
-    </data>
+    <value>Lehetővé teszi pálya készítőknek hogy saját sebességet állítsanak.\nÁltalában nem használják.</value>
+  </data>
   <data name="SearchPlusPlus" xml:space="preserve">
-        <value>Megjeleníti a zene címét, művészét és nehézségét a jobb felső sarokban a játék alatt.</value>
-    </data>
+    <value>Minden keresési funkció amire valaha szükséged lesz (talán).\nOpcionális függőségek: KeybindManager, CustomAlbums</value>
+  </data>
   <data name="Song Desc" xml:space="preserve">
-        <value>Egy SearchPlusPlus bővítmény, amely lehetővé teszi mappák létrehozását\nés azon mappákban lévő zenék keresését.</value>
-    </data>
+    <value>Megjeleníti a zene címét, művészét és nehézségét a jobb felső sarokban a játék alatt.</value>
+  </data>
   <data name="Search++ Folder Tag" xml:space="preserve">
-        <value>Minden keresési funkció amire valaha szükséged lehet (talán).\nNézd meg a főoldalát további infóért.</value>
-    </data>
+    <value>Egy SearchPlusPlus bővítmény, amely lehetővé teszi mappák létrehozását\nés azon mappákban lévő zenék keresését.</value>
+  </data>
   <data name="StricterJudge" xml:space="preserve">
-        <value>Egy mod amely szigorúbbá teszi az időzítéseket.\nManuálisan megváltoztathatod a szigorítás mértékét a StricterJudge.cfg fájlban</value>
-    </data>
+    <value>Egy mod amely szigorúbbá teszi az időzítéseket.\nManuálisan megváltoztathatod a szigorítás mértékét a StricterJudge.cfg fájlban</value>
+  </data>
   <data name="True rank for 999+" xml:space="preserve">
-        <value>"999+" helyett a tényleges 1000 és 2000 közti rangod megjeleníti</value>
-    </data>
+    <value>"999+" helyett a tényleges 1000 és 2000 közti rangod megjeleníti</value>
+  </data>
   <data name="UI Disable" xml:space="preserve">
-        <value>Lehetővé teszi néhány vizuális elem kikapcsolását (pl. időzítési körök)</value>
-    </data>
+    <value>Lehetővé teszi néhány vizuális elem kikapcsolását (pl. időzítési körök)</value>
+  </data>
   <data name="UltraInstinctSleepwalking" xml:space="preserve">
-        <value>Kényszeríti Sleepwalker Rin-t arra hogy maximális sebességen csinálja a Masher-öket (amelyeken spam-elni kell).</value>
-    </data>
+    <value>Kényszeríti Sleepwalker Rin-t arra hogy maximális sebességen csinálja a Masher-öket (amelyeken spam-elni kell).</value>
+  </data>
   <data name="UnlockAll2" xml:space="preserve">
-        <value>UnlockAll alternatívája\nAmíg a mod telepítve van, minden mester fokozat elérhető.</value>
-    </data>
+    <value>UnlockAll alternatívája\nAmíg a mod telepítve van, minden mester fokozat elérhető.</value>
+  </data>
   <data name="VictoryScreenSwitcher" xml:space="preserve">
-        <value>Lehetővé teszi hogy megváltoztasd a győzelmi képernyő stílusát DJMAX-re vagy Arknights-ra.</value>
-    </data>
+    <value>Lehetővé teszi hogy megváltoztasd a győzelmi képernyő stílusát DJMAX-re vagy Arknights-ra.</value>
+  </data>
 </root>

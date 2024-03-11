@@ -20,37 +20,37 @@
         </value>
   </resheader>
   <data name="XAML_UserDataFolder" xml:space="preserve">
-        <value>ユーザーデータ</value>
+        <value>KullanıcıVerileri</value>
     </data>
   <data name="XAML_ReportBug" xml:space="preserve">
-        <value>バグリポート</value>
+        <value>Bug Raporla</value>
     </data>
   <data name="XAML_Check_Update" xml:space="preserve">
-        <value>アップデートを確認</value>
+        <value>Güncelleme için kontrol et</value>
     </data>
   <data name="XAML_DownloadSource_GithubMirror" xml:space="preserve">
-        <value>Github Mirror</value>
+        <value>Github Aynası</value>
     </data>
   <data name="XAML_Analyze" xml:space="preserve">
-        <value>Analyze Log</value>
+        <value>Kayıtları analiz et</value>
     </data>
   <data name="XAML_Apply" xml:space="preserve">
-        <value>適用</value>
+        <value>Uygula</value>
     </data>
   <data name="XAML_AskType_Always" xml:space="preserve">
-        <value>毎回表示</value>
+        <value>Her zaman sor</value>
     </data>
   <data name="XAML_AskType_No" xml:space="preserve">
-        <value>いいえ</value>
+        <value>Hayır</value>
     </data>
   <data name="XAML_AskType_Yes" xml:space="preserve">
-        <value>Yes</value>
+        <value>Evet</value>
     </data>
   <data name="XAML_ChangePath" xml:space="preserve">
-        <value>Change Path</value>
+        <value>Path'i Değiştir</value>
     </data>
   <data name="XAML_DownloadPrerelease" xml:space="preserve">
-        <value>プリリリースをダウンロード ：</value>
+        <value>Önsürümü indir: </value>
     </data>
   <data name="XAML_DownloadSource_Gitee" xml:space="preserve">
         <value>Gitee</value>
@@ -59,121 +59,121 @@
         <value>Github</value>
     </data>
   <data name="XAML_DownloadSource" xml:space="preserve">
-        <value>ソースをダウンロードする </value>
+        <value>Kaynağı Yükle: </value>
     </data>
   <data name="XAML_All" xml:space="preserve">
-        <value>すべて</value>
+        <value>Tümü</value>
     </data>
   <data name="XAML_Enabled" xml:space="preserve">
-        <value>適用</value>
+        <value>Etkin</value>
     </data>
   <data name="XAML_Font" xml:space="preserve">
-        <value>フォント</value>
+        <value>Yazı tipi:</value>
     </data>
   <data name="XAML_HelpTranslate" xml:space="preserve">
-        <value>翻訳を手伝う</value>
+        <value>Çevirmemize yardım et</value>
     </data>
   <data name="XAML_HomePage" xml:space="preserve">
-        <value>ホームページ</value>
+        <value>AnaSayfa</value>
     </data>
   <data name="XAML_Installed" xml:space="preserve">
-        <value>インストール</value>
+        <value>Yüklendi</value>
     </data>
   <data name="XAML_Incompatible" xml:space="preserve">
-        <value>Incompatible</value>
+        <value>Uyumsuz</value>
     </data>
   <data name="XAML_Install_MelonLoader" xml:space="preserve">
-        <value>Install\nMelonLoader</value>
+        <value>MelonLoader'ı\nYükle</value>
     </data>
   <data name="XAML_Install_Mod" xml:space="preserve">
-        <value>Install</value>
+        <value>Yükle</value>
     </data>
   <data name="XAML_Language" xml:space="preserve">
-        <value>言語：</value>
+        <value>Dil: </value>
     </data>
   <data name="XAML_LogFolder" xml:space="preserve">
-        <value>Open Log Folder</value>
+        <value>Sistem Günlüğünü Aç</value>
     </data>
   <data name="XAML_ModsFolder" xml:space="preserve">
-        <value>Mods</value>
+        <value>Modlar</value>
     </data>
   <data name="XAML_Mod_CompatibleGameVersion" xml:space="preserve">
-        <value>すべて</value>
+        <value>Tümü</value>
     </data>
   <data name="XAML_Mod_Dependencies" xml:space="preserve">
-        <value>Dependencies: </value>
+        <value>Bağlılıklar: </value>
     </data>
   <data name="XAML_Mod_Description" xml:space="preserve">
-        <value>{0} \n\nAuthor: {1} \nOnline Version: {2}\nCompatible Game Version: {3}</value>
+        <value>{0}\n\nYayımlayan: {1}\nÇevrim içi Sürüm: {2}\n Uyumlu Oyun Sürümü: {3}</value>
     </data>
   <data name="XAML_Mod_Duplicate" xml:space="preserve">
-        <value>Duplicated by: </value>
+        <value>Tarafından çoğaltılmış: </value>
     </data>
   <data name="XAML_Mod_Incompatible" xml:space="preserve">
-        <value>{0}'s {1} version is incompatible with your game version</value>
+        <value>{0}'nun{1}'i oyunun sürümüyle uyumlu değil</value>
     </data>
   <data name="XAML_Mod_Modified" xml:space="preserve">
-        <value>Local Version: {0} (Modified)</value>
+        <value>Yerel Sürüm: {0} (Modifiye edilmiş)</value>
     </data>
   <data name="XAML_Mod_Newer" xml:space="preserve">
-        <value>Local Version: {0} (WOW MOD DEV)</value>
+        <value>Yerel Sürüm: {0} (WOW MOD GELİŞTİRİCİSİ)</value>
     </data>
   <data name="XAML_Mod_Normal" xml:space="preserve">
-        <value>Local Version: {0}</value>
+        <value>Yerel Sürüm: {0}</value>
     </data>
   <data name="XAML_Tab_About" xml:space="preserve">
-        <value>About</value>
+        <value>Hakkında</value>
     </data>
   <data name="XAML_Mod_Outdated" xml:space="preserve">
-        <value>Local Version: {0} (Has a newer version: {1})</value>
+        <value>Yerel Sürüm: {0} (Yeni bir sürüm var: {1})</value>
     </data>
   <data name="XAML_Outdated" xml:space="preserve">
-        <value>Outdated</value>
+        <value>Güncel değil</value>
     </data>
   <data name="XAML_Path" xml:space="preserve">
-        <value>Muse Dash Folder Path</value>
+        <value>Muse Dash Dosya Path'i</value>
     </data>
   <data name="XAML_Reinstall_Mod" xml:space="preserve">
-        <value>Reinstall</value>
+        <value>Geri yükle</value>
     </data>
   <data name="XAML_Mod_SearchBar" xml:space="preserve">
-        <value>Search Mods    (Name, Author, Descriptions)</value>
+        <value>Modları Ara (İsim, Yayımlayan, Tanımlar)</value>
     </data>
   <data name="XAML_Setting_DisableDependency_Delete" xml:space="preserve">
-        <value>Disable dependents when deleting Mod</value>
+        <value>Mod silerken bağımlıları devre dışı bırak</value>
     </data>
   <data name="XAML_Setting_DisableDependency_Disable" xml:space="preserve">
-        <value>Disable dependents when disabling Mod</value>
+        <value>Modu devre dışı bırakırken bağımlıları devre dışı bırak</value>
     </data>
   <data name="XAML_Setting_EnableDependency_Enable" xml:space="preserve">
-        <value>Enable dependencies when enabling Mod</value>
+        <value>Modu açarken bağımlıları da aç</value>
     </data>
   <data name="XAML_Setting_EnableDependency_Install" xml:space="preserve">
-        <value>Enable dependencies when installing Mod</value>
+        <value>Modu yüklerken bağımlıları da aç</value>
     </data>
   <data name="XAML_Tab_LogAnalysis" xml:space="preserve">
-        <value>Analysis</value>
+        <value>Analiz</value>
     </data>
   <data name="XAML_Tab_ModManage" xml:space="preserve">
-        <value>Mods</value>
+        <value>Modlar</value>
     </data>
   <data name="XAML_Tab_Setting" xml:space="preserve">
-        <value>設定</value>
+        <value>Ayar</value>
     </data>
   <data name="XAML_TroubleShoot" xml:space="preserve">
-        <value>トラブルシューティング</value>
+        <value>Sorun gider</value>
     </data>
   <data name="XAML_Uninstall_MelonLoader" xml:space="preserve">
-        <value>アンインストール\nメロンローダー</value>
+        <value>MelonLoader'ı\nKaldır</value>
     </data>
   <data name="XAML_Uninstall_Mod" xml:space="preserve">
-        <value>アンインストール</value>
+        <value>Kaldır</value>
     </data>
   <data name="XAML_Update_Mod" xml:space="preserve">
-        <value>Update</value>
+        <value>Güncelleme</value>
     </data>
   <data name="XAML_DownloadSource_Custom" xml:space="preserve">
-        <value>Custom</value>
+        <value>Topluluğa Özel</value>
     </data>
   <data name="XAML_UseCustomDownloadSource" xml:space="preserve">
         <value>Provide the link of custom download source</value>
@@ -182,82 +182,82 @@
         <value>The link must end in "/", and must be accessible and parsable when appending "ModLinks.json" to the end of the address (The same structure as the Github repository)\nTakes effect after restarting app</value>
     </data>
   <data name="XAML_Tab_ChartDownload" xml:space="preserve">
-        <value>Charts</value>
+        <value>Haritalar</value>
     </data>
   <data name="XAML_Chart_SearchBar" xml:space="preserve">
-        <value>Search Charts (Name, Author, Charter)</value>
+        <value>Haritalar Ara (İsim, Yayımlayan, Haritayı Yapan)</value>
     </data>
   <data name="XAML_Download_Chart" xml:space="preserve">
-        <value>Download</value>
+        <value>İndir</value>
     </data>
   <data name="XAML_Chart_Downloads" xml:space="preserve">
-        <value>Downloads: </value>
+        <value>İndirilenler: </value>
     </data>
   <data name="XAML_Chart_Likes" xml:space="preserve">
         <value>Likes: </value>
     </data>
   <data name="XAML_Charter" xml:space="preserve">
-        <value>Charter: </value>
+        <value>Haritayı yapan: </value>
     </data>
   <data name="XAML_CustomAlbumsFolder" xml:space="preserve">
-        <value>Open Custom_Albums Folder</value>
+        <value>TopluluğaÖzel_Albümler Dosyasını Aç</value>
     </data>
   <data name="XAML_ChartSortOptions" xml:space="preserve">
-        <value>Sort by: </value>
+        <value>Göre sırala: </value>
     </data>
   <data name="XAML_ChartFilterTypes" xml:space="preserve">
-        <value>選べる</value>
+        <value>Göre filtrele</value>
     </data>
   <data name="XAML_ChartSortOption_Default" xml:space="preserve">
-        <value>プリセット</value>
+        <value>Varsayılan</value>
     </data>
   <data name="XAML_ChartSortOption_Likes" xml:space="preserve">
-        <value>好き</value>
+        <value>Likes</value>
     </data>
   <data name="XAML_ChartSortOption_Downloads" xml:space="preserve">
-        <value>ダウンロード</value>
+        <value>İndirilenler</value>
     </data>
   <data name="XAML_ChartSortOption_Latest" xml:space="preserve">
-        <value>最新</value>
+        <value>En yeni</value>
     </data>
   <data name="XAML_ChartSortOption_Name" xml:space="preserve">
-        <value>名前</value>
+        <value>İsim</value>
     </data>
   <data name="XAML_ChartSortOption_Level" xml:space="preserve">
-        <value>レベル</value>
+        <value>Seviye</value>
     </data>
   <data name="XAML_ChartFilterType_Easy" xml:space="preserve">
-        <value>普通</value>
+        <value>Kolay</value>
     </data>
   <data name="XAML_ChartFilterType_Hard" xml:space="preserve">
-        <value>玄人</value>
+        <value>Zor</value>
     </data>
   <data name="XAML_ChartFilterType_Master" xml:space="preserve">
-        <value>達人</value>
+        <value>Usta</value>
     </data>
   <data name="XAML_ChartFilterType_Hidden" xml:space="preserve">
-        <value>隠し</value>
+        <value>Gizlenmiş</value>
     </data>
   <data name="XAML_SearchBar" xml:space="preserve">
-        <value>Modsを探す （名前，作者，説明）</value>
+        <value>Modları Ara (İsim, Yayımlayan, Tanımlamalar)</value>
     </data>
   <data name="XAML_InfoJson_ChartName" xml:space="preserve">
-        <value>名前</value>
+        <value>İsim</value>
     </data>
   <data name="XAML_InfoJson_Author" xml:space="preserve">
-        <value>アーティスト</value>
+        <value>Sanatçı</value>
     </data>
   <data name="XAML_InfoJson_LevelDesigner" xml:space="preserve">
-        <value>Level Designer</value>
+        <value>Seviye Tasarımcısı</value>
     </data>
   <data name="XAML_InfoJson_Scene" xml:space="preserve">
-        <value>Scene</value>
+        <value>Sahne</value>
     </data>
   <data name="XAML_InfoJson_BPM" xml:space="preserve">
-        <value>BPM</value>
+        <value>Dakika başına düşen vuruş sayısı</value>
     </data>
   <data name="XAML_InfoJson_Difficulty" xml:space="preserve">
-        <value>Difficulty</value>
+        <value>Zorluk</value>
     </data>
   <data name="XAML_InfoJson_SearchTags" xml:space="preserve">
         <value>Search Tags</value>
@@ -272,28 +272,28 @@
         <value>Hide Bms Message</value>
     </data>
   <data name="XAML_ChooseChartPath" xml:space="preserve">
-        <value>Choose Chart Folder</value>
+        <value>Harita Dosyasını Seçin</value>
     </data>
   <data name="XAML_Scene_SpaceStation" xml:space="preserve">
-        <value>Space Station</value>
+        <value>Uzay İstasyonu</value>
     </data>
   <data name="XAML_Scene_Retrocity" xml:space="preserve">
         <value>Retrocity</value>
     </data>
   <data name="XAML_Scene_Castle" xml:space="preserve">
-        <value>Castle</value>
+        <value>Kale</value>
     </data>
   <data name="XAML_Scene_RainyNight" xml:space="preserve">
-        <value>RainyNight</value>
+        <value>YağmurluGece</value>
     </data>
   <data name="XAML_Scene_Candyland" xml:space="preserve">
-        <value>Candyland</value>
+        <value>Şekerdünyası</value>
     </data>
   <data name="XAML_Scene_Oriental" xml:space="preserve">
-        <value>Oriental</value>
+        <value>Oryantal</value>
     </data>
   <data name="XAML_Scene_LetsGroove" xml:space="preserve">
-        <value>Let's Groove</value>
+        <value>Hadi Groove'layalım</value>
     </data>
   <data name="XAML_Scene_Touhou" xml:space="preserve">
         <value>Touhou</value>
@@ -302,6 +302,6 @@
         <value>DJMAX</value>
     </data>
   <data name="XAML_ConfigFile" xml:space="preserve">
-        <value>Config File</value>
+        <value>Config Dosyası</value>
     </data>
 </root>

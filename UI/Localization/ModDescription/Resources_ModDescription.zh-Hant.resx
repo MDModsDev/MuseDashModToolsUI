@@ -1,179 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="" id="root">
-    <xsd:element name="root" msdata:IsDataSet="true">
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-        </xsd:element>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
   </xsd:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
   <resheader name="version">
-    <value>1.3</value>
+    <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-        </value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Accuracy Indicator" xml:space="preserve">
-        <value>在螢幕下方加入了一個更準確的準度指示器\n在成績結算畫面會顯示平均打擊延遲（ms）</value>
-    </data>
+    <value>在螢幕下方加入了一個更準確的準度指示器\n在成績結算畫面會顯示平均打擊延遲（ms）</value>
+  </data>
   <data name="AccuracyDisplay" xml:space="preserve">
-        <value>即時顯示準度百分比</value>
-    </data>
+    <value>即時顯示準度百分比</value>
+  </data>
   <data name="Alt Tab Mute" xml:space="preserve">
-        <value>當遊戲不是當前頁面時會靜音遊戲</value>
-    </data>
+    <value>當遊戲不是當前頁面時會靜音遊戲</value>
+  </data>
   <data name="AlwaysAprilFool" xml:space="preserve">
-        <value>Boss子彈改為鴿子，開啟教學模式的愚人節譜面，並解鎖GOODTEK里譜</value>
-    </data>
+    <value>Boss always shoots pigeons, tutorial is always april fool's version, and activates good tek hidden</value>
+  </data>
   <data name="AlwaysBadApple" xml:space="preserve">
-        <value>讓東方場景讓背景與人物變成黑白</value>
-    </data>
+    <value>讓東方場景讓背景與人物變成黑白</value>
+  </data>
   <data name="AlwaysPigeons" xml:space="preserve">
-        <value>Boss子彈改為鴿子子彈，請注意不要與【AlwaysAprilFool】同時開啟</value>
-    </data>
+    <value>Boss always shoots pigeons, do not use AlwaysAprilFool at the same time</value>
+  </data>
   <data name="BestCombinationSuggest" xml:space="preserve">
-        <value>在暫停介面顯示當前譜面最佳精靈組合\n通常來說都是正確組合，但也不能盲目相信\n如有任何疑問，請查看CharacterScoreboard</value>
-    </data>
+    <value>在暫停介面顯示當前譜面最佳精靈組合\n通常來說都是正確組合，但也不能盲目相信\n如有任何疑問，請查看CharacterScoreboard</value>
+  </data>
   <data name="BPMDisplay" xml:space="preserve">
-        <value>在準備介面的譜師上方顯示歌曲BPM</value>
-    </data>
+    <value>在準備介面的譜師上方顯示歌曲BPM</value>
+  </data>
   <data name="CharacterRandomizer" xml:space="preserve">
-        <value>每次進入譜面時都會隨機選擇角色與精靈</value>
-    </data>
+    <value>每次進入譜面時都會隨機選擇角色與精靈</value>
+  </data>
   <data name="CharacterScoreboard" xml:space="preserve">
-        <value>顯示排行榜上玩家的得分組合 (OCS)\n並同時顯示你自己的分數與組合 (LCS)</value>
-    </data>
+    <value>Displays which character a specific score was achieved with on the leaderboard (OCS)\nIt can also display your own local scores (LCS)\nLCS and OCS have inconsistent behavior on custom songs.</value>
+  </data>
   <data name="ChartDeleter" xml:space="preserve">
-        <value>將譜面排入刪除或移動列隊, 退出遊戲時執行</value>
-    </data>
+    <value>將譜面排入刪除或移動列隊, 退出遊戲時執行</value>
+  </data>
   <data name="ChartReview" xml:space="preserve">
-        <value>自動選擇夢遊少女、偏移值為0、手動Fever、停用部分UI元素\n可以在遊戲中開/關</value>
-    </data>
+    <value>自動選擇夢遊少女、偏移值為0、手動Fever、停用部分UI元素\n可以在遊戲中開/關</value>
+  </data>
   <data name="ChineseMode" xml:space="preserve">
-        <value>和諧部分的遊戲內容 (角色、插圖等)</value>
-    </data>
+    <value>和諧部分的遊戲內容 (角色、插圖等)</value>
+  </data>
   <data name="Cinema" xml:space="preserve">
-        <value>在自製譜背景播放影片 (如果譜面帶有影片)</value>
-    </data>
+    <value>在自製譜背景播放影片 (如果譜面帶有影片)</value>
+  </data>
   <data name="CustomAlbums" xml:space="preserve">
-        <value>自製譜Mod</value>
-    </data>
+    <value>自製譜Mod</value>
+  </data>
   <data name="CustomAnchorSupport" xml:space="preserve">
-        <value>在 info.json 裡添加 streamer tag 標籤來表示這首歌是無版權的\n(直播模式使用)</value>
-    </data>
+    <value>在 info.json 裡添加 streamer tag 標籤來表示這首歌是無版權的\n(直播模式使用)</value>
+  </data>
   <data name="CustomBGBrightness" xml:space="preserve">
-        <value>可調整背景亮度低於40%</value>
-    </data>
+    <value>可調整背景亮度低於40%</value>
+  </data>
   <data name="CustomHitSound" xml:space="preserve">
-        <value>自製音效 Mod\n詳細教程在 Github Readme 里</value>
-    </data>
+    <value>Allows you to set custom hitsounds\nDetailed instructions in the github readme</value>
+  </data>
   <data name="CustomLoadingScreens" xml:space="preserve">
-        <value>可添加自訂義加載介面 (CustomLoadingScreens 文件夾) \n而且可以設置自訂義加載消息
+    <value>可添加自訂義加載介面 (CustomLoadingScreens 文件夾) \n而且可以設置自訂義加載消息
 (UserData/CustomLoadingScreens.cfg)\n消息可以和圖片成對, 也可以單獨隨機出現</value>
-    </data>
+  </data>
   <data name="CustomResolution" xml:space="preserve">
-        <value>分辨率設置里加入自訂義分辨率, 可以在配置文件里修改</value>
-    </data>
+    <value>分辨率設置里加入自訂義分辨率, 可以在配置文件里修改</value>
+  </data>
   <data name="EffectDisable" xml:space="preserve">
-        <value>禁用部分遊戲特效</value>
-    </data>
+    <value>禁用部分遊戲特效</value>
+  </data>
   <data name="FavGirl" xml:space="preserve">
-        <value>換皮 Mod, 可以收藏人物或精靈\n遊戲內會顯示你收藏的人物和精靈外表\n技能扔然是選中的人物, 而且成績會被上傳</value>
-    </data>
+    <value>換皮 Mod, 可以收藏人物或精靈\n遊戲內會顯示你收藏的人物和精靈外表\n技能扔然是選中的人物, 而且成績會被上傳</value>
+  </data>
   <data name="FC AP indicator" xml:space="preserve">
-        <value>指示是否還是 All Perfect 或 Full Combo, 顯示Miss 和 Great 個數</value>
-    </data>
+    <value>指示是否還是 All Perfect 或 Full Combo, 顯示Miss 和 Great 個數</value>
+  </data>
   <data name="FeverEffectDisable" xml:space="preserve">
-        <value>禁用 fever 背景特效</value>
-    </data>
+    <value>禁用 fever 背景特效</value>
+  </data>
   <data name="Headquarters" xml:space="preserve">
-        <value>可以在 MDMC 網站上的自製譜面上傳成績</value>
-    </data>
+    <value>可以在 MDMC 網站上的自製譜面上傳成績</value>
+  </data>
   <data name="HiddenQoL" xml:space="preserve">
-        <value>遊戲左下角加入一個可以一直顯示里譜的按鈕\n例: 不需要狂按難度去打開里譜</value>
-    </data>
+    <value>遊戲左下角加入一個可以一直顯示里譜的按鈕\n例: 不需要狂按難度去打開里譜</value>
+  </data>
   <data name="IntroSkip" xml:space="preserve">
-        <value>跳過遊戲開始界面以及 ''PeroPero HasuHasu''</value>
-    </data>
+    <value>Skips past opening scene by speeding the game up.\nYou can configure the speed and whether to skip past the animated illustration.\nSpiritual successor of RobotLucca's mod</value>
+  </data>
   <data name="KeybindManager" xml:space="preserve">
-        <value>讓其他 Mod 可以監聽和解析健位的庫</value>
-    </data>
+    <value>讓其他 Mod 可以監聽和解析健位的庫</value>
+  </data>
   <data name="LocalizeLib" xml:space="preserve">
-        <value>讓其他 Mod 可以有本地化文字的庫</value>
-    </data>
+    <value>讓其他 Mod 可以有本地化文字的庫</value>
+  </data>
   <data name="MDRPC" xml:space="preserve">
-        <value>Discord 活動顯示 Mod</value>
-    </data>
+    <value>Discord 活動顯示 Mod</value>
+  </data>
   <data name="ModManager" xml:space="preserve">
-        <value>可以在遊戲內禁用或刪除 Mod</value>
-    </data>
+    <value>可以在遊戲內禁用或刪除 Mod</value>
+  </data>
   <data name="Muse Dash Mirror" xml:space="preserve">
-        <value>讓其他 Mod 更容易獲取 PlayerData 和 BattleComponents 信息, 以及創建 UI元素的庫. \n 它不執行任何操作</value>
-    </data>
+    <value>讓其他 Mod 更容易獲取 PlayerData 和 BattleComponents 信息, 以及創建 UI元素的庫. \n 它不執行任何操作</value>
+  </data>
   <data name="MuseDashModTools" xml:space="preserve">
-        <value>自動檢測和輸出可用Mod更新</value>
-    </data>
+    <value>自動檢測和輸出可用Mod更新</value>
+  </data>
   <data name="NoAutoPause" xml:space="preserve">
-        <value>禁止遊戲被最小化或者遊戲窗口在後台時自動暫停</value>
-    </data>
+    <value>禁止遊戲被最小化或者遊戲窗口在後台時自動暫停</value>
+  </data>
   <data name="NoLevelUpAnimations" xml:space="preserve">
-        <value>跳過升級動畫</value>
-    </data>
+    <value>跳過升級動畫</value>
+  </data>
   <data name="PerfectDisable" xml:space="preserve">
-        <value>可禁用判定特效\n (例: 只顯示 early/late 的 perfect) \n受冰與火之舞啟發</value>
-    </data>
+    <value>可禁用判定特效\n (例: 只顯示 early/late 的 perfect) \n受冰與火之舞啟發</value>
+  </data>
   <data name="PopupLib" xml:space="preserve">
-        <value>讓其他Mod 可以管理彈出窗口和界面窗口的程序庫</value>
-    </data>
+    <value>讓其他Mod 可以管理彈出窗口和界面窗口的程序庫</value>
+  </data>
   <data name="PreventLowAcc" xml:space="preserve">
-        <value>可禁用成績上傳\n扔然可以截屏</value>
-    </data>
+    <value>可禁用成績上傳\n扔然可以截屏</value>
+  </data>
   <data name="QuickRestart" xml:space="preserve">
-        <value>用 Delete 按鍵立刻退出譜面和用 Backspace 立刻重開譜面\n可在配置文件里設置自訂義鍵位</value>
-    </data>
+    <value>用 Delete 按鍵立刻退出譜面和用 Backspace 立刻重開譜面\n可在配置文件里設置自訂義鍵位</value>
+  </data>
   <data name="QuickSwitchCombination" xml:space="preserve">
-        <value>可設置快捷鍵位來快切人物和精靈\n有內置 UI 介面 (默認鍵位 F11)</value>
-    </data>
+    <value>可設置快捷鍵位來快切人物和精靈\n有內置 UI 介面 (默認鍵位 F11)</value>
+  </data>
   <data name="SceneEggs" xml:space="preserve">
-        <value>使自製譜能使用一些彩蛋背景裝飾</value>
-    </data>
+    <value>使自製譜能使用一些彩蛋背景裝飾</value>
+  </data>
   <data name="Scoreboard characters and elfins" xml:space="preserve">
-        <value>與 CharacterScoreboard 類似, 但是加入了可點擊的圖標\n點擊之後自動切換對應角色組合</value>
-    </data>
+    <value>與 CharacterScoreboard 類似, 但是加入了可點擊的圖標\n點擊之後自動切換對應角色組合</value>
+  </data>
   <data name="ScrollSpeed" xml:space="preserve">
-        <value>譜師可設置自訂義流速</value>
-    </data>
+    <value>譜師可設置自訂義流速</value>
+  </data>
   <data name="SearchPlusPlus" xml:space="preserve">
-        <value>在遊戲介面右上角顯示標題, 曲師和難度</value>
-    </data>
+    <value>Any search feature you will ever need (probably).\nOptional dependencies: KeybindManager, CustomAlbums</value>
+  </data>
   <data name="Song Desc" xml:space="preserve">
-        <value>SearchPlusPlus的擴展\n可以創建文件夾並在其中搜尋歌曲</value>
-    </data>
+    <value>Displays the title, artist, and difficulty of the song in the top-right corner during play.</value>
+  </data>
   <data name="Search++ Folder Tag" xml:space="preserve">
-        <value>包含你可能需要的所有搜索功能\n查看項目主頁獲取詳細信息</value>
-    </data>
+    <value>An extension to SearchPlusPlus, allowing you to create folders\nand search for songs in said folders.</value>
+  </data>
   <data name="StricterJudge" xml:space="preserve">
-        <value>嚴判 Mod, 改變遊戲判定區間\n可以在 Stricter Judge.cfg 的配置文件里修改判定區間</value>
-    </data>
+    <value>嚴判 Mod, 改變遊戲判定區間\n可以在 Stricter Judge.cfg 的配置文件里修改判定區間</value>
+  </data>
   <data name="True rank for 999+" xml:space="preserve">
-        <value>在排名1000到2000的時候顯示真實排名而不是 ''999+''</value>
-    </data>
+    <value>在排名1000到2000的時候顯示真實排名而不是 ''999+''</value>
+  </data>
   <data name="UI Disable" xml:space="preserve">
-        <value>可禁用部分UI元素 (例: 打擊點)</value>
-    </data>
+    <value>可禁用部分UI元素 (例: 打擊點)</value>
+  </data>
   <data name="UltraInstinctSleepwalking" xml:space="preserve">
-        <value>讓夢遊少女打滿沙包</value>
-    </data>
+    <value>讓夢遊少女打滿沙包</value>
+  </data>
   <data name="UnlockAll2" xml:space="preserve">
-        <value>解鎖所有大觸難度 (刪除Mod 即可移除效果)</value>
-    </data>
+    <value>解鎖所有大觸難度 (刪除Mod 即可移除效果)</value>
+  </data>
   <data name="VictoryScreenSwitcher" xml:space="preserve">
-        <value>可以切換成DJMAX 或者明日方舟的結算界面\n兩個都不勾選則一直為普通結算界面</value>
-    </data>
+    <value>可以切換成DJMAX 或者明日方舟的結算界面\n兩個都不勾選則一直為普通結算界面</value>
+  </data>
 </root>
