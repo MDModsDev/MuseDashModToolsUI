@@ -94,7 +94,7 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Roslynator.Formatting.Analyzers" Version="4.6.2">
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Roslynator.Formatting.Analyzers" Version="4.12.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
