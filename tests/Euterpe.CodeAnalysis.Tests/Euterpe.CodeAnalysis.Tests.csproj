@@ -10,10 +10,9 @@
         <PackageReference Include="Basic.Reference.Assemblies.Net100"/>
         <PackageReference Include="JetBrains.Annotations"/>
         <PackageReference Include="JetBrains.dotCover.Framework" />
+        <PackageReference Include="Meziantou.Framework.SnapshotTesting.Roslyn"/>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp"/>
         <PackageReference Include="TUnit"/>
-        <PackageReference Include="Verify.SourceGenerators"/>
-        <PackageReference Include="Verify.TUnit"/>
     </ItemGroup>
 
     <ItemGroup>

@@ -5,7 +5,7 @@ namespace Euterpe.CodeAnalysis.Tests.Generators;
 public sealed class RouteGeneratorTest
 {
     [Test]
-    public Task Generates_route_tree_with_nested_children()
+    public void RunGenerators_NestedRoutes_GeneratesRouteTree()
     {
         const string source = """
                               namespace Sample
@@ -46,6 +46,6 @@ public sealed class RouteGeneratorTest
                               }
                               """;
 
-        return Verify(GeneratorTestHelper.Run<RouteGenerator>(source));
+        Snapshot.Validate(GeneratorTestHelper.Run<RouteGenerator>(source));
     }
 }

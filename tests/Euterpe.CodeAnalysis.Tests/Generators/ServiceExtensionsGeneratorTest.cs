@@ -5,7 +5,7 @@ namespace Euterpe.CodeAnalysis.Tests.Generators;
 public sealed class ServiceExtensionsGeneratorTest
 {
     [Test]
-    public Task Generates_registrations_for_app_and_per_game_view_models()
+    public void RunGenerators_AppAndPerGameViewModels_GeneratesRegistrations()
     {
         const string source = """
                               namespace Sample
@@ -50,6 +50,6 @@ public sealed class ServiceExtensionsGeneratorTest
                               }
                               """;
 
-        return Verify(GeneratorTestHelper.Run<ServiceExtensionsGenerator>(source));
+        Snapshot.Validate(GeneratorTestHelper.Run<ServiceExtensionsGenerator>(source));
     }
 }

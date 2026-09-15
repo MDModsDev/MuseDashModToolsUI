@@ -14,7 +14,7 @@ Avalonia desktop app. Projects under `src/`:
 - `Euterpe.Tasks` — custom MSBuild build tasks (e.g. generating `EuterpeTheme.axaml`).
 Tests under `tests/` (TUnit):
 
-- `Euterpe.CodeAnalysis.Tests` — source generator and analyzer tests; generator outputs are snapshot-verified with Verify (`snapshots/`).
+- `Euterpe.CodeAnalysis.Tests` — source generator and analyzer tests; generator outputs are snapshot-verified with Meziantou.Framework.SnapshotTesting.Roslyn (`Generators/__snapshots__/`).
 - `Euterpe.Headless.Tests` — anything that needs running Avalonia UI (controls, views, bindings, input, theming) on Avalonia.Headless.
 - `Euterpe.Releaser.Tests` — unit tests for the release automation under `build/Euterpe.Releaser`.
 - `Euterpe.Tests` — plain unit tests; folders mirror the source projects (`App/` = `src/Euterpe`, plus `Core/`, `Models/`, `Shared/`, `Contracts/`).

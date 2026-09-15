@@ -2,7 +2,7 @@ namespace Euterpe.CodeAnalysis.Tests;
 
 internal static class GeneratorTestHelper
 {
-    public static GeneratorDriver Run<TGenerator>(string source)
+    public static GeneratorDriverRunResult Run<TGenerator>(string source)
         where TGenerator : IIncrementalGenerator, new()
     {
         var compilation = CSharpCompilation.Create(
@@ -11,6 +11,6 @@ internal static class GeneratorTestHelper
             Net100.References.All,
             new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
 
-        return CSharpGeneratorDriver.Create(new TGenerator().AsSourceGenerator()).RunGenerators(compilation);
+        return CSharpGeneratorDriver.Create(new TGenerator().AsSourceGenerator()).RunGenerators(compilation).GetRunResult();
     }
 }

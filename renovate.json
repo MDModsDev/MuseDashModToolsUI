@@ -88,8 +88,7 @@
         "TUnit",
         "TUnit.Mocks",
         "TUnit.Mocks.Http",
-        "TUnit.Mocks.Logging",
-        "Verify.TUnit"
+        "TUnit.Mocks.Logging"
       ],
       "groupName": "TUnit",
       "separateMajorMinor": false,

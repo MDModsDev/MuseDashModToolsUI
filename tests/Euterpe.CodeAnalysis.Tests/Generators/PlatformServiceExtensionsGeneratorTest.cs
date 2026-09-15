@@ -68,6 +68,6 @@ public sealed class PlatformServiceExtensionsGeneratorTest
                                   """;
 
     [Test]
-    public Task Generates_registrations_by_platform_and_lifetime() =>
-        Verify(GeneratorTestHelper.Run<PlatformServiceExtensionsGenerator>(Source));
+    public void RunGenerators_PlatformServices_RegistersByPlatformAndLifetime() =>
+        Snapshot.Validate(GeneratorTestHelper.Run<PlatformServiceExtensionsGenerator>(Source));
 }

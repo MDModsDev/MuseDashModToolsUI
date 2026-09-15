@@ -5,7 +5,7 @@ namespace Euterpe.CodeAnalysis.Tests.Generators;
 public sealed class EuterpeApiUrlGeneratorTest
 {
     [Test]
-    public Task Generates_urls_from_euterpe_api()
+    public void RunGenerators_EuterpeApi_GeneratesUrls()
     {
         const string source = """
                               namespace Euterpe.Shared
@@ -35,6 +35,6 @@ public sealed class EuterpeApiUrlGeneratorTest
                               }
                               """;
 
-        return Verify(GeneratorTestHelper.Run<EuterpeApiUrlGenerator>(source));
+        Snapshot.Validate(GeneratorTestHelper.Run<EuterpeApiUrlGenerator>(source));
     }
 }
