@@ -8,7 +8,7 @@ namespace Euterpe.Tests.App.ViewModels;
 public sealed class RepairDialogViewModelTest
 {
     [Test]
-    public async Task ApplyCommand_RaisesRequestClose()
+    public async Task ApplyCommand_SubscriberRegistered_RaisesRequestClose()
     {
         var vm = NewViewModel();
         var closed = false;
@@ -20,7 +20,7 @@ public sealed class RepairDialogViewModelTest
     }
 
     [Test]
-    public async Task Close_RaisesRequestClose()
+    public async Task Close_SubscriberRegistered_RaisesRequestClose()
     {
         var vm = NewViewModel();
         var closed = false;
@@ -42,7 +42,7 @@ public sealed class RepairDialogViewModelTest
     }
 
     [Test]
-    public async Task OpenFileCommand_DelegatesToLauncher()
+    public async Task OpenFileCommand_FilePathProvided_DelegatesToLauncher()
     {
         var launcher = IPlatformLauncher.Mock();
         var vm = NewViewModel(launcher);
@@ -53,7 +53,7 @@ public sealed class RepairDialogViewModelTest
     }
 
     [Test]
-    public async Task OpenUrlCommand_DelegatesToLauncher()
+    public async Task OpenUrlCommand_UrlProvided_DelegatesToLauncher()
     {
         var launcher = IPlatformLauncher.Mock();
         var vm = NewViewModel(launcher);
@@ -64,7 +64,7 @@ public sealed class RepairDialogViewModelTest
     }
 
     [Test]
-    public async Task PrepareForGamePathAsync_ResetsStateAndSetsGamePathPagePresented()
+    public async Task PrepareForGamePathAsync_PreviousSetupFinished_ResetsStateAndPresentsGamePathPage()
     {
         var state = new SetupState();
         state.Steps.Add(new SetupStepState { Kinds = SetupOptionKinds.MelonLoader, DisplayName = "stale" });
@@ -82,7 +82,7 @@ public sealed class RepairDialogViewModelTest
     }
 
     [Test]
-    public async Task PrepareForOptionAsync_ResetsStateAndSelectsOnlyMatchingOption()
+    public async Task PrepareForOptionAsync_AllOptionsSelected_ResetsStateAndSelectsOnlyMatchingOption()
     {
         var state = new SetupState();
         var gameConfig = new MuseDashConfig();

@@ -54,7 +54,7 @@ public sealed partial class JsonSerializationServiceTest
     };
 
     [Test]
-    public Task SerializeConfig_ShouldReturnValidJson()
+    public Task SerializeConfig_PopulatedConfig_WritesValidJson()
     {
         var stream = new MemoryStream();
         _jsonSerializationService.SerializeConfig(stream, CreateTestConfig());
@@ -62,7 +62,7 @@ public sealed partial class JsonSerializationServiceTest
     }
 
     [Test]
-    public async Task SerializeConfigAsync_ShouldReturnValidJson()
+    public async Task SerializeConfigAsync_PopulatedConfig_WritesValidJson()
     {
         var stream = new MemoryStream();
         await _jsonSerializationService.SerializeConfigAsync(stream, CreateTestConfig()).ConfigureAwait(false);

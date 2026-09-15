@@ -9,7 +9,7 @@ namespace Euterpe.Tests.App.ViewModels;
 public sealed class WizardDialogViewModelTest
 {
     [Test]
-    public async Task BackCommand_DecrementsCurrentPageIndex()
+    public async Task BackCommand_CurrentPageAfterFirst_DecrementsCurrentPageIndex()
     {
         var vm = NewViewModel();
         vm.CurrentPageIndex = 2;
@@ -20,7 +20,7 @@ public sealed class WizardDialogViewModelTest
     }
 
     [Test]
-    public async Task Close_RaisesRequestClose()
+    public async Task Close_SubscriberRegistered_RaisesRequestClose()
     {
         var vm = NewViewModel();
         var closed = false;
@@ -32,7 +32,7 @@ public sealed class WizardDialogViewModelTest
     }
 
     [Test]
-    public async Task CurrentPageIndex_ChangeRaisesPropertyChangedForDerivedProperties()
+    public async Task CurrentPageIndex_ValueChanged_RaisesPropertyChangedForDerivedProperties()
     {
         var vm = NewViewModel();
         var changed = new List<string?>();
@@ -48,7 +48,7 @@ public sealed class WizardDialogViewModelTest
     }
 
     [Test]
-    public async Task PrepareForFullSetupAsync_PopulatesPagesAndResetsState()
+    public async Task PrepareForFullSetupAsync_PreviousSetupFinished_PopulatesPagesAndResetsState()
     {
         var state = new SetupState();
         state.Steps.Add(new SetupStepState { Kinds = SetupOptionKinds.MelonLoader, DisplayName = "stale" });

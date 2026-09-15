@@ -7,7 +7,7 @@ public sealed class GameSettingServiceTest
     [Test]
     [Arguments(true)]
     [Arguments(false)]
-    public async Task IsValidGameFolder_DelegatesToGamePathDiscovery(bool expected)
+    public async Task IsValidGameFolder_ConfiguredGameFolder_DelegatesToGamePathDiscovery(bool expected)
     {
         var paths = IGamePathDiscovery.Mock();
         paths.CheckIsValidGameFolder(Any<string?>()).Returns(expected);
@@ -21,7 +21,7 @@ public sealed class GameSettingServiceTest
     }
 
     [Test]
-    public async Task EnsureGameFolders_CreatesAllRequiredDirectories()
+    public async Task EnsureGameFolders_RequiredDirectoriesMissing_CreatesAllRequiredDirectories()
     {
         var root = Path.Combine(Path.GetTempPath(), $"euterpe-test-{Guid.NewGuid():N}");
         try
@@ -53,7 +53,7 @@ public sealed class GameSettingServiceTest
     }
 
     [Test]
-    public async Task EnsureGameFolders_PreservesInFlightTempContent()
+    public async Task EnsureGameFolders_TempDownloadInProgress_PreservesInFlightContent()
     {
         var root = Path.Combine(Path.GetTempPath(), $"euterpe-test-{Guid.NewGuid():N}");
         try

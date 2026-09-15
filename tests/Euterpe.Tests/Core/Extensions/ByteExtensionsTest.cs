@@ -17,12 +17,12 @@ public sealed class ByteExtensionsTest
 
     [Test]
     [MethodDataSource(nameof(HexCases))]
-    public async Task ToHexString_ReturnsUpperHex((byte[] bytes, string upperHex, string lowerHex) data) =>
+    public async Task ToHexString_ByteSequences_ReturnsUpperHex((byte[] bytes, string upperHex, string lowerHex) data) =>
         await Assert.That(data.bytes.ToHexString()).IsEqualTo(data.upperHex);
 
     [Test]
     [MethodDataSource(nameof(HexCases))]
-    public async Task ToHexStringLower_ReturnsLowerHex((byte[] bytes, string upperHex, string lowerHex) data) =>
+    public async Task ToHexStringLower_ByteSequences_ReturnsLowerHex((byte[] bytes, string upperHex, string lowerHex) data) =>
         await Assert.That(data.bytes.ToHexStringLower()).IsEqualTo(data.lowerHex);
 
     public static IEnumerable<Func<(byte[] bytes, string base64Url)>> Base64UrlCases()
@@ -37,6 +37,6 @@ public sealed class ByteExtensionsTest
 
     [Test]
     [MethodDataSource(nameof(Base64UrlCases))]
-    public async Task ToBase64Url_ReturnsUrlSafeUnpaddedBase64((byte[] bytes, string base64Url) data) =>
+    public async Task ToBase64Url_ByteSequences_ReturnsUrlSafeUnpaddedBase64((byte[] bytes, string base64Url) data) =>
         await Assert.That(data.bytes.ToBase64Url()).IsEqualTo(data.base64Url);
 }

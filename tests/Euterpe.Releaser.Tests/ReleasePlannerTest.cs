@@ -7,13 +7,13 @@ namespace Euterpe.Releaser.Tests;
 [TestSubject(typeof(ReleasePlanner))]
 public sealed class ReleasePlannerTest
 {
-    private static readonly ReleaseRuntime _runtime = ReleaseRuntime.Parse("win-x64");
+    private static readonly ReleaseRuntime Runtime = ReleaseRuntime.Parse("win-x64");
 
     [Test]
     public async Task GetPackageChannels_Prerelease_ReturnsBetaChannel()
     {
         var channels = ReleasePlanner.GetPackageChannels(
-            _runtime,
+            Runtime,
             SemVersion.Parse("2.2.0-beta.1", SemVersionStyles.Strict),
             false);
 
@@ -25,7 +25,7 @@ public sealed class ReleasePlannerTest
     public async Task GetPackageChannels_StableWithoutBetaBase_ReturnsStableChannel()
     {
         var channels = ReleasePlanner.GetPackageChannels(
-            _runtime,
+            Runtime,
             SemVersion.Parse("2.2.0", SemVersionStyles.Strict),
             false);
 
@@ -37,7 +37,7 @@ public sealed class ReleasePlannerTest
     public async Task GetPackageChannels_StableWithBetaBase_ReturnsStableAndBetaChannels()
     {
         var channels = ReleasePlanner.GetPackageChannels(
-            _runtime,
+            Runtime,
             SemVersion.Parse("2.2.0", SemVersionStyles.Strict),
             true);
 

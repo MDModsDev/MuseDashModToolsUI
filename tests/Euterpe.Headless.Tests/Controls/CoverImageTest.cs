@@ -17,14 +17,14 @@ public sealed class CoverImageTest : HeadlessTest
         Convert.FromBase64String("UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoEAAQAAgA0JaACdLoB+AADsAD+8Oj3/yC5YXXI1/8gP+QH/ID/+PIAAAA=");
 
     [Test]
-    public Task DefaultStretch_IsUniform() => RunOnUI(async () =>
+    public Task Stretch_NewControl_IsUniform() => RunOnUI(async () =>
     {
         var cover = new CoverImage();
         await Assert.That(cover.Stretch).IsEqualTo(Stretch.Uniform);
     });
 
     [Test]
-    public Task ApplyTemplate_CreatesAnimatedPart() => RunOnUI(async () =>
+    public Task ApplyTemplate_DefaultTheme_CreatesAnimatedPart() => RunOnUI(async () =>
     {
         var cover = Show(new CoverImage());
 
@@ -32,14 +32,14 @@ public sealed class CoverImageTest : HeadlessTest
     });
 
     [Test]
-    public Task NullSource_DoesNotThrowAfterTemplateApply() => RunOnUI(async () =>
+    public Task ApplyTemplate_NullSource_DoesNotThrow() => RunOnUI(async () =>
     {
         var cover = Show(new CoverImage { Source = null });
         await Assert.That(cover.Source).IsNull();
     });
 
     [Test]
-    public Task AnimatedWebpSource_DecodesFramesAndShowsAnimation() => RunOnUI(async () =>
+    public Task Source_AnimatedWebp_DecodesFramesAndShowsAnimation() => RunOnUI(async () =>
     {
         var path = CreateTempWebp(MinimalAnimatedWebp);
         try
@@ -132,7 +132,7 @@ public sealed class CoverImageTest : HeadlessTest
     });
 
     [Test]
-    public Task AnimatedSourceChange_DisposesPreviousAnimatedSource() => RunOnUI(async () =>
+    public Task Source_AnimatedSourceChanged_DisposesPreviousAnimatedSource() => RunOnUI(async () =>
     {
         var pathA = CreateTempWebp(MinimalAnimatedWebp);
         var pathB = CreateTempWebp(MinimalAnimatedWebp);
@@ -158,7 +158,7 @@ public sealed class CoverImageTest : HeadlessTest
     });
 
     [Test]
-    public Task DetachFromVisualTree_DisposesAnimatedSourceAndClearsSource() => RunOnUI(async () =>
+    public Task DetachFromVisualTree_LoadedAnimation_DisposesAnimatedSourceAndClearsSource() => RunOnUI(async () =>
     {
         var path = CreateTempWebp(MinimalAnimatedWebp);
         try
@@ -186,7 +186,7 @@ public sealed class CoverImageTest : HeadlessTest
     });
 
     [Test]
-    public Task SourceCleared_DisposesAnimatedSource() => RunOnUI(async () =>
+    public Task Source_ClearedAfterAnimationLoads_DisposesAnimatedSource() => RunOnUI(async () =>
     {
         var path = CreateTempWebp(MinimalAnimatedWebp);
         try
@@ -210,7 +210,7 @@ public sealed class CoverImageTest : HeadlessTest
     });
 
     [Test]
-    public Task AnimatedReattach_RebuildsAnimatedSource() => RunOnUI(async () =>
+    public Task AttachToVisualTree_AnimatedSourceAfterDetach_RebuildsAnimatedSource() => RunOnUI(async () =>
     {
         var path = CreateTempWebp(MinimalAnimatedWebp);
         try
@@ -240,7 +240,7 @@ public sealed class CoverImageTest : HeadlessTest
     });
 
     [Test]
-    public Task BoundSourceInItemTemplate_LoadsWebp() => RunOnUI(async () =>
+    public Task Source_BoundInsideItemTemplate_LoadsWebp() => RunOnUI(async () =>
     {
         var path = CreateTempWebp(MinimalAnimatedWebp);
         try
@@ -273,7 +273,7 @@ public sealed class CoverImageTest : HeadlessTest
     });
 
     [Test]
-    public Task StaticWebpSource_DecodesSingleFrame() => RunOnUI(async () =>
+    public Task Source_StaticWebp_DecodesSingleFrame() => RunOnUI(async () =>
     {
         var path = CreateTempWebp(MinimalWebp);
         try

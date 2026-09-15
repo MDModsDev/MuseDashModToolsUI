@@ -11,7 +11,7 @@ public sealed class ModDevelopPanelViewModelTest
     [Arguments(true, true, true)]
     [Arguments(false, false, false)]
     [Arguments(true, false, true)]
-    public async Task OnInitialize_PopulatesFlagsFromServices(bool sdk, bool template, bool envSet)
+    public async Task InitializeAsync_InstallationStatusCombinations_PopulatesFlagsFromServices(bool sdk, bool template, bool envSet)
     {
         var sdkInstaller = IDotNetSdkInstaller.Mock();
         sdkInstaller.CheckInstalledAsync().Returns(sdk);
@@ -30,7 +30,7 @@ public sealed class ModDevelopPanelViewModelTest
     }
 
     [Test]
-    public async Task ToggleModTemplateInstallCommand_DisabledWhenSdkNotInstalled()
+    public async Task ToggleModTemplateInstallCommand_SdkNotInstalled_IsDisabled()
     {
         var sdkInstaller = IDotNetSdkInstaller.Mock();
         sdkInstaller.CheckInstalledAsync().Returns(false);
@@ -41,7 +41,7 @@ public sealed class ModDevelopPanelViewModelTest
     }
 
     [Test]
-    public async Task ToggleModTemplateInstallCommand_EnabledWhenSdkInstalled()
+    public async Task ToggleModTemplateInstallCommand_SdkInstalled_IsEnabled()
     {
         var sdkInstaller = IDotNetSdkInstaller.Mock();
         sdkInstaller.CheckInstalledAsync().Returns(true);

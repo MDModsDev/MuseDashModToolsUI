@@ -11,7 +11,7 @@ namespace Euterpe.Tests.Core.Extensions;
 public sealed partial class CoreServiceExtensionsTest
 {
     [Test]
-    public async Task RegisterLogger_RegistersLoggerServices()
+    public async Task RegisterLogger_EmptyServiceCollection_RegistersLoggerServices()
     {
         var services = new ServiceCollection();
         services.RegisterLogger();
@@ -24,7 +24,7 @@ public sealed partial class CoreServiceExtensionsTest
     [Test]
     [Arguments(GameId.MuseDash, typeof(MuseDashConfig))]
     [Arguments(GameId.MuseDash2, typeof(MuseDash2Config))]
-    public async Task RegisterPerGameCoreServices_ResolvesGameConfigForActiveGame(GameId gameId, Type expectedConcrete)
+    public async Task RegisterPerGameCoreServices_GameIdProvided_ResolvesMatchingGameConfig(GameId gameId, Type expectedConcrete)
     {
         var builder = new ContainerBuilder();
         builder.RegisterAppCoreServices();
@@ -37,7 +37,7 @@ public sealed partial class CoreServiceExtensionsTest
     }
 
     [Test]
-    public async Task RegisterAppCoreServices_RegistersAllAppLevelSingletons()
+    public async Task RegisterAppCoreServices_EmptyContainerBuilder_RegistersAllAppLevelSingletons()
     {
         var builder = new ContainerBuilder();
         builder.RegisterAppCoreServices();

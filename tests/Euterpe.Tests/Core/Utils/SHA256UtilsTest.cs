@@ -30,7 +30,7 @@ public sealed class SHA256UtilsTest
     [Test]
     [Arguments("", EmptyHashUpper)]
     [Arguments("abc", AbcHashUpper)]
-    public async Task HexFromBytes_ReturnsExpectedUpperCaseHash(string input, string expected)
+    public async Task HexFromBytes_KnownBytes_ReturnsExpectedUpperCaseHash(string input, string expected)
     {
         var bytes = Encoding.UTF8.GetBytes(input);
         await Assert.That(SHA256Utils.HexFromBytes(bytes)).IsEqualTo(expected);
@@ -39,7 +39,7 @@ public sealed class SHA256UtilsTest
     [Test]
     [Arguments("", EmptyHashLower)]
     [Arguments("abc", AbcHashLower)]
-    public async Task HexLowerFromBytes_ReturnsExpectedLowerCaseHash(string input, string expected)
+    public async Task HexLowerFromBytes_KnownBytes_ReturnsExpectedLowerCaseHash(string input, string expected)
     {
         var bytes = Encoding.UTF8.GetBytes(input);
         await Assert.That(SHA256Utils.HexLowerFromBytes(bytes)).IsEqualTo(expected);
@@ -48,7 +48,7 @@ public sealed class SHA256UtilsTest
     [Test]
     [Arguments("", EmptyHashUpper)]
     [Arguments("abc", AbcHashUpper)]
-    public async Task HexFromPath_ReturnsExpectedUpperCaseHash(string content, string expected)
+    public async Task HexFromPath_KnownFileContents_ReturnsExpectedUpperCaseHash(string content, string expected)
     {
         await File.WriteAllTextAsync(_tempFile, content);
         await Assert.That(SHA256Utils.HexFromPath(_tempFile)).IsEqualTo(expected);
@@ -57,7 +57,7 @@ public sealed class SHA256UtilsTest
     [Test]
     [Arguments("", EmptyHashLower)]
     [Arguments("abc", AbcHashLower)]
-    public async Task HexLowerFromPathAsync_ReturnsExpectedLowerCaseHash(string content, string expected)
+    public async Task HexLowerFromPathAsync_KnownFileContents_ReturnsExpectedLowerCaseHash(string content, string expected)
     {
         await File.WriteAllTextAsync(_tempFile, content);
         await Assert.That(await SHA256Utils.HexLowerFromPathAsync(_tempFile)).IsEqualTo(expected);
@@ -66,7 +66,7 @@ public sealed class SHA256UtilsTest
     [Test]
     [Arguments("", EmptyHashUpper)]
     [Arguments("abc", AbcHashUpper)]
-    public async Task HexFromPathAsync_ReturnsExpectedUpperCaseHash(string content, string expected)
+    public async Task HexFromPathAsync_KnownFileContents_ReturnsExpectedUpperCaseHash(string content, string expected)
     {
         await File.WriteAllTextAsync(_tempFile, content);
         await Assert.That(await SHA256Utils.HexFromPathAsync(_tempFile)).IsEqualTo(expected);
@@ -75,7 +75,7 @@ public sealed class SHA256UtilsTest
     [Test]
     [Arguments("", EmptyHashLower)]
     [Arguments("abc", AbcHashLower)]
-    public async Task HexLowerFromPath_ReturnsExpectedLowerCaseHash(string content, string expected)
+    public async Task HexLowerFromPath_KnownFileContents_ReturnsExpectedLowerCaseHash(string content, string expected)
     {
         await File.WriteAllTextAsync(_tempFile, content);
         await Assert.That(SHA256Utils.HexLowerFromPath(_tempFile)).IsEqualTo(expected);

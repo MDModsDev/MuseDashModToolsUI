@@ -36,7 +36,7 @@ public sealed class BiDictionaryTest
     }
 
     [Test]
-    public async Task Count_ReflectsNumberOfEntries() =>
+    public async Task Count_PopulatedDictionary_ReflectsNumberOfEntries() =>
         await Assert.That(_dict.Count).IsEqualTo(3);
 
     [Test]
@@ -57,14 +57,14 @@ public sealed class BiDictionaryTest
     [Arguments("one", true)]
     [Arguments("two", true)]
     [Arguments("missing", false)]
-    public async Task ContainsKey_ReturnsExpected(string key, bool expected) =>
+    public async Task ContainsKey_ExistingAndMissingKeys_ReportsKeyPresence(string key, bool expected) =>
         await Assert.That(_dict.ContainsKey(key)).IsEqualTo(expected);
 
     [Test]
     [Arguments(1, true)]
     [Arguments(2, true)]
     [Arguments(99, false)]
-    public async Task ContainsValue_ReturnsExpected(int value, bool expected) =>
+    public async Task ContainsValue_ExistingAndMissingValues_ReportsValuePresence(int value, bool expected) =>
         await Assert.That(_dict.ContainsValue(value)).IsEqualTo(expected);
 
     [Test]
@@ -122,7 +122,7 @@ public sealed class BiDictionaryTest
     }
 
     [Test]
-    public async Task Clear_RemovesAllEntries()
+    public async Task Clear_PopulatedDictionary_RemovesAllEntries()
     {
         _dict.Clear();
 
@@ -133,7 +133,7 @@ public sealed class BiDictionaryTest
     }
 
     [Test]
-    public async Task ToFrozenBiDictionary_PreservesAllMappings()
+    public async Task ToFrozenBiDictionary_PopulatedDictionary_PreservesAllMappings()
     {
         var frozen = _dict.ToFrozenBiDictionary();
 
@@ -144,7 +144,7 @@ public sealed class BiDictionaryTest
     }
 
     [Test]
-    public async Task GetEnumerator_YieldsForwardKeyValuePairs()
+    public async Task GetEnumerator_PopulatedDictionary_YieldsForwardKeyValuePairs()
     {
         var pairs = _dict.ToArray();
 
@@ -156,7 +156,7 @@ public sealed class BiDictionaryTest
     }
 
     [Test]
-    public async Task NonGenericEnumerator_YieldsForwardKeyValuePairs()
+    public async Task GetEnumerator_NonGenericEnumerable_YieldsForwardKeyValuePairs()
     {
         IEnumerable enumerable = _dict;
         var pairs = new List<KeyValuePair<string, int>>();
@@ -171,7 +171,7 @@ public sealed class BiDictionaryTest
     }
 
     [Test]
-    public async Task IndexerSetByKey_OverwritesValueAndReverseEntry()
+    public async Task IndexerSetByKey_ExistingKey_OverwritesValueAndReverseEntry()
     {
         _dict["one"] = 100;
 
@@ -181,7 +181,7 @@ public sealed class BiDictionaryTest
     }
 
     [Test]
-    public async Task IndexerSetByValue_OverwritesKeyAndForwardEntry()
+    public async Task IndexerSetByValue_ExistingValue_OverwritesKeyAndForwardEntry()
     {
         _dict[1] = "uno";
 
@@ -221,7 +221,7 @@ public sealed class BiDictionaryTest
     }
 
     [Test]
-    public async Task CollectionInitializer_BuildsBiDictionaryViaCreate()
+    public async Task Create_CollectionExpression_BuildsBiDictionary()
     {
         BiDictionary<string, int> dict =
         [

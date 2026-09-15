@@ -6,7 +6,7 @@ namespace Euterpe.Tests.Core;
 public sealed partial class AuthServiceTest
 {
     [Test]
-    public async Task LogoutAsync_ShouldClearStateAndResetReady()
+    public async Task LogoutAsync_LoggedIn_ClearsStateAndResetsReady()
     {
         var authClientMock = IEuterpeAuthClient.Mock();
         authClientMock.ExchangeAppTokenAsync(Any<AppTokenRequest>(), Any<CancellationToken>())

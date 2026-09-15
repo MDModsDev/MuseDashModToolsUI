@@ -78,7 +78,7 @@ public sealed class MainSplashWindowViewModelTest
     }
 
     [Test]
-    public async Task Close_RaisesRequestClose()
+    public async Task Close_SubscriberRegistered_RaisesRequestClose()
     {
         var vm = NewViewModel(NewAuthService(true, out _));
         var closed = false;

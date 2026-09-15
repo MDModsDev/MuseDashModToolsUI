@@ -11,7 +11,7 @@ public sealed class ChartingToolStepTest
     private ChartingToolStep CreateStep() => new() { Logger = _logger };
 
     [Test]
-    public async Task Kinds_IsChartingTool()
+    public async Task Kinds_ChartingToolStep_ReturnsChartingTool()
     {
         var step = CreateStep();
 
@@ -19,7 +19,7 @@ public sealed class ChartingToolStepTest
     }
 
     [Test]
-    public async Task ExecuteAsync_CompletesWithoutThrowing()
+    public async Task ExecuteAsync_ProgressProvided_CompletesWithoutThrowing()
     {
         var step = CreateStep();
 
@@ -28,7 +28,7 @@ public sealed class ChartingToolStepTest
     }
 
     [Test]
-    public async Task ExecuteAsync_DoesNotReportProgress()
+    public async Task ExecuteAsync_ProgressProvided_DoesNotReportProgress()
     {
         var step = CreateStep();
         var reports = new List<string>();

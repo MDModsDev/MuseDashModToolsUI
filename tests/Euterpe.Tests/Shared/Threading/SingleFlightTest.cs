@@ -140,7 +140,7 @@ public sealed class SingleFlightTest
     [Test]
     [Repeat(20)]
     [Timeout(5_000)]
-    public async Task RunAsync_ManyCallsWithSameKey_BeforeWorkCompletes_ExecuteOnce(CancellationToken cancellationToken)
+    public async Task RunAsync_ConcurrentCallsWithSameKeyBeforeCompletion_ExecutesOnce(CancellationToken cancellationToken)
     {
         const int callerCount = 64;
         var flight = new SingleFlight<int>();

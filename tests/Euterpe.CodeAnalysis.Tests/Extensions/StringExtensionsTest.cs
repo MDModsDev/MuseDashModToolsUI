@@ -12,7 +12,7 @@ public sealed class StringExtensionsTest
     [Arguments("<tag>", "&lt;tag&gt;")]
     [Arguments("a < b > c & d", "a &lt; b &gt; c &amp; d")]
     [Arguments("", "")]
-    public async Task EscapeXmlDoc_ReplacesXmlSpecialCharacters(string input, string expected) =>
+    public async Task EscapeXmlDoc_XmlSpecialCharacters_ReplacesWithEntities(string input, string expected) =>
         await Assert.That(input.EscapeXmlDoc()).IsEqualTo(expected);
 
     [Test]
@@ -26,6 +26,6 @@ public sealed class StringExtensionsTest
     [Arguments("digits123", "digits123")]
     [Arguments("symbols!@#$", "symbols____")]
     [Arguments("", "")]
-    public async Task GetValidIdentifier_ReplacesNonAlphanumericWithUnderscore(string input, string expected) =>
+    public async Task GetValidIdentifier_MixedCharacters_ReplacesNonAlphanumericWithUnderscore(string input, string expected) =>
         await Assert.That(input.GetValidIdentifier()).IsEqualTo(expected);
 }

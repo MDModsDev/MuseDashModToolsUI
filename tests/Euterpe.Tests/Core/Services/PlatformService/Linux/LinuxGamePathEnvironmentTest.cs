@@ -38,7 +38,7 @@ public sealed class LinuxGamePathEnvironmentTest
     [Arguments(null, false)]
     [Arguments(TestFolder, true)]
     [Arguments("/some/other/path", false)]
-    public async Task IsSet_ReflectsEnvironmentVariable(string? envValue, bool expected)
+    public async Task IsSet_EnvironmentVariableValues_MatchesConfiguredGameFolder(string? envValue, bool expected)
     {
         var service = CreateService();
         Environment.SetEnvironmentVariable(_envName, envValue);
@@ -46,7 +46,7 @@ public sealed class LinuxGamePathEnvironmentTest
     }
 
     [Test]
-    public async Task Set_LogsAndReturnsTrue()
+    public async Task Set_GameFolderConfigured_LogsInstructionsAndReturnsTrue()
     {
         var service = CreateService();
         var result = service.Set();

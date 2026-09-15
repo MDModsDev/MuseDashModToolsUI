@@ -10,7 +10,7 @@ namespace Euterpe.Tests.App.ViewModels;
 public sealed class ModManagePanelViewModelTest
 {
     [Test]
-    public async Task Constructor_InitializesWithEmptyMods()
+    public async Task Constructor_DefaultState_InitializesWithEmptyMods()
     {
         var vm = NewViewModel();
 
@@ -22,11 +22,11 @@ public sealed class ModManagePanelViewModelTest
     }
 
     [Test]
-    public async Task ModFilters_HasSixOptions() =>
+    public async Task ModFilters_DefaultOptions_HasSixOptions() =>
         await Assert.That(ModManagePanelViewModel.ModFilters).Count().IsEqualTo(6);
 
     [Test]
-    public async Task OpenConfigFileCommand_DelegatesToLauncher_WithComposedPath()
+    public async Task OpenConfigFileCommand_ModHasConfigFile_OpensComposedPath()
     {
         var launcher = IPlatformLauncher.Mock();
         var openedFiles = new List<string>();
@@ -51,7 +51,7 @@ public sealed class ModManagePanelViewModelTest
     }
 
     [Test]
-    public async Task InstallModCommand_DelegatesToService()
+    public async Task InstallModCommand_ModProvided_DelegatesToService()
     {
         var modManageService = IModManageService.Mock();
         var vm = NewViewModel(modManageService);
@@ -63,7 +63,7 @@ public sealed class ModManagePanelViewModelTest
     }
 
     [Test]
-    public async Task UpdateModCommand_DelegatesToService()
+    public async Task UpdateModCommand_ModProvided_DelegatesToService()
     {
         var modManageService = IModManageService.Mock();
         var vm = NewViewModel(modManageService);
@@ -75,7 +75,7 @@ public sealed class ModManagePanelViewModelTest
     }
 
     [Test]
-    public async Task ReinstallModCommand_DelegatesToService()
+    public async Task ReinstallModCommand_ModProvided_DelegatesToService()
     {
         var modManageService = IModManageService.Mock();
         var vm = NewViewModel(modManageService);
@@ -87,7 +87,7 @@ public sealed class ModManagePanelViewModelTest
     }
 
     [Test]
-    public async Task UninstallModCommand_DelegatesToService()
+    public async Task UninstallModCommand_ModProvided_DelegatesToService()
     {
         var modManageService = IModManageService.Mock();
         var vm = NewViewModel(modManageService);
@@ -99,7 +99,7 @@ public sealed class ModManagePanelViewModelTest
     }
 
     [Test]
-    public async Task ToggleModCommand_DelegatesToService()
+    public async Task ToggleModCommand_ModProvided_DelegatesToService()
     {
         var modManageService = IModManageService.Mock();
         var vm = NewViewModel(modManageService);
@@ -111,7 +111,7 @@ public sealed class ModManagePanelViewModelTest
     }
 
     [Test]
-    public async Task OnInitializeAsync_InitializesModsAndSetsAllModsLoaded()
+    public async Task InitializeAsync_ModServiceAvailable_InitializesModsAndSetsAllModsLoaded()
     {
         var modManageService = IModManageService.Mock();
         modManageService.Connect().Returns(Observable.Empty<IChangeSet<ModDto, string>>());

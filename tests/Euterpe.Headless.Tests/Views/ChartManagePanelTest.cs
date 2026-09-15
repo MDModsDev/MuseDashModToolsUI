@@ -10,7 +10,7 @@ namespace Euterpe.Headless.Tests.Views;
 public sealed class ChartManagePanelTest : HeadlessTest
 {
     [Test]
-    public Task DifficultyFilters_OnePerDifficulty() => RunOnUI(async () =>
+    public Task ApplyTemplate_ChartManagePanel_CreatesOneFilterPerDifficulty() => RunOnUI(async () =>
     {
         var difficulties = DifficultyToggles(Show())
             .Select(static toggle => toggle.GetVisualDescendants().OfType<DifficultyStar>().Single().Difficulty);

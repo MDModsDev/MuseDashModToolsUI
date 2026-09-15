@@ -9,7 +9,7 @@ public sealed class MuseDashConfigTest
     private const string GameFolder = "/games/MuseDash";
 
     [Test]
-    public async Task ComputedPaths_DerivedFromFolder()
+    public async Task ComputedPaths_GameFolderConfigured_AreDerivedFromFolder()
     {
         var game = new MuseDashConfig { Folder = GameFolder };
 
@@ -23,7 +23,7 @@ public sealed class MuseDashConfigTest
     }
 
     [Test]
-    public async Task ChartsFolders_NestedUnderEuterpeChartsFolder()
+    public async Task ChartsFolders_GameFolderConfigured_AreNestedUnderEuterpeChartsFolder()
     {
         var game = new MuseDashConfig { Folder = GameFolder };
 
@@ -33,18 +33,18 @@ public sealed class MuseDashConfigTest
     }
 
     [Test]
-    public async Task GameDataFolder_UsesGameDataFolderName()
+    public async Task GameDataFolder_GameFolderConfigured_UsesGameDataFolderName()
     {
         var game = new MuseDashConfig { Folder = GameFolder };
         await Assert.That(game.GameDataFolder).IsEqualTo(Path.Combine(GameFolder, "MuseDash_Data"));
     }
 
     [Test]
-    public async Task DefaultGameMode_IsModded() =>
+    public async Task GameMode_NewConfig_IsModded() =>
         await Assert.That(new MuseDashConfig().GameMode).IsEqualTo(GameMode.Modded);
 
     [Test]
-    public async Task UnityDependencyZipPath_IncludesUnityVersion()
+    public async Task UnityDependencyZipPath_UnityVersionProvided_IncludesVersion()
     {
         var game = new MuseDashConfig { Folder = GameFolder };
 

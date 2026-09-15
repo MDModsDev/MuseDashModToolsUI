@@ -11,7 +11,7 @@ namespace Euterpe.Tests.Core;
 public sealed class WindowsPathsTest
 {
     [Test]
-    public async Task SteamSearch_IsCartesianProductOfDrivesAndKnownFolders()
+    public async Task SteamSearch_WindowsLocations_CombinesDrivesAndKnownFolders()
     {
         var drives = Environment.GetLogicalDrives();
         var expectedFolders = new[]

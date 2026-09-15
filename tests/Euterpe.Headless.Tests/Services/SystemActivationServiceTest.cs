@@ -114,7 +114,7 @@ public sealed class SystemActivationServiceTest : HeadlessTest
     });
 
     [Test]
-    public Task HandleActivation_LogsReceivedAtInfoLevel() => RunOnUI(async () =>
+    public Task HandleActivation_InvalidUri_LogsReceivedAtInfoLevel() => RunOnUI(async () =>
     {
         var logger = Mock.Logger<SystemActivationService>();
         var service = NewService(logger: logger);
@@ -170,7 +170,7 @@ public sealed class SystemActivationServiceTest : HeadlessTest
     [Arguments("?silent", true)]
     [Arguments("?other=1&silent=true", false)]
     [Arguments("?presilent=1", true)]
-    public async Task ShouldActivateWindow_HonorsSilentFlag(string query, bool expected)
+    public async Task ShouldActivateWindow_SilentQueryVariations_HonorsSilentFlag(string query, bool expected)
     {
         await Assert.That(InvokeShouldActivateWindow(null, query)).IsEqualTo(expected);
     }
@@ -218,7 +218,7 @@ public sealed class SystemActivationServiceTest : HeadlessTest
     }
 
     [Test]
-    public async Task HandleModAction_Update_WithoutName_UpdatesAllMods()
+    public async Task HandleModAction_UpdateWithoutName_UpdatesAllMods()
     {
         var mods = IModManageService.Mock();
         var service = NewService(modManageService: mods);
@@ -231,7 +231,7 @@ public sealed class SystemActivationServiceTest : HeadlessTest
     }
 
     [Test]
-    public async Task HandleModAction_Install_Named_DelegatesToInstallByName()
+    public async Task HandleModAction_InstallWithName_DelegatesToInstallByName()
     {
         var mods = IModManageService.Mock();
         var service = NewService(modManageService: mods);
@@ -242,7 +242,7 @@ public sealed class SystemActivationServiceTest : HeadlessTest
     }
 
     [Test]
-    public async Task HandleModAction_Update_Named_DelegatesToUpdateByName()
+    public async Task HandleModAction_UpdateWithName_DelegatesToUpdateByName()
     {
         var mods = IModManageService.Mock();
         var service = NewService(modManageService: mods);
@@ -255,7 +255,7 @@ public sealed class SystemActivationServiceTest : HeadlessTest
     }
 
     [Test]
-    public async Task HandleModAction_Uninstall_Named_DelegatesToUninstallByName()
+    public async Task HandleModAction_UninstallWithName_DelegatesToUninstallByName()
     {
         var mods = IModManageService.Mock();
         var service = NewService(modManageService: mods);

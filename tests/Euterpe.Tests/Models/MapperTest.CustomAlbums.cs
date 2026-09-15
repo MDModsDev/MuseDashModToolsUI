@@ -5,7 +5,7 @@ namespace Euterpe.Tests.Models;
 public sealed partial class MapperTest
 {
     [Test]
-    public async Task ToManifestMeta_MapsCoreFields()
+    public async Task ToManifestMeta_CoreFieldsPopulated_MapsCoreFields()
     {
         var info = new InfoJson
         {
@@ -25,7 +25,7 @@ public sealed partial class MapperTest
     }
 
     [Test]
-    public async Task ToManifestMeta_BlankOptionalFieldsPassThrough()
+    public async Task ToManifestMeta_BlankOptionalFields_PreservesEmptyValues()
     {
         var info = new InfoJson { Name = "Song", Author = "Composer", Scene = "scene_01" };
 
@@ -44,7 +44,7 @@ public sealed partial class MapperTest
     [Arguments("120~140", 130, 120, 140)]
     [Arguments("", 0, null, null)]
     [Arguments("not-a-number", 0, null, null)]
-    public async Task ToManifestMeta_ParsesBpm(string bpm, int expected, int? expectedMin, int? expectedMax)
+    public async Task ToManifestMeta_BpmTextVariations_ParsesBpm(string bpm, int expected, int? expectedMin, int? expectedMax)
     {
         var info = new InfoJson { Name = "Song", Author = "Composer", Bpm = bpm, Scene = "scene_01" };
 
@@ -56,7 +56,7 @@ public sealed partial class MapperTest
     }
 
     [Test]
-    public async Task ToManifestMeta_BuildsMapsForGivenDifficultiesWithDesignerFallback()
+    public async Task ToManifestMeta_SelectedDifficulties_BuildsMapsWithDesignerFallback()
     {
         var info = new InfoJson
         {
@@ -88,7 +88,7 @@ public sealed partial class MapperTest
     [Arguments("scene_01", "scene_01")]
     [Arguments("scene_12", "scene_12")]
     [Arguments("scene_99", "scene_99")]
-    public async Task ToManifestMeta_NormalizesSceneToTwoDigits(string scene, string expected)
+    public async Task ToManifestMeta_SceneNumberVariations_NormalizesToTwoDigits(string scene, string expected)
     {
         var info = new InfoJson { Name = "Song", Author = "Composer", Scene = scene };
 

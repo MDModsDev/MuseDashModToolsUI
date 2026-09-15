@@ -18,7 +18,7 @@ public sealed class NotificationServiceTest : HeadlessTest
     }
 
     [Test]
-    public Task AllMethods_DoNotThrow() => RunOnUI(async () =>
+    public Task AllMethods_NotifierWired_DoNotThrow() => RunOnUI(async () =>
     {
         var service = NewWiredService();
 
@@ -48,7 +48,7 @@ public sealed class NotificationServiceTest : HeadlessTest
     });
 
     [Test]
-    public async Task OffUIThread_DispatchesWithoutThrowing()
+    public async Task Success_CalledOffUIThread_DispatchesWithoutThrowing()
     {
         var manager = await RunOnUI(() =>
         {
@@ -72,7 +72,7 @@ public sealed class NotificationServiceTest : HeadlessTest
     }
 
     [Test]
-    public async Task BeforeNotifierWired_DoesNotThrow()
+    public async Task Error_NotifierNotWired_DoesNotThrow()
     {
         var service = new NotificationService();
 

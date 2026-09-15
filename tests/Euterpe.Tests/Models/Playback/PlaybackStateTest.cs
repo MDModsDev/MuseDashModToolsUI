@@ -46,7 +46,7 @@ public sealed class PlaybackStateTest
     }
 
     [Test]
-    public async Task Set_RaisesPropertyChangedForBothProperties()
+    public async Task Set_StatusAndPlayingKeyChanged_RaisesPropertyChangedForBoth()
     {
         var state = new PlaybackState();
         var changed = new List<string?>();

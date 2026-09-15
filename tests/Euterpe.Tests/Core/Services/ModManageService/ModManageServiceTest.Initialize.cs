@@ -29,7 +29,7 @@ public sealed partial class ModManageServiceTest
     }
 
     [Test]
-    public async Task InitializeModsAsync_LoadsLocalModsIntoSourceCache()
+    public async Task InitializeModsAsync_LocalModsAvailable_LoadsThemIntoSourceCache()
     {
         var localServiceMock = IModLocalService.Mock();
         localServiceMock.GetModFilePaths().Returns([TestModFilePath]);
@@ -44,7 +44,7 @@ public sealed partial class ModManageServiceTest
     }
 
     [Test]
-    public async Task InitializeModsAsync_AddsWebOnlyModsToSourceCache()
+    public async Task InitializeModsAsync_WebOnlyModsAvailable_AddsThemToSourceCache()
     {
         var downloadManagerMock = IGameDownloadManager.Mock();
         downloadManagerMock.FetchLibListAsync(Any<CancellationToken>()).Returns([]);

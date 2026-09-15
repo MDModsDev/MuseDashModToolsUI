@@ -7,7 +7,7 @@ namespace Euterpe.Tests.Shared.Http;
 public sealed class XRequestIdHandlerTest
 {
     [Test]
-    public async Task SendAsync_AddsXRequestIdHeader()
+    public async Task SendAsync_NewRequest_AddsXRequestIdHeader()
     {
         var inner = Mock.HttpHandler();
         inner.OnAnyRequest().Respond();
@@ -23,7 +23,7 @@ public sealed class XRequestIdHandlerTest
     }
 
     [Test]
-    public async Task SendAsync_GeneratesDifferentIdPerRequest()
+    public async Task SendAsync_MultipleRequests_GeneratesDifferentIdPerRequest()
     {
         var inner = Mock.HttpHandler();
         inner.OnAnyRequest().Respond();

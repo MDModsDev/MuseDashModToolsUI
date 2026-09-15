@@ -15,7 +15,7 @@ public sealed class LogMessageTest
     [Arguments(LogLevel.Error, "ERR")]
     [Arguments(LogLevel.Critical, "CRT")]
     [Arguments(LogLevel.None, "NON")]
-    public async Task LogLevelAbbreviation_DerivedFromLevel(LogLevel level, string expected)
+    public async Task LogLevelAbbreviation_KnownLogLevels_ReturnsMatchingAbbreviation(LogLevel level, string expected)
     {
         var msg = new LogMessage(DateTimeOffset.UtcNow, level, "cat", "m");
         await Assert.That(msg.LogLevelAbbreviation).IsEqualTo(expected);

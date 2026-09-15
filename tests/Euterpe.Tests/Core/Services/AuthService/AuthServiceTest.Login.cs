@@ -7,7 +7,7 @@ namespace Euterpe.Tests.Core;
 public sealed partial class AuthServiceTest
 {
     [Test]
-    public async Task LoginAsync_ShouldOpenAuthorizeUrlWithPkceChallengeAndState()
+    public async Task LoginAsync_InteractiveLogin_OpensAuthorizeUrlWithPkceChallengeAndState()
     {
         string? capturedUrl = null;
         var launcher = IPlatformLauncher.Mock();

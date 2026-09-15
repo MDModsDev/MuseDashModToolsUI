@@ -15,7 +15,7 @@ public sealed partial class ModDtoTest
         };
 
     [Test]
-    public async Task AddLocalInfo_PromotesToLocalAndCopiesVersion()
+    public async Task AddLocalInfo_WebOnlyMod_PromotesToLocalAndCopiesVersion()
     {
         var mod = Create();
 
@@ -30,7 +30,7 @@ public sealed partial class ModDtoTest
     }
 
     [Test]
-    public async Task RemoveLocalInfo_DemotesToWebOnly()
+    public async Task RemoveLocalInfo_LocalMod_DemotesToWebOnly()
     {
         var mod = Create(localFnWithoutExt: "MyMod", disabled: false);
         mod.LocalVersion = "1.0.0";

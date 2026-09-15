@@ -16,7 +16,7 @@ public sealed class NavigationServiceTest
     };
 
     [Test]
-    public async Task Ctor_InitialState()
+    public async Task Constructor_DefaultState_HasNoCurrentRouteAndIsNotReady()
     {
         var service = NewService();
 
@@ -58,7 +58,7 @@ public sealed class NavigationServiceTest
     }
 
     [Test]
-    public async Task NavigateToAsync_BlocksUntilReadyThenNavigates()
+    public async Task NavigateToAsync_NotReady_WaitsUntilReadyThenNavigates()
     {
         var service = NewService();
         var task = service.NavigateToAsync(RouteA);

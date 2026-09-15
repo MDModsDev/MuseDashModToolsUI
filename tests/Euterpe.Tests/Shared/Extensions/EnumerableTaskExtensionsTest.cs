@@ -27,7 +27,7 @@ public sealed class EnumerableTaskExtensionsTest
     }
 
     [Test]
-    public async Task WhenAllAsync_PreservesNullResults()
+    public async Task WhenAllAsync_SelectorReturnsNull_PreservesNullResults()
     {
         var input = new[] { 1, 2, 3 };
 
@@ -41,7 +41,7 @@ public sealed class EnumerableTaskExtensionsTest
     }
 
     [Test]
-    public async Task WhenAllAsync_PropagatesException()
+    public async Task WhenAllAsync_SelectorThrows_PropagatesException()
     {
         var input = new[] { 1, 2, 3 };
 
@@ -52,7 +52,7 @@ public sealed class EnumerableTaskExtensionsTest
     }
 
     [Test]
-    public async Task WhenAllAsync_AcceptsAnyEnumerable()
+    public async Task WhenAllAsync_LazyEnumerable_ProjectsAllItems()
     {
         var input = Enumerable.Range(1, 3);
 

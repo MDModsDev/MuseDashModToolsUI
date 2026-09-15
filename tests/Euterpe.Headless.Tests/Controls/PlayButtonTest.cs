@@ -30,7 +30,7 @@ public sealed class PlayButtonTest : HeadlessTest
     });
 
     [Test]
-    public Task InnerPlayButton_ContentBindsToOuterContent() => RunOnUI(async () =>
+    public Task Content_ValueSet_BindsToInnerPlayButton() => RunOnUI(async () =>
     {
         var playButton = new PlayButton { Content = "PLAY NOW" };
         var window = new Window { Content = playButton, Width = 300, Height = 100 };

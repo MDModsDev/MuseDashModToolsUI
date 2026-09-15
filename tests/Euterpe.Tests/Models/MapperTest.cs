@@ -48,7 +48,7 @@ public sealed partial class MapperTest
 
     [Test]
     [MethodDataSource(nameof(LibToModelCases))]
-    public async Task LibToModel_ProjectsAllRelevantFields((Lib lib, LibDto expected) data)
+    public async Task ToModel_LibContract_ProjectsAllRelevantFields((Lib lib, LibDto expected) data)
     {
         var actual = data.lib.ToModel();
 
@@ -79,7 +79,7 @@ public sealed partial class MapperTest
     }
 
     [Test]
-    public async Task ModToModel_PopulatesDtoFromContract()
+    public async Task ToModel_ModContract_PopulatesDtoFields()
     {
         var mod = new Mod
         {

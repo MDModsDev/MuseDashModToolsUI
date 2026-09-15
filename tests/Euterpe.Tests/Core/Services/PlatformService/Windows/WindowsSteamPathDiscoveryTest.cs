@@ -105,7 +105,7 @@ public sealed class WindowsSteamPathDiscoveryTest
     }
 
     [Test]
-    public async Task TryGetSteamFolder_BehaviorMatchesEnvironment()
+    public async Task TryGetSteamFolder_CurrentEnvironment_ReturnsExistingFolderOrNull()
     {
         // SteamSearch is computed once from logical drives and Steam-related paths.
         // On CI Windows runner Steam isn't installed, so this should return false; on a

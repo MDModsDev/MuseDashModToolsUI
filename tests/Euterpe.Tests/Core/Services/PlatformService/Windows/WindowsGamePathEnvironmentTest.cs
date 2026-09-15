@@ -38,7 +38,7 @@ public sealed class WindowsGamePathEnvironmentTest
     [Arguments(null, false)]
     [Arguments(TestFolder, true)]
     [Arguments(@"C:\different\path", false)]
-    public async Task IsSet_ReflectsEnvironmentVariable(string? envValue, bool expected)
+    public async Task IsSet_EnvironmentVariableValues_MatchesConfiguredGameFolder(string? envValue, bool expected)
     {
         var service = CreateService();
         Environment.SetEnvironmentVariable(_envName, envValue);
@@ -46,7 +46,7 @@ public sealed class WindowsGamePathEnvironmentTest
     }
 
     [Test]
-    public async Task Set_WritesUserEnvironmentVariableAndReturnsTrue()
+    public async Task Set_GameFolderConfigured_WritesUserEnvironmentVariableAndReturnsTrue()
     {
         var service = CreateService();
         var result = service.Set();

@@ -16,7 +16,7 @@ public sealed class AuthHeaderHandlerTest
     }
 
     [Test]
-    public async Task SendAsync_AddsBearerTokenHeader()
+    public async Task SendAsync_AccessTokenAvailable_AddsBearerTokenHeader()
     {
         var auth = IAuthService.Mock();
         auth.GetAccessTokenAsync().Returns("token-123");

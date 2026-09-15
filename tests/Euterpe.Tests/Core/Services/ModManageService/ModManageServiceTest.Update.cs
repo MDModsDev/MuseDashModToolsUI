@@ -52,7 +52,7 @@ public sealed partial class ModManageServiceTest
     }
 
     [Test]
-    public async Task UpdateAllModsAsync_UpdatesOnlyOutdatedMods()
+    public async Task UpdateAllModsAsync_OutdatedAndCurrentMods_UpdatesOnlyOutdatedMods()
     {
         var outdated = CreateInstalledMod("Outdated", "Outdated.dll");
         var upToDate = CreateInstalledMod("UpToDate", "UpToDate.dll");

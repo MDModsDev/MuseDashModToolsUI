@@ -14,10 +14,10 @@ namespace Euterpe.Headless.Tests.Views;
 public sealed class ViewSmokeTest : HeadlessTest
 {
     [Test]
-    public Task ChartingPage_LoadsIntoVisualTree() => Smoke(() => new ChartingPage());
+    public Task Show_ChartingPage_LoadsIntoVisualTree() => Smoke(() => new ChartingPage());
 
     [Test]
-    public Task HomePage_LoadsIntoVisualTree() => RunOnUI(async () =>
+    public Task Show_HomePage_LoadsIntoVisualTree() => RunOnUI(async () =>
     {
         var view = new HomePage();
         var window = new Window { Content = view, Width = 800, Height = 600 };
@@ -33,73 +33,73 @@ public sealed class ViewSmokeTest : HeadlessTest
     });
 
     [Test]
-    public Task LoggingPage_LoadsIntoVisualTree() => Smoke(() => new LoggingPage());
+    public Task Show_LoggingPage_LoadsIntoVisualTree() => Smoke(() => new LoggingPage());
 
     [Test]
-    public Task ModdingPage_LoadsIntoVisualTree() => Smoke(() => new ModdingPage());
+    public Task Show_ModdingPage_LoadsIntoVisualTree() => Smoke(() => new ModdingPage());
 
     [Test]
-    public Task SettingPage_LoadsIntoVisualTree() => Smoke(() => new SettingPage());
+    public Task Show_SettingPage_LoadsIntoVisualTree() => Smoke(() => new SettingPage());
 
     [Test]
-    public Task RepairDialog_LoadsIntoVisualTree() => Smoke(() => new RepairDialog());
+    public Task Show_RepairDialog_LoadsIntoVisualTree() => Smoke(() => new RepairDialog());
 
     [Test]
-    public Task WizardDialog_LoadsIntoVisualTree() => Smoke(() => new WizardDialog());
+    public Task Show_WizardDialog_LoadsIntoVisualTree() => Smoke(() => new WizardDialog());
 
     [Test]
-    public Task ExecutionPage_LoadsIntoVisualTree() => Smoke(() => new ExecutionPage());
+    public Task Show_ExecutionPage_LoadsIntoVisualTree() => Smoke(() => new ExecutionPage());
 
     [Test]
-    public Task GamePathPage_LoadsIntoVisualTree() => Smoke(() => new GamePathPage());
+    public Task Show_GamePathPage_LoadsIntoVisualTree() => Smoke(() => new GamePathPage());
 
     [Test]
-    public Task RolePage_LoadsIntoVisualTree() => Smoke(() => new RolePage());
+    public Task Show_RolePage_LoadsIntoVisualTree() => Smoke(() => new RolePage());
 
     [Test]
-    public Task CharterToolkitPanel_LoadsIntoVisualTree() => Smoke(() => new CharterToolkitPanel());
+    public Task Show_CharterToolkitPanel_LoadsIntoVisualTree() => Smoke(() => new CharterToolkitPanel());
 
     [Test]
-    public Task EpkEditorPanel_LoadsIntoVisualTree() => Smoke(() => new EpkEditorPanel());
+    public Task Show_EpkEditorPanel_LoadsIntoVisualTree() => Smoke(() => new EpkEditorPanel());
 
     [Test]
-    public Task ChartManagePanel_LoadsIntoVisualTree() => Smoke(() => new ChartManagePanel());
+    public Task Show_ChartManagePanel_LoadsIntoVisualTree() => Smoke(() => new ChartManagePanel());
 
     [Test]
-    public Task AppLogPanel_LoadsIntoVisualTree() => Smoke(() => new AppLogPanel());
+    public Task Show_AppLogPanel_LoadsIntoVisualTree() => Smoke(() => new AppLogPanel());
 
     [Test]
-    public Task MelonLoaderLogPanel_LoadsIntoVisualTree() => Smoke(() => new MelonLoaderLogPanel());
+    public Task Show_MelonLoaderLogPanel_LoadsIntoVisualTree() => Smoke(() => new MelonLoaderLogPanel());
 
     [Test]
-    public Task MelonLoaderPanel_LoadsIntoVisualTree() => Smoke(() => new MelonLoaderPanel());
+    public Task Show_MelonLoaderPanel_LoadsIntoVisualTree() => Smoke(() => new MelonLoaderPanel());
 
     [Test]
-    public Task ModDevelopPanel_LoadsIntoVisualTree() => Smoke(() => new ModDevelopPanel());
+    public Task Show_ModDevelopPanel_LoadsIntoVisualTree() => Smoke(() => new ModDevelopPanel());
 
     [Test]
-    public Task ModManagePanel_LoadsIntoVisualTree() => Smoke(() => new ModManagePanel());
+    public Task Show_ModManagePanel_LoadsIntoVisualTree() => Smoke(() => new ModManagePanel());
 
     [Test]
-    public Task AboutPanel_LoadsIntoVisualTree() => Smoke(() => new AboutPanel());
+    public Task Show_AboutPanel_LoadsIntoVisualTree() => Smoke(() => new AboutPanel());
 
     [Test]
-    public Task AdvancedPanel_LoadsIntoVisualTree() => Smoke(() => new AdvancedPanel());
+    public Task Show_AdvancedPanel_LoadsIntoVisualTree() => Smoke(() => new AdvancedPanel());
 
     [Test]
-    public Task AppearancePanel_LoadsIntoVisualTree() => Smoke(() => new AppearancePanel());
+    public Task Show_AppearancePanel_LoadsIntoVisualTree() => Smoke(() => new AppearancePanel());
 
     [Test]
-    public Task DownloadPanel_LoadsIntoVisualTree() => Smoke(() => new DownloadPanel());
+    public Task Show_DownloadPanel_LoadsIntoVisualTree() => Smoke(() => new DownloadPanel());
 
     [Test]
-    public Task ExperiencePanel_LoadsIntoVisualTree() => Smoke(() => new ExperiencePanel());
+    public Task Show_ExperiencePanel_LoadsIntoVisualTree() => Smoke(() => new ExperiencePanel());
 
     [Test]
-    public Task FileManagementPanel_LoadsIntoVisualTree() => Smoke(() => new FileManagementPanel());
+    public Task Show_FileManagementPanel_LoadsIntoVisualTree() => Smoke(() => new FileManagementPanel());
 
     [Test]
-    public Task MainWindow_LoadsIntoVisualTree() => RunOnUI(async () =>
+    public Task Show_MainWindow_LoadsIntoVisualTree() => RunOnUI(async () =>
     {
         var window = new MainWindow();
         window.Show();
@@ -111,7 +111,7 @@ public sealed class ViewSmokeTest : HeadlessTest
     });
 
     [Test]
-    public Task MainSplashWindow_LoadsIntoVisualTree() => RunOnUI(async () =>
+    public Task Show_MainSplashWindow_LoadsIntoVisualTree() => RunOnUI(async () =>
     {
         var window = new MainSplashWindow { MainWindowFactory = () => new MainWindow() };
         window.Show();
@@ -123,7 +123,7 @@ public sealed class ViewSmokeTest : HeadlessTest
     });
 
     [Test]
-    public Task CrashWindow_LoadsIntoVisualTree() => RunOnUI(async () =>
+    public Task Show_CrashWindow_LoadsIntoVisualTree() => RunOnUI(async () =>
     {
         var window = new CrashWindow();
         window.Show();

@@ -56,7 +56,7 @@ public sealed class EpkEditorPanelViewModelTest
     }
 
     [Test]
-    public async Task CreateNew_SeedsFilesFromFolderSkippingManifestAndTemp()
+    public async Task CreateNew_FolderContainsChartAndTemporaryFiles_SeedsFilesExcludingManifestAndTemp()
     {
         var folder = new Dictionary<string, long>(StringComparer.OrdinalIgnoreCase)
         {
@@ -192,7 +192,7 @@ public sealed class EpkEditorPanelViewModelTest
     }
 
     [Test]
-    public async Task CanSave_RequiresSceneAndEveryPresentMapFilled()
+    public async Task CanSave_SceneOrMapFieldsCleared_RequiresSceneAndEveryPresentMapFilled()
     {
         var vm = NewViewModel();
         vm.Open("C:/charts/A/manifest.epk", SingleChartWithoutHidden());
@@ -209,7 +209,7 @@ public sealed class EpkEditorPanelViewModelTest
     }
 
     [Test]
-    public async Task CanSave_RequiresAMap2()
+    public async Task CanSave_Map2Missing_ReturnsFalse()
     {
         var vm = NewViewModel();
         vm.Open("C:/charts/A/manifest.epk", EasyOnlyChart());

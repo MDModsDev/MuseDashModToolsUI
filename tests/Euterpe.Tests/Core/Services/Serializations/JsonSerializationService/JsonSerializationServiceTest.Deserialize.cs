@@ -38,7 +38,7 @@ public sealed partial class JsonSerializationServiceTest
     private readonly JsonSerializationService _jsonSerializationService = new();
 
     [Test]
-    public Task DeserializeConfig_ShouldReturnValidConfig()
+    public Task DeserializeConfig_ValidJson_ReturnsMatchingConfig()
     {
         var stream = new MemoryStream(Encoding.UTF8.GetBytes(ConfigJson));
         var config = _jsonSerializationService.DeserializeConfig(stream);
@@ -47,7 +47,7 @@ public sealed partial class JsonSerializationServiceTest
     }
 
     [Test]
-    public async Task DeserializeConfigAsync_ShouldReturnValidConfig()
+    public async Task DeserializeConfigAsync_ValidJson_ReturnsMatchingConfig()
     {
         var stream = new MemoryStream(Encoding.UTF8.GetBytes(ConfigJson));
         var config = await _jsonSerializationService.DeserializeConfigAsync(stream).ConfigureAwait(false);

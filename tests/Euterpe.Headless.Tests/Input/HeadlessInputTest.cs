@@ -45,7 +45,7 @@ public sealed class HeadlessInputTest : HeadlessTest
     });
 
     [Test]
-    public Task TabKey_MovesFocusToNextControl() => RunOnUI(async () =>
+    public Task KeyPress_Tab_MovesFocusToNextControl() => RunOnUI(async () =>
     {
         var first = new TextBox { Width = 100, Height = 30 };
         var second = new TextBox { Width = 100, Height = 30 };
@@ -64,7 +64,7 @@ public sealed class HeadlessInputTest : HeadlessTest
     });
 
     [Test]
-    public Task BackspaceKey_DeletesLastCharacterFromTextBox() => RunOnUI(async () =>
+    public Task KeyPress_Backspace_DeletesLastCharacterFromTextBox() => RunOnUI(async () =>
     {
         var textBox = new TextBox { Width = 200, Height = 30 };
         var window = new Window { Content = textBox, Width = 300, Height = 100 };
@@ -84,7 +84,7 @@ public sealed class HeadlessInputTest : HeadlessTest
     });
 
     [Test]
-    public Task EnterKey_RaisesClickOnDefaultButton() => RunOnUI(async () =>
+    public Task KeyPress_Enter_RaisesClickOnDefaultButton() => RunOnUI(async () =>
     {
         var clicks = 0;
         var textBox = new TextBox { Width = 100, Height = 30 };

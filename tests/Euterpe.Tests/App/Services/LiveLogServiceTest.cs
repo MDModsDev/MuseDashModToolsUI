@@ -42,7 +42,7 @@ public sealed class LiveLogServiceTest
     }
 
     [Test]
-    public async Task TargetEvent_AppendsMessageToView()
+    public async Task LogMessagesView_MessageReceived_AppendsMessage()
     {
         var (service, factory) = CreateWiredService();
         using (factory)
@@ -58,7 +58,7 @@ public sealed class LiveLogServiceTest
     }
 
     [Test]
-    public async Task TargetEvent_PreservesAppendOrder()
+    public async Task LogMessagesView_MultipleMessagesReceived_PreservesAppendOrder()
     {
         var (service, factory) = CreateWiredService();
         using (factory)
@@ -78,7 +78,7 @@ public sealed class LiveLogServiceTest
     }
 
     [Test]
-    public async Task RingBuffer_DropsOldestWhenExceedingCapacity()
+    public async Task LogMessagesView_CapacityExceeded_DropsOldestMessages()
     {
         var (service, factory) = CreateWiredService();
         using (factory)

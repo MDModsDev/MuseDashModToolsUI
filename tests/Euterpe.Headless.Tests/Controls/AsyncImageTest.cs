@@ -8,14 +8,14 @@ namespace Euterpe.Headless.Tests.Controls;
 public sealed class AsyncImageTest : HeadlessTest
 {
     [Test]
-    public Task DefaultStretch_IsUniform() => RunOnUI(async () =>
+    public Task Stretch_NewControl_IsUniform() => RunOnUI(async () =>
     {
         var image = new AsyncImage();
         await Assert.That(image.Stretch).IsEqualTo(Stretch.Uniform);
     });
 
     [Test]
-    public Task ApplyTemplate_CreatesPartImageAndPartPlaceholder() => RunOnUI(async () =>
+    public Task ApplyTemplate_DefaultTheme_CreatesPartImageAndPartPlaceholder() => RunOnUI(async () =>
     {
         var asyncImage = new AsyncImage();
         var window = new Window { Content = asyncImage, Width = 200, Height = 200 };
@@ -35,7 +35,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task Placeholder_HidesAfterImageLoads() => RunOnUI(async () =>
+    public Task Source_ImageLoaded_HidesPlaceholder() => RunOnUI(async () =>
     {
         var path = CreateTempPng(64, 64);
         try
@@ -55,7 +55,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task Placeholder_StaysVisibleWhenSourceEmpty() => RunOnUI(async () =>
+    public Task Source_NullSource_KeepsPlaceholderVisible() => RunOnUI(async () =>
     {
         var asyncImage = new AsyncImage { Source = null };
         var window = new Window { Content = asyncImage, Width = 200, Height = 200 };
@@ -66,7 +66,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task Placeholder_ReappearsWhenSourceClearedAfterLoad() => RunOnUI(async () =>
+    public Task Source_ClearedAfterLoad_ShowsPlaceholder() => RunOnUI(async () =>
     {
         var path = CreateTempPng(64, 64);
         try
@@ -88,7 +88,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task NullSource_DoesNotThrowAfterTemplateApply() => RunOnUI(async () =>
+    public Task ApplyTemplate_NullSource_DoesNotThrow() => RunOnUI(async () =>
     {
         var asyncImage = new AsyncImage { Source = null };
         var window = new Window { Content = asyncImage, Width = 200, Height = 200 };
@@ -99,7 +99,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task EmptySource_DoesNotThrowAfterTemplateApply() => RunOnUI(async () =>
+    public Task ApplyTemplate_EmptySource_DoesNotThrow() => RunOnUI(async () =>
     {
         var asyncImage = new AsyncImage { Source = string.Empty };
         var window = new Window { Content = asyncImage, Width = 200, Height = 200 };
@@ -110,7 +110,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task InvalidUri_DoesNotThrowAfterTemplateApply() => RunOnUI(async () =>
+    public Task ApplyTemplate_InvalidSourceUri_DoesNotThrow() => RunOnUI(async () =>
     {
         var asyncImage = new AsyncImage { Source = "not-a-uri" };
         var window = new Window { Content = asyncImage, Width = 200, Height = 200 };
@@ -121,7 +121,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task StretchChange_PropagatesToPartImage() => RunOnUI(async () =>
+    public Task Stretch_FillValue_PropagatesToPartImage() => RunOnUI(async () =>
     {
         var asyncImage = new AsyncImage { Stretch = Stretch.Fill };
         var window = new Window { Content = asyncImage, Width = 200, Height = 200 };
@@ -135,7 +135,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task DecodeWidth_DecodesSourceToConfiguredWidth() => RunOnUI(async () =>
+    public Task DecodeWidth_SourceLargerThanConfiguredWidth_DecodesToConfiguredWidth() => RunOnUI(async () =>
     {
         var path = CreateTempPng(512, 512);
         try
@@ -193,7 +193,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task SourceChange_DisposesPreviousBitmap() => RunOnUI(async () =>
+    public Task Source_ChangedAfterLoad_DisposesPreviousBitmap() => RunOnUI(async () =>
     {
         var pathA = CreateTempPng(256, 256);
         var pathB = CreateTempPng(256, 256);
@@ -219,7 +219,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task DetachFromVisualTree_DisposesBitmapAndClearsSource() => RunOnUI(async () =>
+    public Task DetachFromVisualTree_LoadedBitmap_DisposesBitmapAndClearsSource() => RunOnUI(async () =>
     {
         var path = CreateTempPng(256, 256);
         try
@@ -244,7 +244,7 @@ public sealed class AsyncImageTest : HeadlessTest
     });
 
     [Test]
-    public Task ReattachWithUnchangedSource_ReloadsBitmap() => RunOnUI(async () =>
+    public Task AttachToVisualTree_UnchangedSourceAfterDetach_ReloadsBitmap() => RunOnUI(async () =>
     {
         var path = CreateTempPng(256, 256);
         try

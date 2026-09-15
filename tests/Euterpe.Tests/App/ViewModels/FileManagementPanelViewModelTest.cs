@@ -7,7 +7,7 @@ namespace Euterpe.Tests.App.ViewModels;
 public sealed class FileManagementPanelViewModelTest
 {
     [Test]
-    public async Task ChangeGameFolderCommand_WritesPickedPathToGameConfig()
+    public async Task ChangeGameFolderCommand_FolderPicked_WritesPathToGameConfig()
     {
         var gameLocal = IGameLocalService.Mock();
         gameLocal.GetGameFolderAsync().Returns("/games/musedash");
@@ -20,7 +20,7 @@ public sealed class FileManagementPanelViewModelTest
     }
 
     [Test]
-    public async Task ChangeCacheFolderCommand_WritesPickedPathToConfig()
+    public async Task ChangeCacheFolderCommand_FolderPicked_WritesPathToConfig()
     {
         var appLocal = IAppLocalService.Mock();
         appLocal.GetCacheFolderAsync().Returns("/cache/new");

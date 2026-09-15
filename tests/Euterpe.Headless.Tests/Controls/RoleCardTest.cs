@@ -5,14 +5,14 @@ namespace Euterpe.Headless.Tests.Controls;
 public sealed class RoleCardTest : HeadlessTest
 {
     [Test]
-    public Task DefaultIsSelected_IsFalse() => RunOnUI(async () =>
+    public Task IsSelected_NewControl_IsFalse() => RunOnUI(async () =>
     {
         var card = new RoleCard();
         await Assert.That(card.IsSelected).IsFalse();
     });
 
     [Test]
-    public Task AccentColor_BindsToIconBadgeBackground() => RunOnUI(async () =>
+    public Task AccentColor_ValueSet_BindsToIconBadgeBackground() => RunOnUI(async () =>
     {
         var card = new RoleCard { AccentColor = new SolidColorBrush(Colors.Red) };
         var window = new Window { Content = card, Width = 300, Height = 100 };
@@ -28,7 +28,7 @@ public sealed class RoleCardTest : HeadlessTest
     });
 
     [Test]
-    public Task IsSelectedTrue_SwitchesIconBadgeToWhite() => RunOnUI(async () =>
+    public Task IsSelected_SetToTrue_SwitchesIconBadgeToWhite() => RunOnUI(async () =>
     {
         var card = new RoleCard { AccentColor = new SolidColorBrush(Colors.Red) };
         var window = new Window { Content = card, Width = 300, Height = 100 };

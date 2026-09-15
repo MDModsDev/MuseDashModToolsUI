@@ -9,7 +9,7 @@ public sealed class AuthStateTest
     private static readonly UserInfo TestUser = new(1, 0, "test@test.com", "TestUser", "avatar.png", false, false, false);
 
     [Test]
-    public async Task DefaultState_HasNoTokensAndNoUser()
+    public async Task Constructor_DefaultState_HasNoTokensAndNoUser()
     {
         var state = new AuthState();
 
@@ -21,7 +21,7 @@ public sealed class AuthStateTest
     }
 
     [Test]
-    public async Task Clear_ResetsAllFieldsToDefault()
+    public async Task Clear_PopulatedAuthState_ResetsAllFieldsToDefault()
     {
         var state = new AuthState
         {
@@ -44,7 +44,7 @@ public sealed class AuthStateTest
     [Arguments(null, "https://euterpe-org.com/")]
     [Arguments("avatar.png", "https://euterpe-org.com/avatar.png")]
     [Arguments("path/to/avatar.jpg", "https://euterpe-org.com/path/to/avatar.jpg")]
-    public async Task AvatarUrl_BuildsAbsoluteUrlFromCurrentUser(string? avatarUrl, string expected)
+    public async Task AvatarUrl_CurrentUserWithAvatarPath_BuildsAbsoluteUrl(string? avatarUrl, string expected)
     {
         var state = new AuthState
         {
@@ -62,7 +62,7 @@ public sealed class AuthStateTest
     }
 
     [Test]
-    public async Task SettingCurrentUser_RaisesAvatarUrlPropertyChanged()
+    public async Task CurrentUser_ValueChanged_RaisesAvatarUrlPropertyChanged()
     {
         var state = new AuthState();
         var changedProperties = new List<string?>();

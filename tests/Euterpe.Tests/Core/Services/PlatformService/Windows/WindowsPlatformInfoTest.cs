@@ -11,7 +11,7 @@ namespace Euterpe.Tests.Core;
 public sealed class WindowsPlatformInfoTest
 {
     [Test]
-    public async Task OsString_IsWin()
+    public async Task OsString_WindowsPlatformInfo_ReturnsWin()
     {
         var info = new WindowsPlatformInfo();
         await Assert.That(info.OsString).IsEqualTo("win");

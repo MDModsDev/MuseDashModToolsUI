@@ -8,7 +8,7 @@ namespace Euterpe.Tests.App.ViewModels;
 public sealed class HomePageViewModelTest
 {
     [Test]
-    public async Task GameModes_HasModdedAndVanilla()
+    public async Task GameModes_DefaultOptions_HasModdedAndVanilla()
     {
         using var _ = Assert.Multiple();
         await Assert.That(HomePageViewModel.GameModes).Count().IsEqualTo(2);
@@ -43,7 +43,7 @@ public sealed class HomePageViewModelTest
     }
 
     [Test]
-    public async Task LaunchGameCommand_PropagatesLaunchFailure()
+    public async Task LaunchGameCommand_LaunchFails_PropagatesException()
     {
         var launchService = IGameLaunchService.Mock();
         launchService.LaunchModdedGameAsync().Throws<InvalidOperationException>();

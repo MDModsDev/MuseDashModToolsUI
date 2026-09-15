@@ -12,7 +12,7 @@ public sealed class StringExtensionsTest
     [Arguments(" ", false)]
     [Arguments("a", false)]
     [Arguments("hello", false)]
-    public async Task IsNullOrEmpty_ReturnsExpected(string? input, bool expected) =>
+    public async Task IsNullOrEmpty_NullEmptyAndNonEmptyInputs_ReportsWhetherNullOrEmpty(string? input, bool expected) =>
         await Assert.That(input.IsNullOrEmpty()).IsEqualTo(expected);
 
     [Test]
@@ -21,7 +21,7 @@ public sealed class StringExtensionsTest
     [Arguments("   ", null)]
     [Arguments("a", "a")]
     [Arguments("hello", "hello")]
-    public async Task NullIfWhiteSpace_ReturnsNullWhenBlankElseValue(string? input, string? expected) =>
+    public async Task NullIfWhiteSpace_BlankAndNonBlankInputs_ReturnsNullOnlyWhenBlank(string? input, string? expected) =>
         await Assert.That(input.NullIfWhiteSpace()).IsEqualTo(expected);
 
     [Test]
@@ -29,7 +29,7 @@ public sealed class StringExtensionsTest
     [Arguments("", "fallback", "fallback")]
     [Arguments("   ", "fallback", "fallback")]
     [Arguments("value", "fallback", "value")]
-    public async Task DefaultIfWhiteSpace_ReturnsFallbackWhenBlankElseValue(string? input, string fallback, string expected) =>
+    public async Task DefaultIfWhiteSpace_BlankAndNonBlankInputs_ReturnsFallbackOnlyWhenBlank(string? input, string fallback, string expected) =>
         await Assert.That(input.DefaultIfWhiteSpace(fallback)).IsEqualTo(expected);
 
     [Test]
@@ -37,7 +37,7 @@ public sealed class StringExtensionsTest
     [Arguments(@"no\\slashes\\here", @"no\slashes\here")]
     [Arguments("nothing-to-replace", "nothing-to-replace")]
     [Arguments("", "")]
-    public async Task NormalizeSlashes_ReplacesDoubleBackslashesWithSingle(string input, string expected) =>
+    public async Task NormalizeSlashes_EscapedAndPlainPaths_ReplacesDoubleBackslashesWithSingle(string input, string expected) =>
         await Assert.That(input.NormalizeSlashes()).IsEqualTo(expected);
 
     [Test]
@@ -48,7 +48,7 @@ public sealed class StringExtensionsTest
     [Arguments("not-a-number", 0)]
     [Arguments("", 0)]
     [Arguments("3.14", 0)]
-    public async Task ParseLevel_ReturnsParsedValueOrZero(string input, int expected) =>
+    public async Task ParseLevel_IntegerAndInvalidText_ReturnsParsedValueOrZero(string input, int expected) =>
         await Assert.That(input.ParseLevel()).IsEqualTo(expected);
 
     [Test]

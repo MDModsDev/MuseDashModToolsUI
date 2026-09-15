@@ -190,7 +190,7 @@ public sealed partial class FileSystemServiceTest
     }
 
     [Test]
-    public async Task DeleteDirectory_Missing_FailIfNotFound_Throws()
+    public async Task DeleteDirectory_MissingWithFailIfNotFound_Throws()
     {
         var work = NewTempFolder();
         try
@@ -207,7 +207,7 @@ public sealed partial class FileSystemServiceTest
     }
 
     [Test]
-    public async Task DeleteDirectory_Missing_IgnoreIfNotFound_DoesNotThrow()
+    public async Task DeleteDirectory_MissingWithIgnoreIfNotFound_DoesNotThrow()
     {
         var work = NewTempFolder();
         try
@@ -248,7 +248,7 @@ public sealed partial class FileSystemServiceTest
     }
 
     [Test]
-    public async Task TryDeleteDirectory_Missing_FailIfNotFound_ReturnsFalse()
+    public async Task TryDeleteDirectory_MissingWithFailIfNotFound_ReturnsFalse()
     {
         var work = NewTempFolder();
         try
@@ -265,7 +265,7 @@ public sealed partial class FileSystemServiceTest
     }
 
     [Test]
-    public async Task TryDeleteDirectory_Missing_IgnoreIfNotFound_ShortCircuitsToTrue()
+    public async Task TryDeleteDirectory_MissingWithIgnoreIfNotFound_ReturnsTrue()
     {
         var work = NewTempFolder();
         try
@@ -281,7 +281,7 @@ public sealed partial class FileSystemServiceTest
     }
 
     [Test]
-    public async Task CopyDirectory_CopiesFilesAndNestedFoldersAndLeavesSource()
+    public async Task CopyDirectory_SourceContainsNestedFolders_CopiesContentsAndPreservesSource()
     {
         var work = NewTempFolder();
         try

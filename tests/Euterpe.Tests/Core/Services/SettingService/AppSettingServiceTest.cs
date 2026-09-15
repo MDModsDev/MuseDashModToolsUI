@@ -25,7 +25,7 @@ public sealed class AppSettingServiceTest
     }
 
     [Test]
-    public async Task ValidateSteamAsync_FolderInvalid_AutoDetected_WritesToConfig()
+    public async Task ValidateSteamAsync_InvalidFolderAutoDetected_WritesToConfig()
     {
         var config = NewConfig();
         config.SteamFolder = "/bad";
@@ -41,7 +41,7 @@ public sealed class AppSettingServiceTest
     }
 
     [Test]
-    public async Task ValidateSteamAsync_FolderInvalid_NotDetected_PromptsAndUsesUserPick()
+    public async Task ValidateSteamAsync_InvalidFolderNotDetected_PromptsAndUsesUserPick()
     {
         var config = NewConfig();
         config.SteamFolder = "/bad";
@@ -59,7 +59,7 @@ public sealed class AppSettingServiceTest
     }
 
     [Test]
-    public async Task ValidateSteamAsync_ExecPathInvalid_AutoDetected_WritesToConfig()
+    public async Task ValidateSteamAsync_InvalidExecPathAutoDetected_WritesToConfig()
     {
         var config = NewConfig();
         config.SteamFolder = "/steam";

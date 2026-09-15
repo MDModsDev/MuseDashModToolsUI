@@ -113,7 +113,7 @@ public sealed class ArchiveServiceTest
     }
 
     [Test]
-    public async Task ExtractZipFile_RoundTripsContents()
+    public async Task ExtractZipFile_ArchiveWithTextFile_RestoresOriginalContents()
     {
         var work = NewTempFolder();
         try
@@ -136,7 +136,7 @@ public sealed class ArchiveServiceTest
     }
 
     [Test]
-    public async Task ExtractZipFile_OverwritesExistingFile()
+    public async Task ExtractZipFile_DestinationFileExists_OverwritesExistingFile()
     {
         var work = NewTempFolder();
         try
@@ -161,7 +161,7 @@ public sealed class ArchiveServiceTest
     }
 
     [Test]
-    public async Task ExtractZipFileAsync_RoundTripsContents()
+    public async Task ExtractZipFileAsync_ArchiveWithTextFile_RestoresOriginalContents()
     {
         var work = NewTempFolder();
         try

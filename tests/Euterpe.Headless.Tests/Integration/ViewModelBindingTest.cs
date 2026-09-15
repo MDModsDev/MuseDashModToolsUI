@@ -30,7 +30,7 @@ public sealed partial class ViewModelBindingTest : HeadlessTest
     });
 
     [Test]
-    public Task ViewModelPropertyChange_PropagatesToBoundTextBlock() => RunOnUI(async () =>
+    public Task Bind_ViewModelPropertyChanges_UpdatesTextBlock() => RunOnUI(async () =>
     {
         var vm = new CounterViewModel { Title = "initial" };
         var textBlock = new TextBlock();

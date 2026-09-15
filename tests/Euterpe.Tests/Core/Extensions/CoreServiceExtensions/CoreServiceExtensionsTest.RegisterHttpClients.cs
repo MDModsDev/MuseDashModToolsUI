@@ -28,7 +28,7 @@ public sealed partial class CoreServiceExtensionsTest
     }
 
     [Test]
-    public async Task RegisterHttpClients_RegistersAllHandlersAndDownloadService()
+    public async Task RegisterHttpClients_EmptyServiceCollection_RegistersAllHandlersAndDownloadService()
     {
         var services = new ServiceCollection();
         services.RegisterHttpClients();
@@ -46,7 +46,7 @@ public sealed partial class CoreServiceExtensionsTest
     }
 
     [Test]
-    public async Task RegisterHttpClients_RegistersAllRefitClientServiceDescriptors()
+    public async Task RegisterHttpClients_EmptyServiceCollection_RegistersAllRefitClientServiceDescriptors()
     {
         var services = new ServiceCollection();
         services.RegisterHttpClients();

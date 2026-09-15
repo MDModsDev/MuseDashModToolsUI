@@ -16,7 +16,7 @@ public sealed class EssentialModsStepTest
         };
 
     [Test]
-    public async Task Kinds_IsEssentialMods()
+    public async Task Kinds_EssentialModsStep_ReturnsEssentialMods()
     {
         var step = CreateStep(IModManageService.Mock());
 
@@ -24,7 +24,7 @@ public sealed class EssentialModsStepTest
     }
 
     [Test]
-    public async Task ExecuteAsync_InitializesMods()
+    public async Task ExecuteAsync_ModServiceAvailable_InitializesMods()
     {
         var modManageService = IModManageService.Mock();
         var step = CreateStep(modManageService);
@@ -35,7 +35,7 @@ public sealed class EssentialModsStepTest
     }
 
     [Test]
-    public async Task ExecuteAsync_ReportsProgress()
+    public async Task ExecuteAsync_ProgressProvided_ReportsInitializationMessage()
     {
         var modManageService = IModManageService.Mock();
         var step = CreateStep(modManageService);

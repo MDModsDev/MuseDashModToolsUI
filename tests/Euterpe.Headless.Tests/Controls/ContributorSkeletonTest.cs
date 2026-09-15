@@ -5,7 +5,7 @@ namespace Euterpe.Headless.Tests.Controls;
 public sealed class ContributorSkeletonTest : HeadlessTest
 {
     [Test]
-    public Task PlaceholderCard_TakesTheSameBoxAsTheRealCard() => RunOnUI(async () =>
+    public Task ApplyTemplate_ContributorSkeleton_MatchesContributorCardSize() => RunOnUI(async () =>
     {
         var skeleton = new ContributorSkeleton();
         var card = new ContributorCard { ContributorName = "test", ContributorDescription = "the maintainer" };
@@ -17,7 +17,7 @@ public sealed class ContributorSkeletonTest : HeadlessTest
     });
 
     [Test]
-    public Task Placeholders_TakeTheirFillFromTheTheme() => RunOnUI(async () =>
+    public Task ApplyTemplate_ContributorSkeleton_FillsPlaceholdersWithThemeBrushes() => RunOnUI(async () =>
     {
         var skeleton = new ContributorSkeleton();
         Show(skeleton);

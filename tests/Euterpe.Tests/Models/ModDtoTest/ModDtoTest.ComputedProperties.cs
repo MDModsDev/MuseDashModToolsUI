@@ -8,7 +8,7 @@ public sealed partial class ModDtoTest
     [Test]
     [Arguments(true, "MyMod.disabled", "MyMod.dll")]
     [Arguments(false, "MyMod.dll", "MyMod.disabled")]
-    public async Task LocalAndReversedFileName_DependOnIsDisabledFlag(bool isDisabled, string expectedLocal, string expectedReversed)
+    public async Task LocalAndReversedFileName_DisabledFlagVariations_UseMatchingExtensions(bool isDisabled, string expectedLocal, string expectedReversed)
     {
         var mod = Create(localFnWithoutExt: "MyMod", disabled: isDisabled);
 
@@ -20,7 +20,7 @@ public sealed partial class ModDtoTest
     [Test]
     [Arguments(null, false)]
     [Arguments("MyMod", true)]
-    public async Task IsLocal_ReflectsFileNameWithoutExtensionPresence(string? fileNameWithoutExt, bool expected)
+    public async Task IsLocal_LocalFileNameVariations_ReflectsFileNamePresence(string? fileNameWithoutExt, bool expected)
     {
         var mod = Create(localFnWithoutExt: fileNameWithoutExt);
         await Assert.That(mod.IsLocal).IsEqualTo(expected);
@@ -29,7 +29,7 @@ public sealed partial class ModDtoTest
     [Test]
     [Arguments("", false)]
     [Arguments("MyMod.dll", true)]
-    public async Task HasDownloadSource_ReflectsFileNamePresence(string fileName, bool expected)
+    public async Task HasDownloadSource_FileNameVariations_ReflectsFileNamePresence(string fileName, bool expected)
     {
         var mod = Create(fileName);
         await Assert.That(mod.HasDownloadSource).IsEqualTo(expected);
@@ -46,7 +46,7 @@ public sealed partial class ModDtoTest
 
     [Test]
     [MethodDataSource(nameof(InstallableCases))]
-    public async Task IsInstallable_DependsOnLocalDownloadAndStateFlags((bool isLocal, bool hasDownload, ModState state, bool expected) data)
+    public async Task IsInstallable_LocalDownloadAndStateCombinations_ReturnsExpectedAvailability((bool isLocal, bool hasDownload, ModState state, bool expected) data)
     {
         var mod = Create(
             data.hasDownload ? "MyMod.dll" : "",
@@ -61,7 +61,7 @@ public sealed partial class ModDtoTest
     [Arguments(true, ModState.Normal, false)]
     [Arguments(true, ModState.Outdated, false)]
     [Arguments(false, ModState.Modified, false)]
-    public async Task IsReinstallable_RequiresLocalAndModifiedState(bool isLocal, ModState state, bool expected)
+    public async Task IsReinstallable_LocalAndStateCombinations_RequiresLocalModifiedMod(bool isLocal, ModState state, bool expected)
     {
         var mod = Create(localFnWithoutExt: isLocal ? "MyMod" : null);
         mod.State = state;
@@ -92,7 +92,7 @@ public sealed partial class ModDtoTest
     }
 
     [Test]
-    public async Task DuplicatedModPaths_ChangeRaisesPropertyChangedForReasonDisplay()
+    public async Task DuplicatedModPaths_ValueChanged_RaisesPropertyChangedForReasonDisplay()
     {
         var mod = Create();
         var changedProperties = new List<string?>();
@@ -104,7 +104,7 @@ public sealed partial class ModDtoTest
     }
 
     [Test]
-    public async Task HasDependency_TrueWhenAnyDependenciesExist()
+    public async Task HasDependency_DependencyCollectionsChange_ReflectsWhetherAnyExist()
     {
         var mod = Create();
 
@@ -120,7 +120,7 @@ public sealed partial class ModDtoTest
     }
 
     [Test]
-    public async Task DependencyNames_ReturnsModAndLibDependenciesCombined()
+    public async Task DependencyNames_ModAndLibDependencies_ReturnsCombinedNames()
     {
         var mod = Create();
         mod.ModDependencies = ["ModA", "ModB"];
@@ -130,14 +130,14 @@ public sealed partial class ModDtoTest
     }
 
     [Test]
-    public async Task DependencyNames_EmptyWhenNoDependencies()
+    public async Task DependencyNames_NoDependencies_ReturnsEmpty()
     {
         var mod = Create();
         await Assert.That(mod.DependencyNames).IsEmpty();
     }
 
     [Test]
-    public async Task HasScreenshots_TrueWhenScreenshotsPresent()
+    public async Task HasScreenshots_ScreenshotsAdded_ReturnsTrue()
     {
         var mod = Create();
 

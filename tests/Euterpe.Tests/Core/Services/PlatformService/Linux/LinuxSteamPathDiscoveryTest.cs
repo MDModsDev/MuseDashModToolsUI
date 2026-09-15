@@ -87,7 +87,7 @@ public sealed class LinuxSteamPathDiscoveryTest
     }
 
     [Test]
-    public async Task TryGetSteamFolder_BehaviorMatchesFileSystem()
+    public async Task TryGetSteamFolder_CurrentFileSystem_ReturnsExistingSteamFolderOrNull()
     {
         // SteamSearch is initialized from HOME at type init, so we can't redirect it.
         // Just exercise both branches: on CI Linux (no Steam) → false; on a dev machine with Steam → true.

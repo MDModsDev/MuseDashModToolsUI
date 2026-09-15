@@ -11,7 +11,7 @@ namespace Euterpe.Tests.Core;
 public sealed class LinuxPlatformInfoTest
 {
     [Test]
-    public async Task OsString_IsLinux()
+    public async Task OsString_LinuxPlatformInfo_ReturnsLinux()
     {
         var info = new LinuxPlatformInfo();
         await Assert.That(info.OsString).IsEqualTo("linux");

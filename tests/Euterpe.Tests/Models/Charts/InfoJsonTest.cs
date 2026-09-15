@@ -9,7 +9,7 @@ namespace Euterpe.Tests.Models.Charts;
 public sealed class InfoJsonTest
 {
     [Test]
-    public async Task Defaults_EmptyStringsAndEmptyTags()
+    public async Task Constructor_DefaultValues_InitializesEmptyStringsAndTags()
     {
         var info = new InfoJson();
 
@@ -21,7 +21,7 @@ public sealed class InfoJsonTest
     }
 
     [Test]
-    public async Task JsonRoundTrip_PreservesValues()
+    public async Task JsonRoundTrip_PopulatedInfo_PreservesValues()
     {
         var original = new InfoJson
         {

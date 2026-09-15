@@ -25,7 +25,7 @@ public sealed class TelemetryServiceTest
     }
 
     [Test]
-    public async Task TrackSessionAsync_SendsPayloadWithPlatformAndVersion()
+    public async Task TrackSessionAsync_PlatformInfoAvailable_SendsPayloadWithPlatformAndVersion()
     {
         var captured = new List<SessionEvent>();
         var client = IEuterpeTelemetryClient.Mock();
@@ -57,7 +57,7 @@ public sealed class TelemetryServiceTest
     }
 
     [Test]
-    public async Task TrackSessionAsync_CallsApiClientOnce()
+    public async Task TrackSessionAsync_SingleSession_CallsApiClientOnce()
     {
         var client = IEuterpeTelemetryClient.Mock();
         client.TrackSessionAsync(Any<SessionEvent>(), Any<CancellationToken>())

@@ -7,7 +7,7 @@ namespace Euterpe.Headless.Tests.Controls;
 public sealed class ContributorCardTest : HeadlessTest
 {
     [Test]
-    public Task AvatarUrl_BindsToAsyncImageSource() => RunOnUI(async () =>
+    public Task AvatarUrl_ValueSet_BindsToAsyncImageSource() => RunOnUI(async () =>
     {
         var card = new ContributorCard { AvatarUrl = "not-a-uri" };
         var window = new Window { Content = card, Width = 400, Height = 200 };
@@ -20,7 +20,7 @@ public sealed class ContributorCardTest : HeadlessTest
     });
 
     [Test]
-    public Task ContributorName_BindsToTemplateTextBlock() => RunOnUI(async () =>
+    public Task ContributorName_ValueSet_BindsToTemplateTextBlock() => RunOnUI(async () =>
     {
         var card = new ContributorCard { ContributorName = "lxymahatma" };
         var window = new Window { Content = card, Width = 400, Height = 200 };
@@ -34,7 +34,7 @@ public sealed class ContributorCardTest : HeadlessTest
     });
 
     [Test]
-    public Task DescriptionTextBlock_IsHidden_WhenDescriptionIsNull() => RunOnUI(async () =>
+    public Task ContributorDescription_NullValue_HidesDescriptionTextBlock() => RunOnUI(async () =>
     {
         var card = new ContributorCard
         {
@@ -58,7 +58,7 @@ public sealed class ContributorCardTest : HeadlessTest
     });
 
     [Test]
-    public Task DescriptionTextBlock_IsVisible_WhenDescriptionIsSet() => RunOnUI(async () =>
+    public Task ContributorDescription_ValueSet_ShowsDescriptionTextBlock() => RunOnUI(async () =>
     {
         var card = new ContributorCard
         {
@@ -79,7 +79,7 @@ public sealed class ContributorCardTest : HeadlessTest
     });
 
     [Test]
-    public Task ButtonCommand_TriggersWithLinkUrl_WhenLinkButtonClicked() => RunOnUI(async () =>
+    public Task ButtonCommand_LinkButtonClicked_ExecutesWithLinkUrl() => RunOnUI(async () =>
     {
         var receivedUrls = new List<object?>();
         var card = new ContributorCard

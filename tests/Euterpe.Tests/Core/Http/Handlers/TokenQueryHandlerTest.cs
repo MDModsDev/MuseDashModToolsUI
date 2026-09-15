@@ -17,7 +17,7 @@ public sealed class TokenQueryHandlerTest
     }
 
     [Test]
-    public async Task SendAsync_AppendsTokenAsQueryParameter()
+    public async Task SendAsync_DownloadUrlWithoutQuery_AppendsTokenAsQueryParameter()
     {
         var auth = IAuthService.Mock();
         auth.GetAccessTokenAsync().Returns("token-abc");
@@ -33,7 +33,7 @@ public sealed class TokenQueryHandlerTest
     }
 
     [Test]
-    public async Task SendAsync_PreservesExistingQueryParameters()
+    public async Task SendAsync_DownloadUrlWithQuery_PreservesExistingQueryParameters()
     {
         var auth = IAuthService.Mock();
         auth.GetAccessTokenAsync().Returns("tok");

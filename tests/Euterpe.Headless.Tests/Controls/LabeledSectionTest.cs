@@ -5,7 +5,7 @@ namespace Euterpe.Headless.Tests.Controls;
 public sealed class LabeledSectionTest : HeadlessTest
 {
     [Test]
-    public Task TitleAndDescription_BindToTemplateTextBlocks() => RunOnUI(async () =>
+    public Task ApplyTemplate_TitleAndDescriptionSet_BindsTemplateTextBlocks() => RunOnUI(async () =>
     {
         var section = new LabeledSection { Title = "Hello", Description = "World" };
         var window = new Window { Content = section, Width = 400, Height = 300 };
@@ -20,7 +20,7 @@ public sealed class LabeledSectionTest : HeadlessTest
     });
 
     [Test]
-    public Task TitleChange_PropagatesToTemplateTextBlock() => RunOnUI(async () =>
+    public Task Title_ChangedAfterTemplateApply_UpdatesTemplateTextBlock() => RunOnUI(async () =>
     {
         var section = new LabeledSection { Title = "Initial" };
         var window = new Window { Content = section, Width = 400, Height = 300 };

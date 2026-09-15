@@ -38,7 +38,7 @@ public sealed class WrapVirtualizerTest : HeadlessTest
     }
 
     [Test]
-    public Task Rows_ChunkItemsByComputedColumnCount() => RunOnUI(async () =>
+    public Task Rows_ItemsExceedColumnCount_ChunksItemsIntoRows() => RunOnUI(async () =>
     {
         var (wrap, _) = CreateHost(10, 100, 350, 400);
 
@@ -48,14 +48,14 @@ public sealed class WrapVirtualizerTest : HeadlessTest
     });
 
     [Test]
-    public Task Rows_LastRowHoldsRemainder() => RunOnUI(async () =>
+    public Task Rows_ItemCountNotDivisibleByColumns_LastRowHoldsRemainder() => RunOnUI(async () =>
     {
         var (wrap, _) = CreateHost(10, 100, 350, 400);
         await Assert.That(wrap.Rows[^1].Items.Count).IsEqualTo(1);
     });
 
     [Test]
-    public Task Virtualization_RealizesFewerRowsThanTotal() => RunOnUI(async () =>
+    public Task Virtualization_ItemsExceedViewport_RealizesFewerRowsThanTotal() => RunOnUI(async () =>
     {
         var (wrap, _) = CreateHost(2000, 100, 350, 400);
 
@@ -69,7 +69,7 @@ public sealed class WrapVirtualizerTest : HeadlessTest
     });
 
     [Test]
-    public Task WidthChange_RecomputesColumns() => RunOnUI(async () =>
+    public Task Measure_AvailableWidthChanges_RecomputesColumns() => RunOnUI(async () =>
     {
         var (wrap, window) = CreateHost(12, 100, 350, 400);
         await Assert.That(wrap.Rows[0].Items.Count).IsEqualTo(3);
@@ -81,7 +81,7 @@ public sealed class WrapVirtualizerTest : HeadlessTest
     });
 
     [Test]
-    public Task ItemTemplate_RendersItemsInRow() => RunOnUI(async () =>
+    public Task ItemTemplate_BorderTemplate_RendersItemsInRows() => RunOnUI(async () =>
     {
         var (wrap, _) = CreateHost(6, 100, 350, 400);
 
@@ -113,7 +113,7 @@ public sealed class WrapVirtualizerTest : HeadlessTest
     });
 
     [Test]
-    public Task Cards_InSameRowAreArrangedHorizontally() => RunOnUI(async () =>
+    public Task Arrange_CardsInSameRow_PlacesCardsHorizontally() => RunOnUI(async () =>
     {
         var (wrap, _) = CreateHost(6, 100, 350, 400);
 

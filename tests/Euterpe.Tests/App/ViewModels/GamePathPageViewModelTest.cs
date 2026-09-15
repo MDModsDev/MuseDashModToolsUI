@@ -43,7 +43,7 @@ public sealed class GamePathPageViewModelTest
     }
 
     [Test]
-    public async Task ShowInvalidMessage_FalseWhenSelectedFolderEmpty()
+    public async Task ShowInvalidMessage_EmptySelectedFolder_IsFalse()
     {
         var vm = NewViewModel();
         vm.SelectedFolder = string.Empty;
@@ -52,7 +52,7 @@ public sealed class GamePathPageViewModelTest
     }
 
     [Test]
-    public async Task ShowInvalidMessage_TrueWhenSelectedFolderInvalid()
+    public async Task ShowInvalidMessage_InvalidSelectedFolder_IsTrue()
     {
         var paths = IGamePathDiscovery.Mock();
         paths.CheckIsValidGameFolder(Any<string?>()).Returns(false);
@@ -64,7 +64,7 @@ public sealed class GamePathPageViewModelTest
     }
 
     [Test]
-    public async Task ShowInvalidMessage_FalseWhenSelectedFolderValid()
+    public async Task ShowInvalidMessage_ValidSelectedFolder_IsFalse()
     {
         var paths = IGamePathDiscovery.Mock();
         paths.CheckIsValidGameFolder(Any<string?>()).Returns(true);

@@ -32,7 +32,7 @@ public sealed class CrashWindowViewModelTest
     }
 
     [Test]
-    public async Task ContinueCommand_RaisesRequestCloseWithTrue()
+    public async Task ContinueCommand_SubscriberRegistered_RaisesRequestCloseWithTrue()
     {
         var vm = NewViewModel();
         bool? captured = null;
@@ -44,7 +44,7 @@ public sealed class CrashWindowViewModelTest
     }
 
     [Test]
-    public async Task ExitCommand_RaisesRequestCloseWithFalse()
+    public async Task ExitCommand_SubscriberRegistered_RaisesRequestCloseWithFalse()
     {
         var vm = NewViewModel();
         bool? captured = null;
@@ -56,7 +56,7 @@ public sealed class CrashWindowViewModelTest
     }
 
     [Test]
-    public async Task SetException_PopulatesFields()
+    public async Task SetException_InvalidOperationException_PopulatesCrashDetails()
     {
         var vm = NewViewModel();
         var ex = new InvalidOperationException("test crash message");

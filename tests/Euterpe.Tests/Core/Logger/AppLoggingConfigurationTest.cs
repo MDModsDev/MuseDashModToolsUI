@@ -9,7 +9,7 @@ namespace Euterpe.Tests.Core.Logger;
 public sealed class AppLoggingConfigurationTest
 {
     [Test]
-    public async Task Create_RegistersFileAndLiveLogTargets()
+    public async Task Create_LiveLogTargetProvided_RegistersFileAndLiveLogTargets()
     {
         var liveLogTarget = new LiveLogTarget();
         var configuration = AppLoggingConfiguration.Create(liveLogTarget);
@@ -20,7 +20,7 @@ public sealed class AppLoggingConfigurationTest
     }
 
     [Test]
-    public async Task Create_FileLayoutIncludesLevelCategoryMessageAndException()
+    public async Task Create_LogEventWithException_FileLayoutIncludesLevelCategoryMessageAndException()
     {
         var configuration = AppLoggingConfiguration.Create(new LiveLogTarget());
         var fileTarget = configuration.AllTargets.OfType<FileTarget>().Single();

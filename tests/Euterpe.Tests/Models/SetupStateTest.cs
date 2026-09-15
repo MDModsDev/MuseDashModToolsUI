@@ -13,7 +13,7 @@ public sealed class SetupStateTest
         };
 
     [Test]
-    public async Task DefaultState_IsNotStarted_AndNotRunning()
+    public async Task Constructor_DefaultState_IsNotStartedAndNotRunning()
     {
         var state = new SetupState();
 
@@ -26,14 +26,14 @@ public sealed class SetupStateTest
     }
 
     [Test]
-    public async Task IsRunning_ReflectsRunningStage()
+    public async Task IsRunning_RunningStage_ReturnsTrue()
     {
         var state = new SetupState { Stage = SetupExecutionStage.Running };
         await Assert.That(state.IsRunning).IsTrue();
     }
 
     [Test]
-    public async Task AllSucceeded_True_WhenFinishedAndAllStepsSucceeded()
+    public async Task AllSucceeded_FinishedAndAllStepsSucceeded_ReturnsTrue()
     {
         var state = new SetupState();
         state.Steps.Add(NewStep(SetupStepStatus.Succeeded));
@@ -44,7 +44,7 @@ public sealed class SetupStateTest
     }
 
     [Test]
-    public async Task AllSucceeded_False_WhenAnyStepFailed()
+    public async Task AllSucceeded_FailedStep_ReturnsFalse()
     {
         var state = new SetupState();
         state.Steps.Add(NewStep(SetupStepStatus.Succeeded));
@@ -55,7 +55,7 @@ public sealed class SetupStateTest
     }
 
     [Test]
-    public async Task AllSucceeded_False_WhenStageNotFinished()
+    public async Task AllSucceeded_StageNotFinished_ReturnsFalse()
     {
         var state = new SetupState();
         state.Steps.Add(NewStep(SetupStepStatus.Succeeded));
@@ -65,7 +65,7 @@ public sealed class SetupStateTest
     }
 
     [Test]
-    public async Task HasFailedSteps_True_WhenFinishedAndAnyStepFailed()
+    public async Task HasFailedSteps_FinishedWithFailedStep_ReturnsTrue()
     {
         var state = new SetupState();
         state.Steps.Add(NewStep(SetupStepStatus.Succeeded));
@@ -76,7 +76,7 @@ public sealed class SetupStateTest
     }
 
     [Test]
-    public async Task HasFailedSteps_False_WhenStageNotFinished()
+    public async Task HasFailedSteps_StageNotFinished_ReturnsFalse()
     {
         var state = new SetupState();
         state.Steps.Add(NewStep(SetupStepStatus.Failed));
@@ -86,7 +86,7 @@ public sealed class SetupStateTest
     }
 
     [Test]
-    public async Task Reset_ClearsStepsAndResetsStage()
+    public async Task Reset_FinishedSetupWithSteps_ClearsStepsAndResetsStage()
     {
         var state = new SetupState();
         state.Steps.Add(NewStep());
@@ -100,7 +100,7 @@ public sealed class SetupStateTest
     }
 
     [Test]
-    public async Task SettingStage_RaisesPropertyChangedForDependents()
+    public async Task Stage_ValueChanged_RaisesPropertyChangedForDependents()
     {
         var state = new SetupState();
         var changed = new List<string?>();

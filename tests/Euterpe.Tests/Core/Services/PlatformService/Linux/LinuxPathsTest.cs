@@ -11,7 +11,7 @@ namespace Euterpe.Tests.Core;
 public sealed class LinuxPathsTest
 {
     [Test]
-    public async Task SteamSearch_AllRootedUnderUserProfile()
+    public async Task SteamSearch_LinuxLocations_AreRootedUnderUserProfile()
     {
         var home = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         await Assert.That(LinuxPaths.SteamSearch).IsNotEmpty();
@@ -22,7 +22,7 @@ public sealed class LinuxPathsTest
     }
 
     [Test]
-    public async Task SteamSearch_ContainsKnownLocations()
+    public async Task SteamSearch_LinuxLocations_ContainsKnownLocations()
     {
         var joined = string.Join(';', LinuxPaths.SteamSearch);
 
@@ -34,7 +34,7 @@ public sealed class LinuxPathsTest
     }
 
     [Test]
-    public async Task SteamSearch_HasNoDuplicateEntries()
+    public async Task SteamSearch_LinuxLocations_HasNoDuplicateEntries()
     {
         await Assert.That(LinuxPaths.SteamSearch).HasDistinctItems();
     }

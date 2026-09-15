@@ -37,7 +37,7 @@ public sealed class ServerErrorHandlerTest
     }
 
     [Test]
-    public async Task SendAsync_4xxResponse_DoesNotNotify()
+    public async Task SendAsync_ClientErrorResponse_DoesNotNotify()
     {
         var notification = INotificationService.Mock();
         var logger = Mock.Logger<ServerErrorNotifier>();
@@ -52,7 +52,7 @@ public sealed class ServerErrorHandlerTest
     }
 
     [Test]
-    public async Task SendAsync_5xxResponse_LogsWarningAndNotifies()
+    public async Task SendAsync_ServerErrorResponse_LogsWarningAndNotifies()
     {
         var notification = INotificationService.Mock();
         var logger = Mock.Logger<ServerErrorNotifier>();

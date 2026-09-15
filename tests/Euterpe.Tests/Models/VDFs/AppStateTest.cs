@@ -7,7 +7,7 @@ namespace Euterpe.Tests.Models.VDFs;
 public sealed class AppStateTest
 {
     [Test]
-    public async Task Defaults_AreZeroEmptyAndEmptyDictionary()
+    public async Task Constructor_DefaultValues_InitializesZeroEmptyStringsAndEmptyDictionary()
     {
         var state = new AppState();
 

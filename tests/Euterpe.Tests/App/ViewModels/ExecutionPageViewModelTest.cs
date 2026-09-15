@@ -8,11 +8,11 @@ namespace Euterpe.Tests.App.ViewModels;
 public sealed class ExecutionPageViewModelTest
 {
     [Test]
-    public async Task CanGoBack_IsFalse() =>
+    public async Task CanGoBack_NewViewModel_IsFalse() =>
         await Assert.That(NewViewModel(new MuseDashConfig(), []).CanGoBack).IsFalse();
 
     [Test]
-    public async Task OnEnterAsync_PopulatesStepsFromSelectedOptions()
+    public async Task OnEnterAsync_SelectedSetupOptions_PopulatesSteps()
     {
         var gameConfig = new MuseDashConfig();
         SelectOnlyFirst(gameConfig);
@@ -27,7 +27,7 @@ public sealed class ExecutionPageViewModelTest
     }
 
     [Test]
-    public async Task OnEnterAsync_AllStepsSucceed_AllMarkedSucceeded_AndStageFinished()
+    public async Task OnEnterAsync_AllStepsSucceed_MarksAllSucceededAndStageFinished()
     {
         var gameConfig = new MuseDashConfig();
         SelectOnlyFirst(gameConfig);

@@ -12,7 +12,7 @@ namespace Euterpe.Headless.Tests.Views;
 public sealed class DownloadPanelTest : HeadlessTest
 {
     [Test]
-    public Task UpdateChannel_ConfigValueAndSelectionStaySynchronized() => RunOnUI(async () =>
+    public Task UpdateChannel_SelectionChanges_StaysSynchronizedWithConfig() => RunOnUI(async () =>
     {
         var config = new Config
         {

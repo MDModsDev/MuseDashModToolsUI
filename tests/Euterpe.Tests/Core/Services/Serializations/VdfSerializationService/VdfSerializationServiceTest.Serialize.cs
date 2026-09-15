@@ -34,7 +34,7 @@ public sealed partial class VdfSerializationServiceTest
     }
 
     [Test]
-    public async Task SerializeToFile_AndDeserializeFromFile_RoundTrip_PreservesAllFields()
+    public async Task SerializeToFile_DeserializedFromFile_PreservesAllFields()
     {
         var original = new LibraryFolder
         {

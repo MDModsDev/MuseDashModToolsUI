@@ -7,7 +7,7 @@ namespace Euterpe.Headless.Tests.Services;
 public sealed class DialogServiceTest : HeadlessTest
 {
     [Test]
-    public Task ShowDialogAsync_VisibleOwner_VmCloseTrue_ReturnsTrue() => RunOnUI(async () =>
+    public Task ShowDialogAsync_VisibleOwnerAndViewModelClosesWithTrue_ReturnsTrue() => RunOnUI(async () =>
     {
         var service = NewService();
         var owner = NewVisibleOwner();
@@ -23,7 +23,7 @@ public sealed class DialogServiceTest : HeadlessTest
     });
 
     [Test]
-    public Task ShowDialogAsync_VisibleOwner_VmCloseFalse_ReturnsFalse() => RunOnUI(async () =>
+    public Task ShowDialogAsync_VisibleOwnerAndViewModelClosesWithFalse_ReturnsFalse() => RunOnUI(async () =>
     {
         var service = NewService();
         var owner = NewVisibleOwner();

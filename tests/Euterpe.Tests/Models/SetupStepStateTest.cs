@@ -17,11 +17,11 @@ public sealed class SetupStepStateTest
     [Arguments(SetupStepStatus.Running, false)]
     [Arguments(SetupStepStatus.Succeeded, false)]
     [Arguments(SetupStepStatus.Failed, true)]
-    public async Task CanRetry_TrueOnlyWhenFailed(SetupStepStatus status, bool expected) =>
+    public async Task CanRetry_StatusVariations_ReturnsTrueOnlyWhenFailed(SetupStepStatus status, bool expected) =>
         await Assert.That(NewStep(status).CanRetry).IsEqualTo(expected);
 
     [Test]
-    public async Task StatusDisplay_DiffersAcrossStatuses()
+    public async Task StatusDisplay_AllStatuses_ReturnsDistinctText()
     {
         var pending = NewStep().StatusDisplay.ToString();
         var running = NewStep(SetupStepStatus.Running).StatusDisplay.ToString();
@@ -33,7 +33,7 @@ public sealed class SetupStepStateTest
     }
 
     [Test]
-    public async Task SettingStatus_RaisesPropertyChangedForDependents()
+    public async Task Status_ValueChanged_RaisesPropertyChangedForDependents()
     {
         var step = NewStep();
         var changed = new List<string?>();

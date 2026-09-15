@@ -96,7 +96,7 @@ public sealed class LoopbackCallbackListenerTest
     }
 
     [Test]
-    public async Task Port_IsAssignedByTheOperatingSystem()
+    public async Task Port_NewListener_IsAssignedByTheOperatingSystem()
     {
         using var listener = new LoopbackCallbackListener();
 

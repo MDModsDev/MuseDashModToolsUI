@@ -7,7 +7,7 @@ namespace Euterpe.Tests.App.ViewModels;
 public sealed class DownloadPanelViewModelTest
 {
     [Test]
-    public async Task UpdateChannels_ContainsEveryChannelInDeclarationOrder()
+    public async Task UpdateChannels_DefaultOptions_ContainsEveryChannelInDeclarationOrder()
     {
         await Assert.That(DownloadPanelViewModel.UpdateChannels.Select(static option => option.Value))
             .IsEquivalentTo(
